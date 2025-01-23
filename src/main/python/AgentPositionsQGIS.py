@@ -1,3 +1,5 @@
+#----------------------------------------------------------------------------------------------------------
+# Creer un fichier csv qui va etre utilise pour QGIS (AgentID, x_orig,y_orig,x_dest,y_dest)
 
 # import pandas as pd
 
@@ -56,6 +58,8 @@
 
 # print(f"Fichier des trajets filtrés enregistré : {output_filtered_path}")
 
+#----------------------------------------------------------------------------------------------------------
+# Creer un fichier csv qui va etre utilise pour QGIS (AgentID, x_orig,y_orig,x_dest,y_dest,Motif_Orig,Motif_Dest)
 
 import pandas as pd
 
