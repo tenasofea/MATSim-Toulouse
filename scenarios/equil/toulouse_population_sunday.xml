@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE population SYSTEM "http://www.matsim.org/files/dtd/population_v6.dtd">
+<population>
+
+	<attributes>
+		<attribute name="coordinateReferenceSystem" class="java.lang.String">Atlantis</attribute>
+	</attributes>
+		
+	<person id="999307">
+		<attributes>
+			<attribute name="age" class="java.lang.Integer">36</attribute>
+			<attribute name="bikeAvailability" class="java.lang.String">none</attribute>
+			<attribute name="carAvailability" class="java.lang.String">some</attribute>
+			<attribute name="censusHouseholdId" class="java.lang.Long">111675</attribute>
+			<attribute name="censusPersonId" class="java.lang.Long">244777</attribute>
+			<attribute name="employed" class="java.lang.String">True</attribute>
+			<attribute name="hasLicense" class="java.lang.String">yes</attribute>
+			<attribute name="hasPtSubscription" class="java.lang.Boolean">false</attribute>
+			<attribute name="householdId" class="java.lang.Integer">460084</attribute>
+			<attribute name="householdIncome" class="java.lang.Double">2926.696416914103</attribute>
+			<attribute name="htsHouseholdId" class="java.lang.Long">15870</attribute>
+			<attribute name="htsPersonId" class="java.lang.Long">39137</attribute>
+			<attribute name="isPassenger" class="java.lang.Boolean">false</attribute>
+			<attribute name="sex" class="java.lang.String">f</attribute>
+			<attribute name="vehicles" class="org.matsim.vehicles.PersonVehicles">{"car":"999307:car","car_passenger":"999307:car_passenger"}</attribute>
+		</attributes>
+		<plan>
+			<activity type="work" link="536629" facility="work_499084" x="573273.68" y="6283247.22" start_time="05:38:51" end_time="12:26:51">
+			</activity>
+			<leg mode="walk" dep_time="12:26:51" trav_time="00:00:10">
+				<attributes>
+					<attribute name="routingMode" class="java.lang.String">car</attribute>
+				</attributes>
+				<route type="generic" start_link="536629" end_link="536629" trav_time="00:00:10" distance="12.306106065280547" />
+			</leg>
+			<activity type="car interaction" link="536629" x="573273.5896965651" y="6283256.685804699" max_dur="00:00:00">
+			</activity>
+			<leg mode="car" dep_time="12:27:01" trav_time="00:17:56">
+				<attributes>
+					<attribute name="routingMode" class="java.lang.String">car</attribute>
+				</attributes>
+				<route type="links" start_link="536629" end_link="632454" trav_time="00:19:33" distance="17744.328397678313" vehicleRefId="999307:car">536629 29004 278300 278316 278314 278312 278310 485256 485254 485252 355058 355025 355023 355062 355037 355035 355033 355054 355021 355060 355064 602693 355029 355027 355031 355040 355056 485333 832 602303 531479 556803 847 556833 531480 432717 432719 432721 153959 153961 183004 663608 663604 663631 346826 224623 224620 165053 347764 590235 663683 649503 663678 385003 148502 148503 155063 155047 85244 663700 659868 405188 663695 85236 85232 85233 5418 136830 313961 313962 663512 277012 277010 277011 200920 28153 519615 28182 545945 247953 505746 505743 124869 124870 304332 505701 505700 176895 145042 145043 299098 299099 330948 390001 492032 330949 419052 419053 419054 419055 86579 356306 419058 491275 420152 356304 415352 420154 415353 467005 467003 432544 610828 610829 610830 432503 334464 334462 160439 78517 398197 78430 78431 78432 78433 78434 398218 79117 79115 79113 79111 79109 79107 275874 461803 461804 461805 275872 461821 398306 461787 461788 264810 480325 93415 53994 632461 632577 632574 632575 632578 632458 632459 632454</route>
+			</leg>
+			<activity type="car interaction" link="632454" x="561635.6395071012" y="6277447.166046368" max_dur="00:00:00">
+			</activity>
+			<leg mode="walk" dep_time="12:44:57" trav_time="00:00:19">
+				<attributes>
+					<attribute name="routingMode" class="java.lang.String">car</attribute>
+				</attributes>
+				<route type="generic" start_link="632454" end_link="632454" trav_time="00:00:19" distance="22.862929340119255" />
+			</leg>
+			<activity type="home" link="632454" facility="home_460084" x="561640.63" y="6277464.03" start_time="12:45:51">
+			</activity>
+		</plan>
+	</person>
+
+</population>

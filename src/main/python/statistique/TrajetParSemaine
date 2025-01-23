@@ -1,0 +1,93 @@
+import pandas as pd
+
+output_path = "C:\\Users\\User\\IdeaProjects\\matsim-example-project-modified\\csv_semaine\\"
+
+include_other = True  # Set to True to include "other", False to exclude
+group_motifs = True  # Set to True to group specific motifs, False to include all motifs
+
+daily_files = {
+    "Sunday": 'agent_positions_motif_filtre_g_clean_sunday_short.csv',
+    "Monday": 'agent_positions_motif_filtre_g_clean_monday_short.csv',
+    "Tuesday": 'agent_positions_motif_filtre_g_clean_tuesday_short.csv',
+    "Wednesday": 'agent_positions_motif_filtre_g_clean_wednesday_short.csv',
+    # "Thursday": 'agent_positions_motif_filtre_g_clean_thursday.csv',
+    # "Friday": 'agent_positions_motif_filtre_clean_friday.csv',
+    # "Saturday": 'agent_positions_motif_filtre_clean_saturday.csv',
+}
+
+day_order = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday']
+
+# Define the specific motifs to retain
+specific_motifs = {
+    ("home", "work"),
+    ("home", "leisure"),
+    ("home", "education"),
+    ("home", "other"),
+    ("home", "shop"),
+    ("work", "home"),
+    ("leisure", "home"),
+    ("education", "home"),
+    ("other", "home"),
+    ("shop", "home"),
+}
+
+# Initialize dictionaries to aggregate trips by day
+trips_by_motif_per_day = {}
+
+# Process each file and handle data
+for day, file_name in daily_files.items():
+    try:
+        df = pd.read_csv(file_name)
+
+        # Initialize the dictionary for this day if it doesn't exist
+        if day not in trips_by_motif_per_day:
+            trips_by_motif_per_day[day] = {}
+
+        # Process each row in the DataFrame
+        for _, row in df.iterrows():
+            agent_id = row['AgentId']
+            motif_orig = row['Motif_Orig']
+            motif_dest = row['Motif_Dest']
+
+            # Check if "other" should be excluded based on the parameter
+            if not include_other and ("other" in [motif_orig, motif_dest]):
+                continue  # Skip this row if "other" should be excluded
+
+            if group_motifs:
+                # Group into specific motifs or "divers"
+                if (motif_orig, motif_dest) in specific_motifs:
+                    trip_type = (motif_orig, motif_dest)
+                else:
+                    trip_type = ("divers", "divers")
+            else:
+                # Keep all motifs as is
+                trip_type = (motif_orig, motif_dest)
+
+            # Initialize the set for this trip type if it doesn't exist
+            if trip_type not in trips_by_motif_per_day[day]:
+                trips_by_motif_per_day[day][trip_type] = set()
+
+            # Add the agent to the set for this trip type in this day
+            trips_by_motif_per_day[day][trip_type].add(agent_id)
+
+    except FileNotFoundError:
+        print(f"File not found: {file_name}. Skipping.")
+
+# Convert trips by motif per day into a DataFrame
+motif_data = []
+for day, motifs in trips_by_motif_per_day.items():
+    for (motif_orig, motif_dest), agents in motifs.items():
+        motif_data.append([day, motif_orig, motif_dest, len(agents)])  # Use len(agents) to count distinct agents
+
+motif_df = pd.DataFrame(motif_data, columns=['Jour', 'Motif_Orig', 'Motif_Dest', 'Nombre_Trajet'])
+motif_df['Jour'] = pd.Categorical(motif_df['Jour'], categories=day_order, ordered=True)
+motif_df = motif_df.sort_values(by='Jour')
+
+# Calculate the total number of trips per day without distinguishing motifs
+trips_per_day_df = motif_df.groupby('Jour')['Nombre_Trajet'].sum().reset_index()
+trips_per_day_df.columns = ['Jour', 'Nombre_Trajet']
+trips_per_day_df['Jour'] = pd.Categorical(trips_per_day_df['Jour'], categories=day_order, ordered=True)
+trips_per_day_df = trips_per_day_df.sort_values(by='Jour')
+
+motif_df.to_csv(output_path + 'repartition_trajet_par_jour_avec_motif_regroup.csv', index=False)
+trips_per_day_df.to_csv(output_path + 'nombre_trajets_par_jour_sans_motif_regroup.csv', index=False)

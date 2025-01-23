@@ -1,0 +1,162 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plans SYSTEM "http://www.matsim.org/files/dtd/plans_v4.dtd">
+<plans xml:lang="de-CH">
+    <person id="1">
+        <plan>
+            <act type="home" x="-25000" y="0" link="2" end_time="06:00" />
+<!--            This is an activity of type home, which ends at 06:00. The agent will depart at this time for the next leg of their journey.-->
+<!--            the agent will prioritize link position if the x and y is differents-->
+<!--            agent departs from at the end of link 2-->
+
+            <leg mode="car">
+                <route>2 7 12</route>
+            </leg>
+<!--            The agent travels by car using the specified route through links 2, 7, and 12.-->
+<!--            if we look closely on via, it travel from node 2 to node 7, 12 and then reach end link 20-->
+<!--            even if the route is absent, agent will generate the route by itself-->
+
+            <act type="work" x="10000" y="0" link="20" dur="00:10" />
+<!--            The agent reaches the first work activity at coordinates x="10000" and y="0", linked to network link 20.-->
+<!--            in reality the workplace is very far from the route but agent will associate it to the nearest link-->
+<!--            The attribute dur="00:10" indicates that the agent will stay at this activity for 10 minutes before moving to the next leg.-->
+<!--            if we did not put the dur, agents will follow the configurations stated in config.xml using typicalDuration in planCalcScore-->
+
+            <leg mode="car">
+                <route> </route>
+            </leg>
+<!--            An empty route here means the agent does not perform any journey or has not yet started a journey.-->
+
+            <act type="work" x="10000" y="0" link="20" dur="03:30" />
+<!--            The agent starts another work activity at the same location, this time with a duration of 3 hours and 30 minutes (dur="03:30").-->
+<!--            After this time, the agent will proceed to the next leg.-->
+<!--            even if the xy is different than link, it does not represent walking, the agent just perform two different works here-->
+
+            <leg mode="car">
+                <route>13 14 15 1</route>
+            </leg>
+<!--            The agent travels by car using the route through links 13, 14, 15, and 1.-->
+<!--            it travel from node 13 to node 14, 15, 1 and then reach end link 2-->
+
+            <act type="home" x="-25000" y="0" link="2" />
+<!--            Finally, the agent reaches home at coordinates x="-25000", linked to network link 1.-->
+        </plan>
+    </person>
+
+    <person id="2">
+        <plan>
+            <act type="home" x="-25000" y="0" link="1" end_time="05:59" />
+            <leg mode="car">
+<!--                <route>2 7 12</route>-->
+            </leg>
+            <act type="work" x="10000" y="0" link="20" dur="02:30" />
+            <leg mode="car">
+<!--                <route>13 14 15 1</route>-->
+            </leg>
+            <act type="home" x="-25000" y="0" link="1" />
+        </plan>
+    </person>
+
+    <person id="3">
+        <plan>
+            <act type="home" x="-25000" y="0" link="1" end_time="05:58:30" />
+            <leg mode="car">
+                <route>2 7 12</route>
+            </leg>
+            <act type="work" x="10000" y="0" link="20" dur="01:30" />
+            <leg mode="car">
+                <route>13 14 15 1</route>
+            </leg>
+            <act type="home" x="-25000" y="0" link="1" />
+        </plan>
+    </person>
+
+    <person id="4">
+        <plan>
+            <act type="home" x="-25000" y="0" link="1" end_time="05:59:30" />
+            <leg mode="car">
+                <route>2 7 12</route>
+            </leg>
+            <act type="work" x="10000" y="0" link="20" dur="02:30" />
+            <leg mode="car">
+                <route>13 14 15 1</route>
+            </leg>
+            <act type="home" x="-25000" y="0" link="1" />
+        </plan>
+    </person>
+
+    <person id="5">
+        <plan>
+            <act type="home" x="-25000" y="0" link="1" end_time="06:00" />
+            <leg mode="car">
+                <route>2 7 12</route>
+            </leg>
+            <act type="work" x="10000" y="0" link="20" dur="06:30" />
+            <leg mode="car">
+                <route>13 14 15 1</route>
+            </leg>
+            <act type="home" x="-25000" y="0" link="1" />
+        </plan>
+    </person>
+
+</plans>
+
+        <!--<?xml version="1.0" ?>-->
+<!--<!DOCTYPE plans SYSTEM "http://www.matsim.org/files/dtd/plans_v4.dtd">-->
+<!--<plans xml:lang="de-CH">-->
+
+<!--    &lt;!&ndash; Person 1 &ndash;&gt;-->
+<!--    <person id="1">-->
+<!--        <plan selected="yes">-->
+<!--            <act type="home" x="-20000.0" y="0.0" end_time="07:30:00" /> &lt;!&ndash; Home at node 1 &ndash;&gt;-->
+<!--            <leg mode="car" />-->
+<!--            <act type="work" x="0.0" y="0.0" /> &lt;!&ndash; Work at node 12 &ndash;&gt;-->
+<!--            <leg mode="car" />-->
+<!--            <act type="home" x="-20000.0" y="0.0" /> &lt;!&ndash; Return to home at node 1 &ndash;&gt;-->
+<!--        </plan>-->
+<!--    </person>-->
+
+<!--    &lt;!&ndash; Person 2 &ndash;&gt;-->
+<!--    <person id="2">-->
+<!--        <plan selected="yes">-->
+<!--            <act type="home" x="-15000.0" y="0.0" end_time="08:00:00" /> &lt;!&ndash; Home at node 2 &ndash;&gt;-->
+<!--            <leg mode="car" />-->
+<!--            <act type="work" x="0.0" y="0.0" /> &lt;!&ndash; Work at node 12 &ndash;&gt;-->
+<!--            <leg mode="car" />-->
+<!--            <act type="home" x="-15000.0" y="0.0" /> &lt;!&ndash; Return to home at node 2 &ndash;&gt;-->
+<!--        </plan>-->
+<!--    </person>-->
+
+<!--    &lt;!&ndash; Person 3 &ndash;&gt;-->
+<!--    <person id="3">-->
+<!--        <plan selected="yes">-->
+<!--            <act type="home" x="-865.0" y="5925.0" end_time="07:45:00" /> &lt;!&ndash; Home at node 3 &ndash;&gt;-->
+<!--            <leg mode="car" />-->
+<!--            <act type="work" x="0.0" y="0.0" /> &lt;!&ndash; Work at node 12 &ndash;&gt;-->
+<!--            <leg mode="car" />-->
+<!--            <act type="home" x="-865.0" y="5925.0" /> &lt;!&ndash; Return to home at node 3 &ndash;&gt;-->
+<!--        </plan>-->
+<!--    </person>-->
+
+<!--    &lt;!&ndash; Person 4 &ndash;&gt;-->
+<!--    <person id="4">-->
+<!--        <plan selected="yes">-->
+<!--            <act type="home" x="-2498.0" y="4331.0" end_time="07:15:00" /> &lt;!&ndash; Home at node 4 &ndash;&gt;-->
+<!--            <leg mode="car" />-->
+<!--            <act type="work" x="0.0" y="0.0" /> &lt;!&ndash; Work at node 12 &ndash;&gt;-->
+<!--            <leg mode="car" />-->
+<!--            <act type="home" x="-2498.0" y="4331.0" /> &lt;!&ndash; Return to home at node 4 &ndash;&gt;-->
+<!--        </plan>-->
+<!--    </person>-->
+
+<!--    &lt;!&ndash; Person 5 &ndash;&gt;-->
+<!--    <person id="5">-->
+<!--        <plan selected="yes">-->
+<!--            <act type="home" x="-3829.0" y="3215.0" end_time="08:15:00" /> &lt;!&ndash; Home at node 5 &ndash;&gt;-->
+<!--            <leg mode="car" />-->
+<!--            <act type="work" x="0.0" y="0.0" /> &lt;!&ndash; Work at node 12 &ndash;&gt;-->
+<!--            <leg mode="car" />-->
+<!--            <act type="home" x="-3829.0" y="3215.0" /> &lt;!&ndash; Return to home at node 5 &ndash;&gt;-->
+<!--        </plan>-->
+<!--    </person>-->
+
+<!--</plans>-->

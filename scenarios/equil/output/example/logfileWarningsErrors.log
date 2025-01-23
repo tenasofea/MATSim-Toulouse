@@ -1,0 +1,152 @@
+2024-09-18T13:46:56,237  WARN RandomizingTimeDistanceTravelDisutilityFactory:113 There will be no routing randomness. The randomization of the travel disutility requires the monetary distance rate to be different than zero. Continuing anyway.
+2024-09-18T13:46:56,237  WARN RandomizingTimeDistanceTravelDisutilityFactory:118 There will be no routing randomness. The randomization of the travel disutility requires the travel time cost rate to be different than zero. Continuing anyway.
+2024-09-18T13:46:56,239  WARN SpeedyALTData:141 Network does not contain any nodes!
+2024-09-18T13:46:56,432  WARN QueueWithBuffer:422 max flow from fdiag < flow cap in network file; linkId=1; network file flow cap/h=36000.0; max flow from fdiag/h=1739.1485809682804
+2024-09-18T13:46:56,432  WARN QueueWithBuffer:426 number of lanes from fdiag > number of lanes in network file; linkId=1; number of lanes in network file=1.0; number of lanes from fdiag=20.69978401727862
+2024-09-18T13:46:56,432  WARN QueueWithBuffer:436 The flow capacity will be reduced. See link attribute 'maxInflowUsedInQsim' written into the output network.
+2024-09-18T13:46:56,432  WARN QueueWithBuffer:500 Link 1 too small: enlarge storage capacity from: 1333.3333333333333 Vehicles to: 3599.712023038157 Vehicles.  This is not fatal, but modifies the traffic flow dynamics.
+2024-09-18T13:46:56,432  WARN QueueWithBuffer:539 storage capacity not sufficient for holes; increasing from 3599.712023038157 to 27599.712023038155
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:422 max flow from fdiag < flow cap in network file; linkId=2; network file flow cap/h=3600.0; max flow from fdiag/h=1739.1485809682804
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:426 number of lanes from fdiag > number of lanes in network file; linkId=2; number of lanes in network file=1.0; number of lanes from fdiag=2.069978401727862
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:436 The flow capacity will be reduced. See link attribute 'maxInflowUsedInQsim' written into the output network.
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:539 storage capacity not sufficient for holes; increasing from 1333.3333333333333 to 2759.9712023038155
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:422 max flow from fdiag < flow cap in network file; linkId=3; network file flow cap/h=3600.0; max flow from fdiag/h=1739.1485809682804
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:426 number of lanes from fdiag > number of lanes in network file; linkId=3; number of lanes in network file=1.0; number of lanes from fdiag=2.069978401727862
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:436 The flow capacity will be reduced. See link attribute 'maxInflowUsedInQsim' written into the output network.
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:539 storage capacity not sufficient for holes; increasing from 1333.3333333333333 to 2759.9712023038155
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:422 max flow from fdiag < flow cap in network file; linkId=4; network file flow cap/h=3600.0; max flow from fdiag/h=1739.1485809682804
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:426 number of lanes from fdiag > number of lanes in network file; linkId=4; number of lanes in network file=1.0; number of lanes from fdiag=2.069978401727862
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:436 The flow capacity will be reduced. See link attribute 'maxInflowUsedInQsim' written into the output network.
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:539 storage capacity not sufficient for holes; increasing from 1333.3333333333333 to 2759.9712023038155
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:422 max flow from fdiag < flow cap in network file; linkId=5; network file flow cap/h=3600.0; max flow from fdiag/h=1739.1485809682804
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:426 number of lanes from fdiag > number of lanes in network file; linkId=5; number of lanes in network file=1.0; number of lanes from fdiag=2.069978401727862
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:436 The flow capacity will be reduced. See link attribute 'maxInflowUsedInQsim' written into the output network.
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:539 storage capacity not sufficient for holes; increasing from 1333.3333333333333 to 2759.9712023038155
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:422 max flow from fdiag < flow cap in network file; linkId=6; network file flow cap/h=3600.0; max flow from fdiag/h=1739.1485809682804
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:426 number of lanes from fdiag > number of lanes in network file; linkId=6; number of lanes in network file=1.0; number of lanes from fdiag=2.069978401727862
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:436 The flow capacity will be reduced. See link attribute 'maxInflowUsedInQsim' written into the output network.
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:539 storage capacity not sufficient for holes; increasing from 1333.3333333333333 to 2759.9712023038155
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:422 max flow from fdiag < flow cap in network file; linkId=7; network file flow cap/h=3600.0; max flow from fdiag/h=1739.1485809682804
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:426 number of lanes from fdiag > number of lanes in network file; linkId=7; number of lanes in network file=1.0; number of lanes from fdiag=2.069978401727862
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:436 The flow capacity will be reduced. See link attribute 'maxInflowUsedInQsim' written into the output network.
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:539 storage capacity not sufficient for holes; increasing from 1333.3333333333333 to 2759.9712023038155
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:422 max flow from fdiag < flow cap in network file; linkId=8; network file flow cap/h=3600.0; max flow from fdiag/h=1739.1485809682804
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:426 number of lanes from fdiag > number of lanes in network file; linkId=8; number of lanes in network file=1.0; number of lanes from fdiag=2.069978401727862
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:436 The flow capacity will be reduced. See link attribute 'maxInflowUsedInQsim' written into the output network.
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:539 storage capacity not sufficient for holes; increasing from 1333.3333333333333 to 2759.9712023038155
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:422 max flow from fdiag < flow cap in network file; linkId=9; network file flow cap/h=3600.0; max flow from fdiag/h=1739.1485809682804
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:426 number of lanes from fdiag > number of lanes in network file; linkId=9; number of lanes in network file=1.0; number of lanes from fdiag=2.069978401727862
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:436 The flow capacity will be reduced. See link attribute 'maxInflowUsedInQsim' written into the output network.
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:539 storage capacity not sufficient for holes; increasing from 1333.3333333333333 to 2759.9712023038155
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:422 max flow from fdiag < flow cap in network file; linkId=10; network file flow cap/h=3600.0; max flow from fdiag/h=1739.1485809682804
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:426 number of lanes from fdiag > number of lanes in network file; linkId=10; number of lanes in network file=1.0; number of lanes from fdiag=2.069978401727862
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:431  Future occurences of this logging statement are suppressed.
+2024-09-18T13:46:56,434  WARN QueueWithBuffer:539 storage capacity not sufficient for holes; increasing from 1333.3333333333333 to 2759.9712023038155
+2024-09-18T13:46:56,442 ERROR QSim:360 got exception while cleaning up
+java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because the return value of "org.matsim.core.mobsim.qsim.qnetsimengine.AbstractQNetsimEngine.getQnetsimEngineRunner()" is null
+	at org.matsim.core.mobsim.qsim.qnetsimengine.AbstractQNetsimEngine.afterSim(AbstractQNetsimEngine.java:182) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.mobsim.qsim.QSim.cleanupSim(QSim.java:357) [matsim-2024.0.jar:?]
+	at org.matsim.core.mobsim.qsim.QSim.run(QSim.java:269) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.NewControler.runMobSim(NewControler.java:125) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController$8.run(AbstractController.java:214) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController.iterationStep(AbstractController.java:246) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController.mobsim(AbstractController.java:210) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController.iteration(AbstractController.java:157) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController.doIterations(AbstractController.java:124) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController$1.run(AbstractController.java:84) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:70) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:53) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController.run(AbstractController.java:92) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.NewControler.run(NewControler.java:83) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.Controler.run(Controler.java:259) [matsim-2024.0.jar:?]
+	at org.matsim.project.RunMatsim.main(RunMatsim.java:65) [classes/:?]
+2024-09-18T13:46:56,449  WARN QSim:274 exception in finally block - this may be a follow-up exception of an exception thrown in the try block.
+java.lang.RuntimeException: got exception while cleaning up the QSim. Please check the error messages above for details.
+	at org.matsim.core.mobsim.qsim.QSim.cleanupSim(QSim.java:365) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.mobsim.qsim.QSim.run(QSim.java:269) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.NewControler.runMobSim(NewControler.java:125) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController$8.run(AbstractController.java:214) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController.iterationStep(AbstractController.java:246) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController.mobsim(AbstractController.java:210) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController.iteration(AbstractController.java:157) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController.doIterations(AbstractController.java:124) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController$1.run(AbstractController.java:84) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:70) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:53) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController.run(AbstractController.java:92) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.NewControler.run(NewControler.java:83) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.Controler.run(Controler.java:259) [matsim-2024.0.jar:?]
+	at org.matsim.project.RunMatsim.main(RunMatsim.java:65) [classes/:?]
+2024-09-18T13:46:56,449 ERROR AbstractController:225 Mobsim did not complete normally! afterMobsimListeners will be called anyway.
+java.lang.RuntimeException: Could not retrieve vehicle id from person: 1 for mode: car. 
+If you are not using config.qsim().getVehicleSource() with 'defaultVehicle' or 'modeVehicleTypesFromVehiclesData' you have to provide a vehicle for each mode for each person. Attach a PersonVehicles instance (containing a map of mode:String -> id:Id<Vehicle>) with key 'vehicles' as person attribute to each person.
+ VehicleUtils.insertVehicleIdIntoAttributes does this for you.
+	at org.matsim.vehicles.VehicleUtils.getVehicleId(VehicleUtils.java:169) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.mobsim.qsim.agents.PopulationAgentSource.insertVehicles(PopulationAgentSource.java:96) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.mobsim.qsim.agents.PopulationAgentSource.insertAgentsIntoMobsim(PopulationAgentSource.java:73) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.mobsim.qsim.QSim.createAgents(QSim.java:309) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.mobsim.qsim.QSim.prepareSim(QSim.java:294) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.mobsim.qsim.QSim.run(QSim.java:242) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.controler.NewControler.runMobSim(NewControler.java:125) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController$8.run(AbstractController.java:214) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController.iterationStep(AbstractController.java:246) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController.mobsim(AbstractController.java:210) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController.iteration(AbstractController.java:157) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController.doIterations(AbstractController.java:124) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController$1.run(AbstractController.java:84) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:70) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:53) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController.run(AbstractController.java:92) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.NewControler.run(NewControler.java:83) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.Controler.run(Controler.java:259) [matsim-2024.0.jar:?]
+	at org.matsim.project.RunMatsim.main(RunMatsim.java:65) [classes/:?]
+2024-09-18T13:46:56,462 ERROR MatsimRuntimeModifications:76 Getting uncaught Exception in Thread main
+java.lang.RuntimeException: Could not retrieve vehicle id from person: 1 for mode: car. 
+If you are not using config.qsim().getVehicleSource() with 'defaultVehicle' or 'modeVehicleTypesFromVehiclesData' you have to provide a vehicle for each mode for each person. Attach a PersonVehicles instance (containing a map of mode:String -> id:Id<Vehicle>) with key 'vehicles' as person attribute to each person.
+ VehicleUtils.insertVehicleIdIntoAttributes does this for you.
+	at org.matsim.vehicles.VehicleUtils.getVehicleId(VehicleUtils.java:169) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.mobsim.qsim.agents.PopulationAgentSource.insertVehicles(PopulationAgentSource.java:96) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.mobsim.qsim.agents.PopulationAgentSource.insertAgentsIntoMobsim(PopulationAgentSource.java:73) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.mobsim.qsim.QSim.createAgents(QSim.java:309) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.mobsim.qsim.QSim.prepareSim(QSim.java:294) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.mobsim.qsim.QSim.run(QSim.java:242) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.controler.NewControler.runMobSim(NewControler.java:125) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController$8.run(AbstractController.java:214) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController.iterationStep(AbstractController.java:246) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController.mobsim(AbstractController.java:210) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController.iteration(AbstractController.java:157) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController.doIterations(AbstractController.java:124) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController$1.run(AbstractController.java:84) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:70) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:53) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController.run(AbstractController.java:92) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.NewControler.run(NewControler.java:83) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.Controler.run(Controler.java:259) [matsim-2024.0.jar:?]
+	at org.matsim.project.RunMatsim.main(RunMatsim.java:65) [classes/:?]
+2024-09-18T13:46:56,462 ERROR MatsimRuntimeModifications:82 ERROR --- This is an unexpected shutdown!
+2024-09-18T13:46:56,462 ERROR MatsimRuntimeModifications:85 Shutdown possibly caused by the following Exception:
+java.lang.RuntimeException: Could not retrieve vehicle id from person: 1 for mode: car. 
+If you are not using config.qsim().getVehicleSource() with 'defaultVehicle' or 'modeVehicleTypesFromVehiclesData' you have to provide a vehicle for each mode for each person. Attach a PersonVehicles instance (containing a map of mode:String -> id:Id<Vehicle>) with key 'vehicles' as person attribute to each person.
+ VehicleUtils.insertVehicleIdIntoAttributes does this for you.
+	at org.matsim.vehicles.VehicleUtils.getVehicleId(VehicleUtils.java:169) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.mobsim.qsim.agents.PopulationAgentSource.insertVehicles(PopulationAgentSource.java:96) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.mobsim.qsim.agents.PopulationAgentSource.insertAgentsIntoMobsim(PopulationAgentSource.java:73) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.mobsim.qsim.QSim.createAgents(QSim.java:309) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.mobsim.qsim.QSim.prepareSim(QSim.java:294) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.mobsim.qsim.QSim.run(QSim.java:242) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.controler.NewControler.runMobSim(NewControler.java:125) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController$8.run(AbstractController.java:214) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController.iterationStep(AbstractController.java:246) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController.mobsim(AbstractController.java:210) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController.iteration(AbstractController.java:157) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController.doIterations(AbstractController.java:124) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController$1.run(AbstractController.java:84) ~[matsim-2024.0.jar:?]
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:70) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:53) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.AbstractController.run(AbstractController.java:92) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.NewControler.run(NewControler.java:83) [matsim-2024.0.jar:?]
+	at org.matsim.core.controler.Controler.run(Controler.java:259) [matsim-2024.0.jar:?]
+	at org.matsim.project.RunMatsim.main(RunMatsim.java:65) [classes/:?]
+2024-09-18T13:46:56,485 ERROR MatsimRuntimeModifications:100 ERROR --- MATSim unexpectedly terminated. Please check the output or the logfile with warnings and errors for hints.
+2024-09-18T13:46:56,485 ERROR MatsimRuntimeModifications:101 ERROR --- results should not be used for further analysis.
+2024-09-18T13:46:56,486 ERROR MatsimRuntimeModifications:105 ERROR --- This was an unexpected shutdown! See the log file for a possible reason.
