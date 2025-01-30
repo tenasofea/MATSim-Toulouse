@@ -1,0 +1,163 @@
+\doxysection{Freq\+Trajet\+Par\+Destination Namespace Reference}
+\hypertarget{namespace_freq_trajet_par_destination}{}\label{namespace_freq_trajet_par_destination}\index{FreqTrajetParDestination@{FreqTrajetParDestination}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespace_freq_trajet_par_destination_aa0843c2b35e41a51ade9a77dcf072046}{file\+\_\+path}} = \textquotesingle{}ordered\+\_\+weekly\+\_\+trips.\+csv\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_a0b66553a0ccf97879fd6d12168b5ed8a}{data}} = pd.\+read\+\_\+csv(\mbox{\hyperlink{namespace_freq_trajet_par_destination_aa0843c2b35e41a51ade9a77dcf072046}{file\+\_\+path}})
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_adc15eaf53ce08c40672ed2aeab56e379}{consecutive\+\_\+trips}}
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_aca3962996eb02746ac876273aacc2860}{consecutive\+\_\+trip\+\_\+counts}} = consecutive\+\_\+trips.\+groupby(\textquotesingle{}Agent\+Id\textquotesingle{}).size()
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_ad56c80e02d45d29d56195743e890e024}{frequency\+\_\+distribution}} = consecutive\+\_\+trip\+\_\+counts.\+value\+\_\+counts().sort\+\_\+index()
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_a77ef8c1113755d900bdb9c6464d3e6db}{x\+\_\+range}} = range(1, 15)
+\item 
+int \mbox{\hyperlink{namespace_freq_trajet_par_destination_a141a5a33277bd9905acc6e5ea20eece0}{y\+\_\+max}} = 700
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_ac1167f285558b6a2f5f339a681b1c51a}{figsize}}
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_a29ba80cc2ff47eaca8814ed060f0f20a}{bars}}
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_ad07c7fec08ce26efbcf58fb65db1d1ac}{height}} = bar.\+get\+\_\+height()
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_a57e62c674f4da8ac3e296f6a3d96de09}{ha}}
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_ac66f1be44ef4851224fcff503e1b9aef}{va}}
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_aa4a39512b5af63c1f54db6394e98924c}{fontsize}}
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_a66da8c99030097a7361b1997c08c9748}{color}}
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_ac1079dbd33919cd2437438cff82e647c}{axis}}
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_a898eccda01410081ca1fa08f0e3ab0f5}{linestyle}}
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_af81d843b28e2405f71d0584e059d9ef8}{alpha}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespace_freq_trajet_par_destination_af81d843b28e2405f71d0584e059d9ef8}\index{FreqTrajetParDestination@{FreqTrajetParDestination}!alpha@{alpha}}
+\index{alpha@{alpha}!FreqTrajetParDestination@{FreqTrajetParDestination}}
+\doxysubsubsection{\texorpdfstring{alpha}{alpha}}
+{\footnotesize\ttfamily \label{namespace_freq_trajet_par_destination_af81d843b28e2405f71d0584e059d9ef8} 
+Freq\+Trajet\+Par\+Destination.\+alpha}
+
+\Hypertarget{namespace_freq_trajet_par_destination_ac1079dbd33919cd2437438cff82e647c}\index{FreqTrajetParDestination@{FreqTrajetParDestination}!axis@{axis}}
+\index{axis@{axis}!FreqTrajetParDestination@{FreqTrajetParDestination}}
+\doxysubsubsection{\texorpdfstring{axis}{axis}}
+{\footnotesize\ttfamily \label{namespace_freq_trajet_par_destination_ac1079dbd33919cd2437438cff82e647c} 
+Freq\+Trajet\+Par\+Destination.\+axis}
+
+\Hypertarget{namespace_freq_trajet_par_destination_a29ba80cc2ff47eaca8814ed060f0f20a}\index{FreqTrajetParDestination@{FreqTrajetParDestination}!bars@{bars}}
+\index{bars@{bars}!FreqTrajetParDestination@{FreqTrajetParDestination}}
+\doxysubsubsection{\texorpdfstring{bars}{bars}}
+{\footnotesize\ttfamily \label{namespace_freq_trajet_par_destination_a29ba80cc2ff47eaca8814ed060f0f20a} 
+Freq\+Trajet\+Par\+Destination.\+bars}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ plt.bar(}
+\DoxyCodeLine{00002\ \ \ \ \ frequency\_distribution.index,\ }
+\DoxyCodeLine{00003\ \ \ \ \ frequency\_distribution.values,\ }
+\DoxyCodeLine{00004\ \ \ \ \ width=0.8,\ }
+\DoxyCodeLine{00005\ \ \ \ \ edgecolor=\textcolor{stringliteral}{'black'}}
+\DoxyCodeLine{00006\ )}
+
+\end{DoxyCode}
+\Hypertarget{namespace_freq_trajet_par_destination_a66da8c99030097a7361b1997c08c9748}\index{FreqTrajetParDestination@{FreqTrajetParDestination}!color@{color}}
+\index{color@{color}!FreqTrajetParDestination@{FreqTrajetParDestination}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily \label{namespace_freq_trajet_par_destination_a66da8c99030097a7361b1997c08c9748} 
+Freq\+Trajet\+Par\+Destination.\+color}
+
+\Hypertarget{namespace_freq_trajet_par_destination_aca3962996eb02746ac876273aacc2860}\index{FreqTrajetParDestination@{FreqTrajetParDestination}!consecutive\_trip\_counts@{consecutive\_trip\_counts}}
+\index{consecutive\_trip\_counts@{consecutive\_trip\_counts}!FreqTrajetParDestination@{FreqTrajetParDestination}}
+\doxysubsubsection{\texorpdfstring{consecutive\_trip\_counts}{consecutive\_trip\_counts}}
+{\footnotesize\ttfamily \label{namespace_freq_trajet_par_destination_aca3962996eb02746ac876273aacc2860} 
+Freq\+Trajet\+Par\+Destination.\+consecutive\+\_\+trip\+\_\+counts = consecutive\+\_\+trips.\+groupby(\textquotesingle{}Agent\+Id\textquotesingle{}).size()}
+
+\Hypertarget{namespace_freq_trajet_par_destination_adc15eaf53ce08c40672ed2aeab56e379}\index{FreqTrajetParDestination@{FreqTrajetParDestination}!consecutive\_trips@{consecutive\_trips}}
+\index{consecutive\_trips@{consecutive\_trips}!FreqTrajetParDestination@{FreqTrajetParDestination}}
+\doxysubsubsection{\texorpdfstring{consecutive\_trips}{consecutive\_trips}}
+{\footnotesize\ttfamily \label{namespace_freq_trajet_par_destination_adc15eaf53ce08c40672ed2aeab56e379} 
+Freq\+Trajet\+Par\+Destination.\+consecutive\+\_\+trips}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ data[}
+\DoxyCodeLine{00002\ \ \ \ \ (data[\textcolor{stringliteral}{'Prev\_Motif\_Orig'}]\ ==\ \textcolor{stringliteral}{'home'})\ \&\ (data[\textcolor{stringliteral}{'Prev\_Motif\_Dest'}]\ ==\ \textcolor{stringliteral}{'other'})\ \&\ \ \textcolor{comment}{\#\ Previous\ trip\ was\ home-\/>work}}
+\DoxyCodeLine{00003\ \ \ \ \ (data[\textcolor{stringliteral}{'Motif\_Orig'}]\ ==\ \textcolor{stringliteral}{'other'})\ \&\ (data[\textcolor{stringliteral}{'Motif\_Dest'}]\ ==\ \textcolor{stringliteral}{'home'})\ \&\ \ \textcolor{comment}{\#\ Current\ trip\ is\ work-\/>home}}
+\DoxyCodeLine{00004\ \ \ \ \ (data[\textcolor{stringliteral}{'AgentId'}]\ ==\ data[\textcolor{stringliteral}{'Prev\_AgentId'}])\ \ \textcolor{comment}{\#\ Same\ agent}}
+\DoxyCodeLine{00005\ ]}
+
+\end{DoxyCode}
+\Hypertarget{namespace_freq_trajet_par_destination_a0b66553a0ccf97879fd6d12168b5ed8a}\index{FreqTrajetParDestination@{FreqTrajetParDestination}!data@{data}}
+\index{data@{data}!FreqTrajetParDestination@{FreqTrajetParDestination}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \label{namespace_freq_trajet_par_destination_a0b66553a0ccf97879fd6d12168b5ed8a} 
+Freq\+Trajet\+Par\+Destination.\+data = pd.\+read\+\_\+csv(\mbox{\hyperlink{namespace_freq_trajet_par_destination_aa0843c2b35e41a51ade9a77dcf072046}{file\+\_\+path}})}
+
+\Hypertarget{namespace_freq_trajet_par_destination_ac1167f285558b6a2f5f339a681b1c51a}\index{FreqTrajetParDestination@{FreqTrajetParDestination}!figsize@{figsize}}
+\index{figsize@{figsize}!FreqTrajetParDestination@{FreqTrajetParDestination}}
+\doxysubsubsection{\texorpdfstring{figsize}{figsize}}
+{\footnotesize\ttfamily \label{namespace_freq_trajet_par_destination_ac1167f285558b6a2f5f339a681b1c51a} 
+Freq\+Trajet\+Par\+Destination.\+figsize}
+
+\Hypertarget{namespace_freq_trajet_par_destination_aa0843c2b35e41a51ade9a77dcf072046}\index{FreqTrajetParDestination@{FreqTrajetParDestination}!file\_path@{file\_path}}
+\index{file\_path@{file\_path}!FreqTrajetParDestination@{FreqTrajetParDestination}}
+\doxysubsubsection{\texorpdfstring{file\_path}{file\_path}}
+{\footnotesize\ttfamily \label{namespace_freq_trajet_par_destination_aa0843c2b35e41a51ade9a77dcf072046} 
+str Freq\+Trajet\+Par\+Destination.\+file\+\_\+path = \textquotesingle{}ordered\+\_\+weekly\+\_\+trips.\+csv\textquotesingle{}}
+
+\Hypertarget{namespace_freq_trajet_par_destination_aa4a39512b5af63c1f54db6394e98924c}\index{FreqTrajetParDestination@{FreqTrajetParDestination}!fontsize@{fontsize}}
+\index{fontsize@{fontsize}!FreqTrajetParDestination@{FreqTrajetParDestination}}
+\doxysubsubsection{\texorpdfstring{fontsize}{fontsize}}
+{\footnotesize\ttfamily \label{namespace_freq_trajet_par_destination_aa4a39512b5af63c1f54db6394e98924c} 
+Freq\+Trajet\+Par\+Destination.\+fontsize}
+
+\Hypertarget{namespace_freq_trajet_par_destination_ad56c80e02d45d29d56195743e890e024}\index{FreqTrajetParDestination@{FreqTrajetParDestination}!frequency\_distribution@{frequency\_distribution}}
+\index{frequency\_distribution@{frequency\_distribution}!FreqTrajetParDestination@{FreqTrajetParDestination}}
+\doxysubsubsection{\texorpdfstring{frequency\_distribution}{frequency\_distribution}}
+{\footnotesize\ttfamily \label{namespace_freq_trajet_par_destination_ad56c80e02d45d29d56195743e890e024} 
+Freq\+Trajet\+Par\+Destination.\+frequency\+\_\+distribution = consecutive\+\_\+trip\+\_\+counts.\+value\+\_\+counts().sort\+\_\+index()}
+
+\Hypertarget{namespace_freq_trajet_par_destination_a57e62c674f4da8ac3e296f6a3d96de09}\index{FreqTrajetParDestination@{FreqTrajetParDestination}!ha@{ha}}
+\index{ha@{ha}!FreqTrajetParDestination@{FreqTrajetParDestination}}
+\doxysubsubsection{\texorpdfstring{ha}{ha}}
+{\footnotesize\ttfamily \label{namespace_freq_trajet_par_destination_a57e62c674f4da8ac3e296f6a3d96de09} 
+Freq\+Trajet\+Par\+Destination.\+ha}
+
+\Hypertarget{namespace_freq_trajet_par_destination_ad07c7fec08ce26efbcf58fb65db1d1ac}\index{FreqTrajetParDestination@{FreqTrajetParDestination}!height@{height}}
+\index{height@{height}!FreqTrajetParDestination@{FreqTrajetParDestination}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily \label{namespace_freq_trajet_par_destination_ad07c7fec08ce26efbcf58fb65db1d1ac} 
+Freq\+Trajet\+Par\+Destination.\+height = bar.\+get\+\_\+height()}
+
+\Hypertarget{namespace_freq_trajet_par_destination_a898eccda01410081ca1fa08f0e3ab0f5}\index{FreqTrajetParDestination@{FreqTrajetParDestination}!linestyle@{linestyle}}
+\index{linestyle@{linestyle}!FreqTrajetParDestination@{FreqTrajetParDestination}}
+\doxysubsubsection{\texorpdfstring{linestyle}{linestyle}}
+{\footnotesize\ttfamily \label{namespace_freq_trajet_par_destination_a898eccda01410081ca1fa08f0e3ab0f5} 
+Freq\+Trajet\+Par\+Destination.\+linestyle}
+
+\Hypertarget{namespace_freq_trajet_par_destination_ac66f1be44ef4851224fcff503e1b9aef}\index{FreqTrajetParDestination@{FreqTrajetParDestination}!va@{va}}
+\index{va@{va}!FreqTrajetParDestination@{FreqTrajetParDestination}}
+\doxysubsubsection{\texorpdfstring{va}{va}}
+{\footnotesize\ttfamily \label{namespace_freq_trajet_par_destination_ac66f1be44ef4851224fcff503e1b9aef} 
+Freq\+Trajet\+Par\+Destination.\+va}
+
+\Hypertarget{namespace_freq_trajet_par_destination_a77ef8c1113755d900bdb9c6464d3e6db}\index{FreqTrajetParDestination@{FreqTrajetParDestination}!x\_range@{x\_range}}
+\index{x\_range@{x\_range}!FreqTrajetParDestination@{FreqTrajetParDestination}}
+\doxysubsubsection{\texorpdfstring{x\_range}{x\_range}}
+{\footnotesize\ttfamily \label{namespace_freq_trajet_par_destination_a77ef8c1113755d900bdb9c6464d3e6db} 
+Freq\+Trajet\+Par\+Destination.\+x\+\_\+range = range(1, 15)}
+
+\Hypertarget{namespace_freq_trajet_par_destination_a141a5a33277bd9905acc6e5ea20eece0}\index{FreqTrajetParDestination@{FreqTrajetParDestination}!y\_max@{y\_max}}
+\index{y\_max@{y\_max}!FreqTrajetParDestination@{FreqTrajetParDestination}}
+\doxysubsubsection{\texorpdfstring{y\_max}{y\_max}}
+{\footnotesize\ttfamily \label{namespace_freq_trajet_par_destination_a141a5a33277bd9905acc6e5ea20eece0} 
+int Freq\+Trajet\+Par\+Destination.\+y\+\_\+max = 700}
+

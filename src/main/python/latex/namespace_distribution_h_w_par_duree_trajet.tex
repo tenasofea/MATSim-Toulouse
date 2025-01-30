@@ -1,0 +1,67 @@
+\doxysection{Distribution\+HWPar\+Duree\+Trajet Namespace Reference}
+\hypertarget{namespace_distribution_h_w_par_duree_trajet}{}\label{namespace_distribution_h_w_par_duree_trajet}\index{DistributionHWParDureeTrajet@{DistributionHWParDureeTrajet}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespace_distribution_h_w_par_duree_trajet_a98c7b3df99c0cac78ea5273b27eeee28}{file\+\_\+path}} = \textquotesingle{}C\+:\textbackslash{}\textbackslash{}\+Users\textbackslash{}\textbackslash{}\+User\textbackslash{}\textbackslash{}\+Idea\+Projects\textbackslash{}\textbackslash{}matsim-\/example-\/project-\/modified\textbackslash{}\textbackslash{}csv\+\_\+short\textbackslash{}\textbackslash{}duree\+\_\+total\+\_\+par\+\_\+trajet.\+csv\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespace_distribution_h_w_par_duree_trajet_ad9460fa32ca91b8d370406b6a1b9fc97}{data}} = pd.\+read\+\_\+csv(\mbox{\hyperlink{namespace_distribution_h_w_par_duree_trajet_a98c7b3df99c0cac78ea5273b27eeee28}{file\+\_\+path}})
+\item 
+\mbox{\hyperlink{namespace_distribution_h_w_par_duree_trajet_a31db23d1cddbf541de2a43db45a6ffe3}{home\+\_\+work\+\_\+trips}} = \mbox{\hyperlink{namespace_distribution_h_w_par_duree_trajet_ad9460fa32ca91b8d370406b6a1b9fc97}{data}}\mbox{[}(\mbox{\hyperlink{namespace_distribution_h_w_par_duree_trajet_ad9460fa32ca91b8d370406b6a1b9fc97}{data}}\mbox{[}\textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}\mbox{]} == \textquotesingle{}home\textquotesingle{}) \& (\mbox{\hyperlink{namespace_distribution_h_w_par_duree_trajet_ad9460fa32ca91b8d370406b6a1b9fc97}{data}}\mbox{[}\textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}\mbox{]} == \textquotesingle{}work\textquotesingle{})\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_distribution_h_w_par_duree_trajet_a5cbd0d6be2dc18753b42710cc3a98645}{fig}}
+\item 
+\mbox{\hyperlink{namespace_distribution_h_w_par_duree_trajet_ae32bcd660589d72be28dd3180ca6994f}{xaxis\+\_\+title}}
+\item 
+\mbox{\hyperlink{namespace_distribution_h_w_par_duree_trajet_ad09af83e843141d498ad91785bd68f2c}{yaxis\+\_\+title}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespace_distribution_h_w_par_duree_trajet_ad9460fa32ca91b8d370406b6a1b9fc97}\index{DistributionHWParDureeTrajet@{DistributionHWParDureeTrajet}!data@{data}}
+\index{data@{data}!DistributionHWParDureeTrajet@{DistributionHWParDureeTrajet}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \label{namespace_distribution_h_w_par_duree_trajet_ad9460fa32ca91b8d370406b6a1b9fc97} 
+Distribution\+HWPar\+Duree\+Trajet.\+data = pd.\+read\+\_\+csv(\mbox{\hyperlink{namespace_distribution_h_w_par_duree_trajet_a98c7b3df99c0cac78ea5273b27eeee28}{file\+\_\+path}})}
+
+\Hypertarget{namespace_distribution_h_w_par_duree_trajet_a5cbd0d6be2dc18753b42710cc3a98645}\index{DistributionHWParDureeTrajet@{DistributionHWParDureeTrajet}!fig@{fig}}
+\index{fig@{fig}!DistributionHWParDureeTrajet@{DistributionHWParDureeTrajet}}
+\doxysubsubsection{\texorpdfstring{fig}{fig}}
+{\footnotesize\ttfamily \label{namespace_distribution_h_w_par_duree_trajet_a5cbd0d6be2dc18753b42710cc3a98645} 
+Distribution\+HWPar\+Duree\+Trajet.\+fig}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ px.histogram(}
+\DoxyCodeLine{00002\ \ \ \ \ home\_work\_trips,}
+\DoxyCodeLine{00003\ \ \ \ \ x=\textcolor{stringliteral}{'Duree\_trajet'},}
+\DoxyCodeLine{00004\ \ \ \ \ nbins=100,\ \ }
+\DoxyCodeLine{00005\ \ \ \ \ labels=\{\textcolor{stringliteral}{'Duree\_trajet'}:\ \textcolor{stringliteral}{'Durée\ du\ trajet\ (minutes)'}\},}
+\DoxyCodeLine{00006\ \ \ \ \ title=\textcolor{stringliteral}{'Distribution\ des\ trajets\ domicile-\/travail\ en\ fonction\ de\ leur\ durée'}}
+\DoxyCodeLine{00007\ )}
+
+\end{DoxyCode}
+\Hypertarget{namespace_distribution_h_w_par_duree_trajet_a98c7b3df99c0cac78ea5273b27eeee28}\index{DistributionHWParDureeTrajet@{DistributionHWParDureeTrajet}!file\_path@{file\_path}}
+\index{file\_path@{file\_path}!DistributionHWParDureeTrajet@{DistributionHWParDureeTrajet}}
+\doxysubsubsection{\texorpdfstring{file\_path}{file\_path}}
+{\footnotesize\ttfamily \label{namespace_distribution_h_w_par_duree_trajet_a98c7b3df99c0cac78ea5273b27eeee28} 
+str Distribution\+HWPar\+Duree\+Trajet.\+file\+\_\+path = \textquotesingle{}C\+:\textbackslash{}\textbackslash{}\+Users\textbackslash{}\textbackslash{}\+User\textbackslash{}\textbackslash{}\+Idea\+Projects\textbackslash{}\textbackslash{}matsim-\/example-\/project-\/modified\textbackslash{}\textbackslash{}csv\+\_\+short\textbackslash{}\textbackslash{}duree\+\_\+total\+\_\+par\+\_\+trajet.\+csv\textquotesingle{}}
+
+\Hypertarget{namespace_distribution_h_w_par_duree_trajet_a31db23d1cddbf541de2a43db45a6ffe3}\index{DistributionHWParDureeTrajet@{DistributionHWParDureeTrajet}!home\_work\_trips@{home\_work\_trips}}
+\index{home\_work\_trips@{home\_work\_trips}!DistributionHWParDureeTrajet@{DistributionHWParDureeTrajet}}
+\doxysubsubsection{\texorpdfstring{home\_work\_trips}{home\_work\_trips}}
+{\footnotesize\ttfamily \label{namespace_distribution_h_w_par_duree_trajet_a31db23d1cddbf541de2a43db45a6ffe3} 
+Distribution\+HWPar\+Duree\+Trajet.\+home\+\_\+work\+\_\+trips = \mbox{\hyperlink{namespace_distribution_h_w_par_duree_trajet_ad9460fa32ca91b8d370406b6a1b9fc97}{data}}\mbox{[}(\mbox{\hyperlink{namespace_distribution_h_w_par_duree_trajet_ad9460fa32ca91b8d370406b6a1b9fc97}{data}}\mbox{[}\textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}\mbox{]} == \textquotesingle{}home\textquotesingle{}) \& (\mbox{\hyperlink{namespace_distribution_h_w_par_duree_trajet_ad9460fa32ca91b8d370406b6a1b9fc97}{data}}\mbox{[}\textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}\mbox{]} == \textquotesingle{}work\textquotesingle{})\mbox{]}}
+
+\Hypertarget{namespace_distribution_h_w_par_duree_trajet_ae32bcd660589d72be28dd3180ca6994f}\index{DistributionHWParDureeTrajet@{DistributionHWParDureeTrajet}!xaxis\_title@{xaxis\_title}}
+\index{xaxis\_title@{xaxis\_title}!DistributionHWParDureeTrajet@{DistributionHWParDureeTrajet}}
+\doxysubsubsection{\texorpdfstring{xaxis\_title}{xaxis\_title}}
+{\footnotesize\ttfamily \label{namespace_distribution_h_w_par_duree_trajet_ae32bcd660589d72be28dd3180ca6994f} 
+Distribution\+HWPar\+Duree\+Trajet.\+xaxis\+\_\+title}
+
+\Hypertarget{namespace_distribution_h_w_par_duree_trajet_ad09af83e843141d498ad91785bd68f2c}\index{DistributionHWParDureeTrajet@{DistributionHWParDureeTrajet}!yaxis\_title@{yaxis\_title}}
+\index{yaxis\_title@{yaxis\_title}!DistributionHWParDureeTrajet@{DistributionHWParDureeTrajet}}
+\doxysubsubsection{\texorpdfstring{yaxis\_title}{yaxis\_title}}
+{\footnotesize\ttfamily \label{namespace_distribution_h_w_par_duree_trajet_ad09af83e843141d498ad91785bd68f2c} 
+Distribution\+HWPar\+Duree\+Trajet.\+yaxis\+\_\+title}
+

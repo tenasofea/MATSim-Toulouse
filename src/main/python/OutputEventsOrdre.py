@@ -153,41 +153,59 @@ import gzip
 from collections import defaultdict
 
 def ecrire_evenements_filtre(fichier_entree, fichier_sortie):
-    # dict pour stocker les events de chaque agent par temps
+    """
+    @brief Filters and writes important events for agents using cars only by ignoring other leg mode.
+
+    @details This function reads an input compressed XML file, processes events related to agents
+    based on their mode of transport, and filters for those using cars. It then writes the 
+    filtered events into a new XML file.
+
+    @param fichier_entree The path to the input compressed XML file containing events.
+    @param fichier_sortie The path to the output XML file for filtered events.
+    """
+    # Dictionary to store events of each agent sorted by time
     evenements_par_agent = defaultdict(list)
-    agents_qui_utilisent_voiture = set()  # set pour les agents utilsie voiture
-    agents_qui_nutilisent_pas_voiture = set()  # set pour les agents utilise walk seulement
-    
+    agents_qui_utilisent_voiture = set()  # Set for agents using cars
+    agents_qui_nutilisent_pas_voiture = set()  # Set for agents using only walking
+
     with gzip.open(fichier_entree, 'rt', encoding='utf-8') as f:
+        """
+        @brief Opens and parses the input compressed XML file.
+
+        @details Reads events from the file and categorizes agents based on their mode of transport.
+        """
         tree = ET.parse(f)
         root = tree.getroot()
 
-        # recupere tous les events
+        # Retrieve all events
         for event in root.findall('event'):
+            """
+            @brief Processes each event and determines its relevance.
+
+            @details Identifies the agent or vehicle involved and filters based on the mode of transport.
+            """
             event_type = event.get('type')
             person_id = event.get('person')
             vehicle_id = event.get('vehicle')
 
-            # si events concerne une personne ou un vehicule de type person_id:car
-            # si un person_id est trouve, utilise directement. sinon, si un vehicle_id se termine par :car, on l'interpete comme une voiture, et on extrait ID de la personne 
+            # Determine the agent ID from person_id or vehicle_id
             if person_id:
                 person_or_vehicle_id = person_id
             elif vehicle_id and vehicle_id.endswith(':car'):
                 person_or_vehicle_id = vehicle_id.split(':')[0]
             else:
-                continue  
+                continue  # Skip irrelevant events
 
             leg_mode = event.get('legMode')
-            # si events est associs à l'utilisation d'une voiture (legMode == 'car'), l'agent est ajoute à l'ensemble des personnes avec voiture
+            # Add agent to car users set if they use cars
             if leg_mode == 'car':
-                agents_qui_utilisent_voiture.add(person_or_vehicle_id) 
+                agents_qui_utilisent_voiture.add(person_or_vehicle_id)
             elif leg_mode == 'walk':
-                #  si l'agent utilise uniquement la marche (legMode == 'walk'), ajoute a cette ensemble (mais seulement si cet agent n'a jamais utilise une voiture)
-                # ajouter cet agent au set des agents qui n'utilisent que walk si on n'a pas vu d'utilisation de la car
+                # Add agent to walkers set if they don't use cars
                 if person_or_vehicle_id not in agents_qui_utilisent_voiture:
                     agents_qui_nutilisent_pas_voiture.add(person_or_vehicle_id)
 
-            # les evenements sont filtres pour ne garder que les types :
+            # Filter events of interest
             if event_type in ['actend', 'actstart'] and event.get('facility'):
                 time = float(event.get('time'))
                 evenements_par_agent[person_or_vehicle_id].append((time, event))
@@ -195,26 +213,36 @@ def ecrire_evenements_filtre(fichier_entree, fichier_sortie):
                 time = float(event.get('time'))
                 evenements_par_agent[person_or_vehicle_id].append((time, event))
 
-    # cree un nouvel element racine pour le fichier XML de sortie
+    # Create a new root element for the output XML file
     root_sortie = ET.Element('events')
 
-    # parcourt le dictionnaire evenements_par_agent (person_id,events)
-    # traiter les events agent par agent
+    # Process events agent by agent
     for person_id, events in evenements_par_agent.items():
-        # si l'agent utilise car
+        """
+        @brief Sorts and writes events for agents using cars.
+
+        @details Only events of agents categorized as car users are included in the output file.
+        """
         if person_id in agents_qui_utilisent_voiture:
-            # fontion trie cette liste events en fonction du premier element du tuple,cad le temps
             events_triees = sorted(events, key=lambda x: x[0])
-            # ajouter cette events a output fichier
             for _, event in events_triees:
                 root_sortie.append(event)
 
     tree_sortie = ET.ElementTree(root_sortie)
 
-    # ecrire le nouvel arbre dans un fichier XML
+    # Write the new tree into an XML file
     with open(fichier_sortie, 'wb') as f_out:
+        """
+        @brief Writes the filtered and sorted events into the output XML file.
+
+        @param fichier_sortie The path to the output XML file.
+        """
         tree_sortie.write(f_out, encoding='utf-8', xml_declaration=True)
 
+# Specify input and output files
 fichier_entree = "C:/Users/User/IdeaProjects/matsim-example-project-modified/simulation_output_monday/output_events.xml.gz"
 fichier_sortie = "output_detaillees_car_monday.xml"
+
+# Call the function to write filtered and sorted events to the output file
 ecrire_evenements_filtre(fichier_entree, fichier_sortie)
+

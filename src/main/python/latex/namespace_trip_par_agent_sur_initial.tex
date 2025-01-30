@@ -1,0 +1,72 @@
+\doxysection{Trip\+Par\+Agent\+Sur\+Initial Namespace Reference}
+\hypertarget{namespace_trip_par_agent_sur_initial}{}\label{namespace_trip_par_agent_sur_initial}\index{TripParAgentSurInitial@{TripParAgentSurInitial}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespace_trip_par_agent_sur_initial_a0f0e315c368455df011b0e547cd2f495}{file\+\_\+path}} = "{}C\+:/Users/User/Idea\+Projects/matsim-\/example-\/project-\/modified/csv\+\_\+clean/duree\+\_\+total\+\_\+par\+\_\+trajet.\+csv"{}
+\item 
+\mbox{\hyperlink{namespace_trip_par_agent_sur_initial_a4dd7461f9e23a5d0edcf99c35dfecfbe}{data}} = pd.\+read\+\_\+csv(\mbox{\hyperlink{namespace_trip_par_agent_sur_initial_a0f0e315c368455df011b0e547cd2f495}{file\+\_\+path}})
+\item 
+list \mbox{\hyperlink{namespace_trip_par_agent_sur_initial_a0cda34c1eb6f85e2672e254a7e4c22fc}{ordered\+\_\+trips}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_trip_par_agent_sur_initial_a9b42b71a47431ef86d637a3ebdcce81e}{agent\+\_\+data}} = agent\+\_\+data.\+sort\+\_\+values(by=\mbox{[}\textquotesingle{}New\+\_\+\+Trip\textquotesingle{}\mbox{]}).reset\+\_\+index(drop=True)
+\item 
+\mbox{\hyperlink{namespace_trip_par_agent_sur_initial_a53aa5f35e846c41e9882a42f0542d5f8}{current\+\_\+motif}} = agent\+\_\+data.\+loc\mbox{[}0, \textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_trip_par_agent_sur_initial_af71fbce8587d21a70d2c85ac88362abf}{ordered\+\_\+trips\+\_\+df}} = pd.\+Data\+Frame(\mbox{\hyperlink{namespace_trip_par_agent_sur_initial_a0cda34c1eb6f85e2672e254a7e4c22fc}{ordered\+\_\+trips}})
+\item 
+str \mbox{\hyperlink{namespace_trip_par_agent_sur_initial_af8b33d860ed0e4cec192eab1ab1fabf8}{output\+\_\+file}} = \textquotesingle{}ordered\+\_\+daily\+\_\+trips.\+csv\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespace_trip_par_agent_sur_initial_a554d3d7742403b6543c25302c578630a}{index}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespace_trip_par_agent_sur_initial_a9b42b71a47431ef86d637a3ebdcce81e}\index{TripParAgentSurInitial@{TripParAgentSurInitial}!agent\_data@{agent\_data}}
+\index{agent\_data@{agent\_data}!TripParAgentSurInitial@{TripParAgentSurInitial}}
+\doxysubsubsection{\texorpdfstring{agent\_data}{agent\_data}}
+{\footnotesize\ttfamily \label{namespace_trip_par_agent_sur_initial_a9b42b71a47431ef86d637a3ebdcce81e} 
+Trip\+Par\+Agent\+Sur\+Initial.\+agent\+\_\+data = agent\+\_\+data.\+sort\+\_\+values(by=\mbox{[}\textquotesingle{}New\+\_\+\+Trip\textquotesingle{}\mbox{]}).reset\+\_\+index(drop=True)}
+
+\Hypertarget{namespace_trip_par_agent_sur_initial_a53aa5f35e846c41e9882a42f0542d5f8}\index{TripParAgentSurInitial@{TripParAgentSurInitial}!current\_motif@{current\_motif}}
+\index{current\_motif@{current\_motif}!TripParAgentSurInitial@{TripParAgentSurInitial}}
+\doxysubsubsection{\texorpdfstring{current\_motif}{current\_motif}}
+{\footnotesize\ttfamily \label{namespace_trip_par_agent_sur_initial_a53aa5f35e846c41e9882a42f0542d5f8} 
+Trip\+Par\+Agent\+Sur\+Initial.\+current\+\_\+motif = agent\+\_\+data.\+loc\mbox{[}0, \textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}\mbox{]}}
+
+\Hypertarget{namespace_trip_par_agent_sur_initial_a4dd7461f9e23a5d0edcf99c35dfecfbe}\index{TripParAgentSurInitial@{TripParAgentSurInitial}!data@{data}}
+\index{data@{data}!TripParAgentSurInitial@{TripParAgentSurInitial}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \label{namespace_trip_par_agent_sur_initial_a4dd7461f9e23a5d0edcf99c35dfecfbe} 
+Trip\+Par\+Agent\+Sur\+Initial.\+data = pd.\+read\+\_\+csv(\mbox{\hyperlink{namespace_trip_par_agent_sur_initial_a0f0e315c368455df011b0e547cd2f495}{file\+\_\+path}})}
+
+\Hypertarget{namespace_trip_par_agent_sur_initial_a0f0e315c368455df011b0e547cd2f495}\index{TripParAgentSurInitial@{TripParAgentSurInitial}!file\_path@{file\_path}}
+\index{file\_path@{file\_path}!TripParAgentSurInitial@{TripParAgentSurInitial}}
+\doxysubsubsection{\texorpdfstring{file\_path}{file\_path}}
+{\footnotesize\ttfamily \label{namespace_trip_par_agent_sur_initial_a0f0e315c368455df011b0e547cd2f495} 
+str Trip\+Par\+Agent\+Sur\+Initial.\+file\+\_\+path = "{}C\+:/Users/User/Idea\+Projects/matsim-\/example-\/project-\/modified/csv\+\_\+clean/duree\+\_\+total\+\_\+par\+\_\+trajet.\+csv"{}}
+
+\Hypertarget{namespace_trip_par_agent_sur_initial_a554d3d7742403b6543c25302c578630a}\index{TripParAgentSurInitial@{TripParAgentSurInitial}!index@{index}}
+\index{index@{index}!TripParAgentSurInitial@{TripParAgentSurInitial}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily \label{namespace_trip_par_agent_sur_initial_a554d3d7742403b6543c25302c578630a} 
+Trip\+Par\+Agent\+Sur\+Initial.\+index}
+
+\Hypertarget{namespace_trip_par_agent_sur_initial_a0cda34c1eb6f85e2672e254a7e4c22fc}\index{TripParAgentSurInitial@{TripParAgentSurInitial}!ordered\_trips@{ordered\_trips}}
+\index{ordered\_trips@{ordered\_trips}!TripParAgentSurInitial@{TripParAgentSurInitial}}
+\doxysubsubsection{\texorpdfstring{ordered\_trips}{ordered\_trips}}
+{\footnotesize\ttfamily \label{namespace_trip_par_agent_sur_initial_a0cda34c1eb6f85e2672e254a7e4c22fc} 
+list Trip\+Par\+Agent\+Sur\+Initial.\+ordered\+\_\+trips = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{namespace_trip_par_agent_sur_initial_af71fbce8587d21a70d2c85ac88362abf}\index{TripParAgentSurInitial@{TripParAgentSurInitial}!ordered\_trips\_df@{ordered\_trips\_df}}
+\index{ordered\_trips\_df@{ordered\_trips\_df}!TripParAgentSurInitial@{TripParAgentSurInitial}}
+\doxysubsubsection{\texorpdfstring{ordered\_trips\_df}{ordered\_trips\_df}}
+{\footnotesize\ttfamily \label{namespace_trip_par_agent_sur_initial_af71fbce8587d21a70d2c85ac88362abf} 
+Trip\+Par\+Agent\+Sur\+Initial.\+ordered\+\_\+trips\+\_\+df = pd.\+Data\+Frame(\mbox{\hyperlink{namespace_trip_par_agent_sur_initial_a0cda34c1eb6f85e2672e254a7e4c22fc}{ordered\+\_\+trips}})}
+
+\Hypertarget{namespace_trip_par_agent_sur_initial_af8b33d860ed0e4cec192eab1ab1fabf8}\index{TripParAgentSurInitial@{TripParAgentSurInitial}!output\_file@{output\_file}}
+\index{output\_file@{output\_file}!TripParAgentSurInitial@{TripParAgentSurInitial}}
+\doxysubsubsection{\texorpdfstring{output\_file}{output\_file}}
+{\footnotesize\ttfamily \label{namespace_trip_par_agent_sur_initial_af8b33d860ed0e4cec192eab1ab1fabf8} 
+Trip\+Par\+Agent\+Sur\+Initial.\+output\+\_\+file = \textquotesingle{}ordered\+\_\+daily\+\_\+trips.\+csv\textquotesingle{}}
+

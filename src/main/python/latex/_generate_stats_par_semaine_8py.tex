@@ -1,0 +1,54 @@
+\doxysection{statistique/\+Generate\+Stats\+Par\+Semaine.py File Reference}
+\hypertarget{_generate_stats_par_semaine_8py}{}\label{_generate_stats_par_semaine_8py}\index{statistique/GenerateStatsParSemaine.py@{statistique/GenerateStatsParSemaine.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_generate_stats_par_semaine}{Generate\+Stats\+Par\+Semaine}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_semaine_a1efcb51d9e40bfefb82f25166469fc09}{Generate\+Stats\+Par\+Semaine.\+traffic\+\_\+df}} = pd.\+read\+\_\+csv("{}C\+:\textbackslash{}\textbackslash{}\+Users\textbackslash{}\textbackslash{}\+User\textbackslash{}\textbackslash{}\+Idea\+Projects\textbackslash{}\textbackslash{}matsim-\/example-\/project-\/modified\textbackslash{}\textbackslash{}csv\+\_\+semaine\textbackslash{}\textbackslash{}nombre\+\_\+trajets\+\_\+par\+\_\+jour\+\_\+sans\+\_\+motif\+\_\+regroup.\+csv"{})
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_semaine_ae9dc5c610cf37c412a5d7700b9f7d2f7}{Generate\+Stats\+Par\+Semaine.\+motif\+\_\+df}} = pd.\+read\+\_\+csv("{}C\+:\textbackslash{}\textbackslash{}\+Users\textbackslash{}\textbackslash{}\+User\textbackslash{}\textbackslash{}\+Idea\+Projects\textbackslash{}\textbackslash{}matsim-\/example-\/project-\/modified\textbackslash{}\textbackslash{}csv\+\_\+semaine\textbackslash{}\textbackslash{}repartition\+\_\+trajet\+\_\+par\+\_\+jour\+\_\+avec\+\_\+motif\+\_\+regroup.\+csv"{})
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_semaine_aad9f22f4551866d99ad1963391da18fd}{Generate\+Stats\+Par\+Semaine.\+columns}}
+\item 
+list \mbox{\hyperlink{namespace_generate_stats_par_semaine_a829c405c74d08697aa62e4e123e78809}{Generate\+Stats\+Par\+Semaine.\+day\+\_\+order}} = \mbox{[}\textquotesingle{}Sunday\textquotesingle{}, \textquotesingle{}Monday\textquotesingle{}, \textquotesingle{}Tuesday\textquotesingle{}, \textquotesingle{}Wednesday\textquotesingle{}, \textquotesingle{}Thursday\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_semaine_a390bb4f137ac53fcfd0398c17694629e}{Generate\+Stats\+Par\+Semaine.\+categories}}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_semaine_a071624f58aa499c6f91b1625a935ee21}{Generate\+Stats\+Par\+Semaine.\+ordered}}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_semaine_a2a176e44ef2dff629d3ceef4b47aa87a}{Generate\+Stats\+Par\+Semaine.\+total\+\_\+agents\+\_\+per\+\_\+day}} = motif\+\_\+df.\+groupby(\textquotesingle{}Jour\textquotesingle{})\mbox{[}\textquotesingle{}Nombre\+\_\+\+Trajet\textquotesingle{}\mbox{]}.sum().reset\+\_\+index()
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_semaine_a3646d4998bd972b629824ac23ba8dc76}{Generate\+Stats\+Par\+Semaine.\+merged\+\_\+df}} = pd.\+merge(\mbox{\hyperlink{namespace_generate_stats_par_semaine_ae9dc5c610cf37c412a5d7700b9f7d2f7}{motif\+\_\+df}}, \mbox{\hyperlink{namespace_generate_stats_par_semaine_a1efcb51d9e40bfefb82f25166469fc09}{traffic\+\_\+df}}, on=\textquotesingle{}Jour\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_semaine_ab0c5d71469ecf2aef52d965f803535e0}{Generate\+Stats\+Par\+Semaine.\+axis}}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_semaine_ae9f8d76c4479adbfae6e6bc4dff790d0}{Generate\+Stats\+Par\+Semaine.\+pivot\+\_\+df}} = merged\+\_\+df.\+pivot(index=\textquotesingle{}Jour\textquotesingle{}, \mbox{\hyperlink{namespace_generate_stats_par_semaine_aad9f22f4551866d99ad1963391da18fd}{columns}}=\mbox{[}\textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}\mbox{]}, values=\textquotesingle{}Normalized\+\_\+\+Trajet\textquotesingle{}).fillna(0)
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_semaine_a880c72408b99cf3bdd542ec3c6a8b821}{Generate\+Stats\+Par\+Semaine.\+fig}}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_semaine_ab2d134b756d3a6302f6854012eea6918}{Generate\+Stats\+Par\+Semaine.\+ax}}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_semaine_a38d061fc31bf856ed5d97611e60a7d1a}{Generate\+Stats\+Par\+Semaine.\+figsize}}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_semaine_a139bfee8fdf83ca840a172211083f061}{Generate\+Stats\+Par\+Semaine.\+kind}}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_semaine_a6a025f6347758ca82de9b3544b82e7c2}{Generate\+Stats\+Par\+Semaine.\+stacked}}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_semaine_a4ce60a4e1b7039277b44553d1b5d85d1}{Generate\+Stats\+Par\+Semaine.\+True}}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_semaine_a8b85165a9e6ee4f2f4c8dd1a37656482}{Generate\+Stats\+Par\+Semaine.\+colormap}}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_semaine_a1c05370ebc4ed6ea2dc0ccfb9331fe0a}{Generate\+Stats\+Par\+Semaine.\+title}}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_semaine_a3da6b384bc1d7d6b64c05125866f7b39}{Generate\+Stats\+Par\+Semaine.\+bbox\+\_\+to\+\_\+anchor}}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_semaine_a0bad9a867514f7c25ea9158536edafea}{Generate\+Stats\+Par\+Semaine.\+loc}}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_semaine_afa35c810ed789aa3a30e465fbb8f3bbe}{Generate\+Stats\+Par\+Semaine.\+color}}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_semaine_ac90a03d98642720d7cecabe0e676934b}{Generate\+Stats\+Par\+Semaine.\+linewidth}}
+\end{DoxyCompactItemize}

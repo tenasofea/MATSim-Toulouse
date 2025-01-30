@@ -1,0 +1,151 @@
+\doxysection{Statistique Namespace Reference}
+\hypertarget{namespace_statistique}{}\label{namespace_statistique}\index{Statistique@{Statistique}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_statistique_a2b4c9cc7eb53429f407bed0c8498e68d}{agents\+\_\+df}} = pd.\+read\+\_\+csv("{}agent\+\_\+positions\+\_\+motif\+\_\+filtre\+\_\+g\+\_\+clean\+\_\+monday.\+csv"{})
+\item 
+\mbox{\hyperlink{namespace_statistique_a1143c213a4f9096f9d0dff0386dcac3b}{persons\+\_\+df}} = pd.\+read\+\_\+csv("{}C\+:/Users/User/Idea\+Projects/matsim-\/example-\/project-\/modified/simulation\+\_\+output\+\_\+monday/output\+\_\+persons.\+csv.\+gz"{}, sep=\textquotesingle{};\textquotesingle{})
+\item 
+str \mbox{\hyperlink{namespace_statistique_a6edcdfe6ecf405657c6df29b1198ef9e}{output\+\_\+path}} = "{}C\+:\textbackslash{}\textbackslash{}\+Users\textbackslash{}\textbackslash{}\+User\textbackslash{}\textbackslash{}\+Idea\+Projects\textbackslash{}\textbackslash{}matsim-\/example-\/project-\/modified\textbackslash{}\textbackslash{}csv\+\_\+monday\textbackslash{}\textbackslash{}"{}
+\item 
+\mbox{\hyperlink{namespace_statistique_a5abe95916766ef92cfab383b0e0ca5e6}{population\+\_\+car}} = \mbox{\hyperlink{namespace_statistique_a2b4c9cc7eb53429f407bed0c8498e68d}{agents\+\_\+df}}\mbox{[}\textquotesingle{}Agent\+Id\textquotesingle{}\mbox{]}.nunique()
+\item 
+\mbox{\hyperlink{namespace_statistique_a74c1a6e4afd422a91f702572c30d9a7f}{population\+\_\+autre}} = \mbox{\hyperlink{namespace_statistique_a1143c213a4f9096f9d0dff0386dcac3b}{persons\+\_\+df}}\mbox{[}\textquotesingle{}person\textquotesingle{}\mbox{]}.nunique()
+\item 
+\mbox{\hyperlink{namespace_statistique_a445e81d6689b9ddf4d13e2b606196c1c}{nombre\+\_\+total\+\_\+trajets}} = agents\+\_\+df.\+groupby(\mbox{[}\textquotesingle{}Agent\+Id\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}, \textquotesingle{}New\+\_\+\+Trip\textquotesingle{}\mbox{]}).ngroups
+\item 
+\mbox{\hyperlink{namespace_statistique_a6287ee672f497352f37e4dfe8feaa72c}{nombre\+\_\+trajet\+\_\+par\+\_\+agent}} = agents\+\_\+df.\+groupby(\textquotesingle{}Agent\+Id\textquotesingle{})\mbox{[}\textquotesingle{}New\+\_\+\+Trip\textquotesingle{}\mbox{]}.nunique().reset\+\_\+index(name=\textquotesingle{}Nombre\+\_\+\+Trajets\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespace_statistique_a1d0181bd01bd5fdac59f96a703dd8175}{index}}
+\item 
+\mbox{\hyperlink{namespace_statistique_a830f85f7dfd7c58a61918f632a6cd50a}{duree\+\_\+total\+\_\+par\+\_\+trajet}}
+\item 
+\mbox{\hyperlink{namespace_statistique_a58e3d3afbcfa1c7e989fd29c0248792e}{nombre\+\_\+points\+\_\+par\+\_\+trajet}} = agents\+\_\+df.\+groupby(\mbox{[}\textquotesingle{}Agent\+Id\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}, \textquotesingle{}New\+\_\+\+Trip\textquotesingle{}\mbox{]}).size().reset\+\_\+index(name=\textquotesingle{}Nombre\+\_\+\+Points\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespace_statistique_a15ab378763e392e2985a3e4d9db7556b}{nombre\+\_\+trajet\+\_\+par\+\_\+motif}} = agents\+\_\+df.\+groupby(\mbox{[}\textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}\mbox{]})\mbox{[}\textquotesingle{}New\+\_\+\+Trip\textquotesingle{}\mbox{]}.nunique().reset\+\_\+index(name=\textquotesingle{}Nombre\+\_\+\+Trajets\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespace_statistique_a8ab186f9c42cdbe6a89a2b313d2fb8db}{duree\+\_\+moyenne\+\_\+par\+\_\+trajet}} = duree\+\_\+total\+\_\+par\+\_\+trajet.\+groupby(\mbox{[}\textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}\mbox{]})\mbox{[}\textquotesingle{}Duree\+\_\+trajet\textquotesingle{}\mbox{]}.mean().reset\+\_\+index(name=\textquotesingle{}Duree\+\_\+\+Moyenne\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespace_statistique_a467c578144887abe0964e4e53e04fce6}{nombre\+\_\+min\+\_\+points\+\_\+trajet}} = nombre\+\_\+points\+\_\+par\+\_\+trajet.\+loc\mbox{[}nombre\+\_\+points\+\_\+par\+\_\+trajet.\+groupby(\mbox{[}\textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}\mbox{]})\mbox{[}\textquotesingle{}Nombre\+\_\+\+Points\textquotesingle{}\mbox{]}.idxmin()\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_statistique_a274f30e2d09a7c229f6c0f8e2dddcd76}{columns}}
+\item 
+\mbox{\hyperlink{namespace_statistique_adf8cc74bd4fbda959585bbe5fbd8a6a3}{nombre\+\_\+max\+\_\+points\+\_\+trajet}} = nombre\+\_\+points\+\_\+par\+\_\+trajet.\+loc\mbox{[}nombre\+\_\+points\+\_\+par\+\_\+trajet.\+groupby(\mbox{[}\textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}\mbox{]})\mbox{[}\textquotesingle{}Nombre\+\_\+\+Points\textquotesingle{}\mbox{]}.idxmax()\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_statistique_a5c2890f6696a3cc1d199ee54a7d7e5b5}{heure\+\_\+debut\+\_\+simulation}} = \mbox{\hyperlink{namespace_statistique_a2b4c9cc7eb53429f407bed0c8498e68d}{agents\+\_\+df}}\mbox{[}\textquotesingle{}Temps\+\_\+minute\textquotesingle{}\mbox{]}.min()
+\item 
+\mbox{\hyperlink{namespace_statistique_ae395db6f754ba1237c8de56151760b1f}{heure\+\_\+fin\+\_\+simulation}} = \mbox{\hyperlink{namespace_statistique_a2b4c9cc7eb53429f407bed0c8498e68d}{agents\+\_\+df}}\mbox{[}\textquotesingle{}Temps\+\_\+minute\textquotesingle{}\mbox{]}.max()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespace_statistique_a2b4c9cc7eb53429f407bed0c8498e68d}\index{Statistique@{Statistique}!agents\_df@{agents\_df}}
+\index{agents\_df@{agents\_df}!Statistique@{Statistique}}
+\doxysubsubsection{\texorpdfstring{agents\_df}{agents\_df}}
+{\footnotesize\ttfamily \label{namespace_statistique_a2b4c9cc7eb53429f407bed0c8498e68d} 
+Statistique.\+agents\+\_\+df = pd.\+read\+\_\+csv("{}agent\+\_\+positions\+\_\+motif\+\_\+filtre\+\_\+g\+\_\+clean\+\_\+monday.\+csv"{})}
+
+\Hypertarget{namespace_statistique_a274f30e2d09a7c229f6c0f8e2dddcd76}\index{Statistique@{Statistique}!columns@{columns}}
+\index{columns@{columns}!Statistique@{Statistique}}
+\doxysubsubsection{\texorpdfstring{columns}{columns}}
+{\footnotesize\ttfamily \label{namespace_statistique_a274f30e2d09a7c229f6c0f8e2dddcd76} 
+Statistique.\+columns}
+
+\Hypertarget{namespace_statistique_a8ab186f9c42cdbe6a89a2b313d2fb8db}\index{Statistique@{Statistique}!duree\_moyenne\_par\_trajet@{duree\_moyenne\_par\_trajet}}
+\index{duree\_moyenne\_par\_trajet@{duree\_moyenne\_par\_trajet}!Statistique@{Statistique}}
+\doxysubsubsection{\texorpdfstring{duree\_moyenne\_par\_trajet}{duree\_moyenne\_par\_trajet}}
+{\footnotesize\ttfamily \label{namespace_statistique_a8ab186f9c42cdbe6a89a2b313d2fb8db} 
+Statistique.\+duree\+\_\+moyenne\+\_\+par\+\_\+trajet = duree\+\_\+total\+\_\+par\+\_\+trajet.\+groupby(\mbox{[}\textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}\mbox{]})\mbox{[}\textquotesingle{}Duree\+\_\+trajet\textquotesingle{}\mbox{]}.mean().reset\+\_\+index(name=\textquotesingle{}Duree\+\_\+\+Moyenne\textquotesingle{})}
+
+\Hypertarget{namespace_statistique_a830f85f7dfd7c58a61918f632a6cd50a}\index{Statistique@{Statistique}!duree\_total\_par\_trajet@{duree\_total\_par\_trajet}}
+\index{duree\_total\_par\_trajet@{duree\_total\_par\_trajet}!Statistique@{Statistique}}
+\doxysubsubsection{\texorpdfstring{duree\_total\_par\_trajet}{duree\_total\_par\_trajet}}
+{\footnotesize\ttfamily \label{namespace_statistique_a830f85f7dfd7c58a61918f632a6cd50a} 
+Statistique.\+duree\+\_\+total\+\_\+par\+\_\+trajet}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ agents\_df.groupby([\textcolor{stringliteral}{'AgentId'},\ \textcolor{stringliteral}{'New\_Trip'},\ \textcolor{stringliteral}{'Motif\_Orig'},\ \textcolor{stringliteral}{'Motif\_Dest'}]).agg(}
+\DoxyCodeLine{00002\ \ \ \ \ Duree\_trajet=(\textcolor{stringliteral}{'Temps\_minute'},\ \textcolor{keyword}{lambda}\ x:\ x.max()\ -\/\ x.min())}
+\DoxyCodeLine{00003\ ).reset\_index()}
+
+\end{DoxyCode}
+\Hypertarget{namespace_statistique_a5c2890f6696a3cc1d199ee54a7d7e5b5}\index{Statistique@{Statistique}!heure\_debut\_simulation@{heure\_debut\_simulation}}
+\index{heure\_debut\_simulation@{heure\_debut\_simulation}!Statistique@{Statistique}}
+\doxysubsubsection{\texorpdfstring{heure\_debut\_simulation}{heure\_debut\_simulation}}
+{\footnotesize\ttfamily \label{namespace_statistique_a5c2890f6696a3cc1d199ee54a7d7e5b5} 
+Statistique.\+heure\+\_\+debut\+\_\+simulation = \mbox{\hyperlink{namespace_statistique_a2b4c9cc7eb53429f407bed0c8498e68d}{agents\+\_\+df}}\mbox{[}\textquotesingle{}Temps\+\_\+minute\textquotesingle{}\mbox{]}.min()}
+
+\Hypertarget{namespace_statistique_ae395db6f754ba1237c8de56151760b1f}\index{Statistique@{Statistique}!heure\_fin\_simulation@{heure\_fin\_simulation}}
+\index{heure\_fin\_simulation@{heure\_fin\_simulation}!Statistique@{Statistique}}
+\doxysubsubsection{\texorpdfstring{heure\_fin\_simulation}{heure\_fin\_simulation}}
+{\footnotesize\ttfamily \label{namespace_statistique_ae395db6f754ba1237c8de56151760b1f} 
+Statistique.\+heure\+\_\+fin\+\_\+simulation = \mbox{\hyperlink{namespace_statistique_a2b4c9cc7eb53429f407bed0c8498e68d}{agents\+\_\+df}}\mbox{[}\textquotesingle{}Temps\+\_\+minute\textquotesingle{}\mbox{]}.max()}
+
+\Hypertarget{namespace_statistique_a1d0181bd01bd5fdac59f96a703dd8175}\index{Statistique@{Statistique}!index@{index}}
+\index{index@{index}!Statistique@{Statistique}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily \label{namespace_statistique_a1d0181bd01bd5fdac59f96a703dd8175} 
+Statistique.\+index}
+
+\Hypertarget{namespace_statistique_adf8cc74bd4fbda959585bbe5fbd8a6a3}\index{Statistique@{Statistique}!nombre\_max\_points\_trajet@{nombre\_max\_points\_trajet}}
+\index{nombre\_max\_points\_trajet@{nombre\_max\_points\_trajet}!Statistique@{Statistique}}
+\doxysubsubsection{\texorpdfstring{nombre\_max\_points\_trajet}{nombre\_max\_points\_trajet}}
+{\footnotesize\ttfamily \label{namespace_statistique_adf8cc74bd4fbda959585bbe5fbd8a6a3} 
+Statistique.\+nombre\+\_\+max\+\_\+points\+\_\+trajet = nombre\+\_\+points\+\_\+par\+\_\+trajet.\+loc\mbox{[}nombre\+\_\+points\+\_\+par\+\_\+trajet.\+groupby(\mbox{[}\textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}\mbox{]})\mbox{[}\textquotesingle{}Nombre\+\_\+\+Points\textquotesingle{}\mbox{]}.idxmax()\mbox{]}}
+
+\Hypertarget{namespace_statistique_a467c578144887abe0964e4e53e04fce6}\index{Statistique@{Statistique}!nombre\_min\_points\_trajet@{nombre\_min\_points\_trajet}}
+\index{nombre\_min\_points\_trajet@{nombre\_min\_points\_trajet}!Statistique@{Statistique}}
+\doxysubsubsection{\texorpdfstring{nombre\_min\_points\_trajet}{nombre\_min\_points\_trajet}}
+{\footnotesize\ttfamily \label{namespace_statistique_a467c578144887abe0964e4e53e04fce6} 
+Statistique.\+nombre\+\_\+min\+\_\+points\+\_\+trajet = nombre\+\_\+points\+\_\+par\+\_\+trajet.\+loc\mbox{[}nombre\+\_\+points\+\_\+par\+\_\+trajet.\+groupby(\mbox{[}\textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}\mbox{]})\mbox{[}\textquotesingle{}Nombre\+\_\+\+Points\textquotesingle{}\mbox{]}.idxmin()\mbox{]}}
+
+\Hypertarget{namespace_statistique_a58e3d3afbcfa1c7e989fd29c0248792e}\index{Statistique@{Statistique}!nombre\_points\_par\_trajet@{nombre\_points\_par\_trajet}}
+\index{nombre\_points\_par\_trajet@{nombre\_points\_par\_trajet}!Statistique@{Statistique}}
+\doxysubsubsection{\texorpdfstring{nombre\_points\_par\_trajet}{nombre\_points\_par\_trajet}}
+{\footnotesize\ttfamily \label{namespace_statistique_a58e3d3afbcfa1c7e989fd29c0248792e} 
+Statistique.\+nombre\+\_\+points\+\_\+par\+\_\+trajet = agents\+\_\+df.\+groupby(\mbox{[}\textquotesingle{}Agent\+Id\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}, \textquotesingle{}New\+\_\+\+Trip\textquotesingle{}\mbox{]}).size().reset\+\_\+index(name=\textquotesingle{}Nombre\+\_\+\+Points\textquotesingle{})}
+
+\Hypertarget{namespace_statistique_a445e81d6689b9ddf4d13e2b606196c1c}\index{Statistique@{Statistique}!nombre\_total\_trajets@{nombre\_total\_trajets}}
+\index{nombre\_total\_trajets@{nombre\_total\_trajets}!Statistique@{Statistique}}
+\doxysubsubsection{\texorpdfstring{nombre\_total\_trajets}{nombre\_total\_trajets}}
+{\footnotesize\ttfamily \label{namespace_statistique_a445e81d6689b9ddf4d13e2b606196c1c} 
+Statistique.\+nombre\+\_\+total\+\_\+trajets = agents\+\_\+df.\+groupby(\mbox{[}\textquotesingle{}Agent\+Id\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}, \textquotesingle{}New\+\_\+\+Trip\textquotesingle{}\mbox{]}).ngroups}
+
+\Hypertarget{namespace_statistique_a6287ee672f497352f37e4dfe8feaa72c}\index{Statistique@{Statistique}!nombre\_trajet\_par\_agent@{nombre\_trajet\_par\_agent}}
+\index{nombre\_trajet\_par\_agent@{nombre\_trajet\_par\_agent}!Statistique@{Statistique}}
+\doxysubsubsection{\texorpdfstring{nombre\_trajet\_par\_agent}{nombre\_trajet\_par\_agent}}
+{\footnotesize\ttfamily \label{namespace_statistique_a6287ee672f497352f37e4dfe8feaa72c} 
+Statistique.\+nombre\+\_\+trajet\+\_\+par\+\_\+agent = agents\+\_\+df.\+groupby(\textquotesingle{}Agent\+Id\textquotesingle{})\mbox{[}\textquotesingle{}New\+\_\+\+Trip\textquotesingle{}\mbox{]}.nunique().reset\+\_\+index(name=\textquotesingle{}Nombre\+\_\+\+Trajets\textquotesingle{})}
+
+\Hypertarget{namespace_statistique_a15ab378763e392e2985a3e4d9db7556b}\index{Statistique@{Statistique}!nombre\_trajet\_par\_motif@{nombre\_trajet\_par\_motif}}
+\index{nombre\_trajet\_par\_motif@{nombre\_trajet\_par\_motif}!Statistique@{Statistique}}
+\doxysubsubsection{\texorpdfstring{nombre\_trajet\_par\_motif}{nombre\_trajet\_par\_motif}}
+{\footnotesize\ttfamily \label{namespace_statistique_a15ab378763e392e2985a3e4d9db7556b} 
+Statistique.\+nombre\+\_\+trajet\+\_\+par\+\_\+motif = agents\+\_\+df.\+groupby(\mbox{[}\textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}\mbox{]})\mbox{[}\textquotesingle{}New\+\_\+\+Trip\textquotesingle{}\mbox{]}.nunique().reset\+\_\+index(name=\textquotesingle{}Nombre\+\_\+\+Trajets\textquotesingle{})}
+
+\Hypertarget{namespace_statistique_a6edcdfe6ecf405657c6df29b1198ef9e}\index{Statistique@{Statistique}!output\_path@{output\_path}}
+\index{output\_path@{output\_path}!Statistique@{Statistique}}
+\doxysubsubsection{\texorpdfstring{output\_path}{output\_path}}
+{\footnotesize\ttfamily \label{namespace_statistique_a6edcdfe6ecf405657c6df29b1198ef9e} 
+str Statistique.\+output\+\_\+path = "{}C\+:\textbackslash{}\textbackslash{}\+Users\textbackslash{}\textbackslash{}\+User\textbackslash{}\textbackslash{}\+Idea\+Projects\textbackslash{}\textbackslash{}matsim-\/example-\/project-\/modified\textbackslash{}\textbackslash{}csv\+\_\+monday\textbackslash{}\textbackslash{}"{}}
+
+\Hypertarget{namespace_statistique_a1143c213a4f9096f9d0dff0386dcac3b}\index{Statistique@{Statistique}!persons\_df@{persons\_df}}
+\index{persons\_df@{persons\_df}!Statistique@{Statistique}}
+\doxysubsubsection{\texorpdfstring{persons\_df}{persons\_df}}
+{\footnotesize\ttfamily \label{namespace_statistique_a1143c213a4f9096f9d0dff0386dcac3b} 
+Statistique.\+persons\+\_\+df = pd.\+read\+\_\+csv("{}C\+:/Users/User/Idea\+Projects/matsim-\/example-\/project-\/modified/simulation\+\_\+output\+\_\+monday/output\+\_\+persons.\+csv.\+gz"{}, sep=\textquotesingle{};\textquotesingle{})}
+
+\Hypertarget{namespace_statistique_a74c1a6e4afd422a91f702572c30d9a7f}\index{Statistique@{Statistique}!population\_autre@{population\_autre}}
+\index{population\_autre@{population\_autre}!Statistique@{Statistique}}
+\doxysubsubsection{\texorpdfstring{population\_autre}{population\_autre}}
+{\footnotesize\ttfamily \label{namespace_statistique_a74c1a6e4afd422a91f702572c30d9a7f} 
+Statistique.\+population\+\_\+autre = \mbox{\hyperlink{namespace_statistique_a1143c213a4f9096f9d0dff0386dcac3b}{persons\+\_\+df}}\mbox{[}\textquotesingle{}person\textquotesingle{}\mbox{]}.nunique()}
+
+\Hypertarget{namespace_statistique_a5abe95916766ef92cfab383b0e0ca5e6}\index{Statistique@{Statistique}!population\_car@{population\_car}}
+\index{population\_car@{population\_car}!Statistique@{Statistique}}
+\doxysubsubsection{\texorpdfstring{population\_car}{population\_car}}
+{\footnotesize\ttfamily \label{namespace_statistique_a5abe95916766ef92cfab383b0e0ca5e6} 
+Statistique.\+population\+\_\+car = \mbox{\hyperlink{namespace_statistique_a2b4c9cc7eb53429f407bed0c8498e68d}{agents\+\_\+df}}\mbox{[}\textquotesingle{}Agent\+Id\textquotesingle{}\mbox{]}.nunique()}
+

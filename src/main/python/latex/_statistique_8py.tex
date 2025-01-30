@@ -1,0 +1,44 @@
+\doxysection{statistique/\+Statistique.py File Reference}
+\hypertarget{_statistique_8py}{}\label{_statistique_8py}\index{statistique/Statistique.py@{statistique/Statistique.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_statistique}{Statistique}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_statistique_a2b4c9cc7eb53429f407bed0c8498e68d}{Statistique.\+agents\+\_\+df}} = pd.\+read\+\_\+csv("{}agent\+\_\+positions\+\_\+motif\+\_\+filtre\+\_\+g\+\_\+clean\+\_\+monday.\+csv"{})
+\item 
+\mbox{\hyperlink{namespace_statistique_a1143c213a4f9096f9d0dff0386dcac3b}{Statistique.\+persons\+\_\+df}} = pd.\+read\+\_\+csv("{}C\+:/Users/User/Idea\+Projects/matsim-\/example-\/project-\/modified/simulation\+\_\+output\+\_\+monday/output\+\_\+persons.\+csv.\+gz"{}, sep=\textquotesingle{};\textquotesingle{})
+\item 
+str \mbox{\hyperlink{namespace_statistique_a6edcdfe6ecf405657c6df29b1198ef9e}{Statistique.\+output\+\_\+path}} = "{}C\+:\textbackslash{}\textbackslash{}\+Users\textbackslash{}\textbackslash{}\+User\textbackslash{}\textbackslash{}\+Idea\+Projects\textbackslash{}\textbackslash{}matsim-\/example-\/project-\/modified\textbackslash{}\textbackslash{}csv\+\_\+monday\textbackslash{}\textbackslash{}"{}
+\item 
+\mbox{\hyperlink{namespace_statistique_a5abe95916766ef92cfab383b0e0ca5e6}{Statistique.\+population\+\_\+car}} = \mbox{\hyperlink{namespace_statistique_a2b4c9cc7eb53429f407bed0c8498e68d}{agents\+\_\+df}}\mbox{[}\textquotesingle{}Agent\+Id\textquotesingle{}\mbox{]}.nunique()
+\item 
+\mbox{\hyperlink{namespace_statistique_a74c1a6e4afd422a91f702572c30d9a7f}{Statistique.\+population\+\_\+autre}} = \mbox{\hyperlink{namespace_statistique_a1143c213a4f9096f9d0dff0386dcac3b}{persons\+\_\+df}}\mbox{[}\textquotesingle{}person\textquotesingle{}\mbox{]}.nunique()
+\item 
+\mbox{\hyperlink{namespace_statistique_a445e81d6689b9ddf4d13e2b606196c1c}{Statistique.\+nombre\+\_\+total\+\_\+trajets}} = agents\+\_\+df.\+groupby(\mbox{[}\textquotesingle{}Agent\+Id\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}, \textquotesingle{}New\+\_\+\+Trip\textquotesingle{}\mbox{]}).ngroups
+\item 
+\mbox{\hyperlink{namespace_statistique_a6287ee672f497352f37e4dfe8feaa72c}{Statistique.\+nombre\+\_\+trajet\+\_\+par\+\_\+agent}} = agents\+\_\+df.\+groupby(\textquotesingle{}Agent\+Id\textquotesingle{})\mbox{[}\textquotesingle{}New\+\_\+\+Trip\textquotesingle{}\mbox{]}.nunique().reset\+\_\+index(name=\textquotesingle{}Nombre\+\_\+\+Trajets\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespace_statistique_a1d0181bd01bd5fdac59f96a703dd8175}{Statistique.\+index}}
+\item 
+\mbox{\hyperlink{namespace_statistique_a830f85f7dfd7c58a61918f632a6cd50a}{Statistique.\+duree\+\_\+total\+\_\+par\+\_\+trajet}}
+\item 
+\mbox{\hyperlink{namespace_statistique_a58e3d3afbcfa1c7e989fd29c0248792e}{Statistique.\+nombre\+\_\+points\+\_\+par\+\_\+trajet}} = agents\+\_\+df.\+groupby(\mbox{[}\textquotesingle{}Agent\+Id\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}, \textquotesingle{}New\+\_\+\+Trip\textquotesingle{}\mbox{]}).size().reset\+\_\+index(name=\textquotesingle{}Nombre\+\_\+\+Points\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespace_statistique_a15ab378763e392e2985a3e4d9db7556b}{Statistique.\+nombre\+\_\+trajet\+\_\+par\+\_\+motif}} = agents\+\_\+df.\+groupby(\mbox{[}\textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}\mbox{]})\mbox{[}\textquotesingle{}New\+\_\+\+Trip\textquotesingle{}\mbox{]}.nunique().reset\+\_\+index(name=\textquotesingle{}Nombre\+\_\+\+Trajets\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespace_statistique_a8ab186f9c42cdbe6a89a2b313d2fb8db}{Statistique.\+duree\+\_\+moyenne\+\_\+par\+\_\+trajet}} = duree\+\_\+total\+\_\+par\+\_\+trajet.\+groupby(\mbox{[}\textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}\mbox{]})\mbox{[}\textquotesingle{}Duree\+\_\+trajet\textquotesingle{}\mbox{]}.mean().reset\+\_\+index(name=\textquotesingle{}Duree\+\_\+\+Moyenne\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespace_statistique_a467c578144887abe0964e4e53e04fce6}{Statistique.\+nombre\+\_\+min\+\_\+points\+\_\+trajet}} = nombre\+\_\+points\+\_\+par\+\_\+trajet.\+loc\mbox{[}nombre\+\_\+points\+\_\+par\+\_\+trajet.\+groupby(\mbox{[}\textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}\mbox{]})\mbox{[}\textquotesingle{}Nombre\+\_\+\+Points\textquotesingle{}\mbox{]}.idxmin()\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_statistique_a274f30e2d09a7c229f6c0f8e2dddcd76}{Statistique.\+columns}}
+\item 
+\mbox{\hyperlink{namespace_statistique_adf8cc74bd4fbda959585bbe5fbd8a6a3}{Statistique.\+nombre\+\_\+max\+\_\+points\+\_\+trajet}} = nombre\+\_\+points\+\_\+par\+\_\+trajet.\+loc\mbox{[}nombre\+\_\+points\+\_\+par\+\_\+trajet.\+groupby(\mbox{[}\textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}\mbox{]})\mbox{[}\textquotesingle{}Nombre\+\_\+\+Points\textquotesingle{}\mbox{]}.idxmax()\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_statistique_a5c2890f6696a3cc1d199ee54a7d7e5b5}{Statistique.\+heure\+\_\+debut\+\_\+simulation}} = \mbox{\hyperlink{namespace_statistique_a2b4c9cc7eb53429f407bed0c8498e68d}{agents\+\_\+df}}\mbox{[}\textquotesingle{}Temps\+\_\+minute\textquotesingle{}\mbox{]}.min()
+\item 
+\mbox{\hyperlink{namespace_statistique_ae395db6f754ba1237c8de56151760b1f}{Statistique.\+heure\+\_\+fin\+\_\+simulation}} = \mbox{\hyperlink{namespace_statistique_a2b4c9cc7eb53429f407bed0c8498e68d}{agents\+\_\+df}}\mbox{[}\textquotesingle{}Temps\+\_\+minute\textquotesingle{}\mbox{]}.max()
+\end{DoxyCompactItemize}

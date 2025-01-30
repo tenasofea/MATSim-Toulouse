@@ -1,0 +1,62 @@
+\doxysection{Generate\+Frequency\+Sur\+Semaine Namespace Reference}
+\hypertarget{namespace_generate_frequency_sur_semaine}{}\label{namespace_generate_frequency_sur_semaine}\index{GenerateFrequencySurSemaine@{GenerateFrequencySurSemaine}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_generate_frequency_sur_semaine_a244086c547ab66cae1072294c7f04128}{visualize\+\_\+trip\+\_\+frequency}} (\mbox{\hyperlink{namespace_generate_frequency_sur_semaine_aaeacf78118024fe43555daff41ece66c}{trip\+\_\+frequency}})
+\item 
+\mbox{\hyperlink{namespace_generate_frequency_sur_semaine_a82cfc22e9b3141519631c1a887358d04}{visualize\+\_\+agent\+\_\+frequency}} (\mbox{\hyperlink{namespace_generate_frequency_sur_semaine_abb9dc9c6ac384d221d3f73c7b5c690ef}{agent\+\_\+trip\+\_\+frequency}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespace_generate_frequency_sur_semaine_a9e3df32c9b92353b95baf8e0d3e5a901}{file\+\_\+path}} = \textquotesingle{}C\+:\textbackslash{}\textbackslash{}\+Users\textbackslash{}\textbackslash{}\+User\textbackslash{}\textbackslash{}\+Idea\+Projects\textbackslash{}\textbackslash{}matsim-\/example-\/project-\/modified\textbackslash{}\textbackslash{}ordered\+\_\+weekly\+\_\+trips.\+csv\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespace_generate_frequency_sur_semaine_a76200eb4a70ecf786946b0d9d1bc6709}{data}} = pd.\+read\+\_\+csv(\mbox{\hyperlink{namespace_generate_frequency_sur_semaine_a9e3df32c9b92353b95baf8e0d3e5a901}{file\+\_\+path}})
+\item 
+\mbox{\hyperlink{namespace_generate_frequency_sur_semaine_aaeacf78118024fe43555daff41ece66c}{trip\+\_\+frequency}} = data.\+groupby(\mbox{[}\textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}\mbox{]}).size().reset\+\_\+index(name=\textquotesingle{}Frequency\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespace_generate_frequency_sur_semaine_abb9dc9c6ac384d221d3f73c7b5c690ef}{agent\+\_\+trip\+\_\+frequency}} = data.\+groupby(\mbox{[}\textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}, \textquotesingle{}Agent\+Id\textquotesingle{}\mbox{]}).size().reset\+\_\+index(name=\textquotesingle{}Agent\+Frequency\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_generate_frequency_sur_semaine_a82cfc22e9b3141519631c1a887358d04}\index{GenerateFrequencySurSemaine@{GenerateFrequencySurSemaine}!visualize\_agent\_frequency@{visualize\_agent\_frequency}}
+\index{visualize\_agent\_frequency@{visualize\_agent\_frequency}!GenerateFrequencySurSemaine@{GenerateFrequencySurSemaine}}
+\doxysubsubsection{\texorpdfstring{visualize\_agent\_frequency()}{visualize\_agent\_frequency()}}
+{\footnotesize\ttfamily \label{namespace_generate_frequency_sur_semaine_a82cfc22e9b3141519631c1a887358d04} 
+Generate\+Frequency\+Sur\+Semaine.\+visualize\+\_\+agent\+\_\+frequency (\begin{DoxyParamCaption}\item[{}]{agent\+\_\+trip\+\_\+frequency}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespace_generate_frequency_sur_semaine_a244086c547ab66cae1072294c7f04128}\index{GenerateFrequencySurSemaine@{GenerateFrequencySurSemaine}!visualize\_trip\_frequency@{visualize\_trip\_frequency}}
+\index{visualize\_trip\_frequency@{visualize\_trip\_frequency}!GenerateFrequencySurSemaine@{GenerateFrequencySurSemaine}}
+\doxysubsubsection{\texorpdfstring{visualize\_trip\_frequency()}{visualize\_trip\_frequency()}}
+{\footnotesize\ttfamily \label{namespace_generate_frequency_sur_semaine_a244086c547ab66cae1072294c7f04128} 
+Generate\+Frequency\+Sur\+Semaine.\+visualize\+\_\+trip\+\_\+frequency (\begin{DoxyParamCaption}\item[{}]{trip\+\_\+frequency}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespace_generate_frequency_sur_semaine_abb9dc9c6ac384d221d3f73c7b5c690ef}\index{GenerateFrequencySurSemaine@{GenerateFrequencySurSemaine}!agent\_trip\_frequency@{agent\_trip\_frequency}}
+\index{agent\_trip\_frequency@{agent\_trip\_frequency}!GenerateFrequencySurSemaine@{GenerateFrequencySurSemaine}}
+\doxysubsubsection{\texorpdfstring{agent\_trip\_frequency}{agent\_trip\_frequency}}
+{\footnotesize\ttfamily \label{namespace_generate_frequency_sur_semaine_abb9dc9c6ac384d221d3f73c7b5c690ef} 
+Generate\+Frequency\+Sur\+Semaine.\+agent\+\_\+trip\+\_\+frequency = data.\+groupby(\mbox{[}\textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}, \textquotesingle{}Agent\+Id\textquotesingle{}\mbox{]}).size().reset\+\_\+index(name=\textquotesingle{}Agent\+Frequency\textquotesingle{})}
+
+\Hypertarget{namespace_generate_frequency_sur_semaine_a76200eb4a70ecf786946b0d9d1bc6709}\index{GenerateFrequencySurSemaine@{GenerateFrequencySurSemaine}!data@{data}}
+\index{data@{data}!GenerateFrequencySurSemaine@{GenerateFrequencySurSemaine}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \label{namespace_generate_frequency_sur_semaine_a76200eb4a70ecf786946b0d9d1bc6709} 
+Generate\+Frequency\+Sur\+Semaine.\+data = pd.\+read\+\_\+csv(\mbox{\hyperlink{namespace_generate_frequency_sur_semaine_a9e3df32c9b92353b95baf8e0d3e5a901}{file\+\_\+path}})}
+
+\Hypertarget{namespace_generate_frequency_sur_semaine_a9e3df32c9b92353b95baf8e0d3e5a901}\index{GenerateFrequencySurSemaine@{GenerateFrequencySurSemaine}!file\_path@{file\_path}}
+\index{file\_path@{file\_path}!GenerateFrequencySurSemaine@{GenerateFrequencySurSemaine}}
+\doxysubsubsection{\texorpdfstring{file\_path}{file\_path}}
+{\footnotesize\ttfamily \label{namespace_generate_frequency_sur_semaine_a9e3df32c9b92353b95baf8e0d3e5a901} 
+str Generate\+Frequency\+Sur\+Semaine.\+file\+\_\+path = \textquotesingle{}C\+:\textbackslash{}\textbackslash{}\+Users\textbackslash{}\textbackslash{}\+User\textbackslash{}\textbackslash{}\+Idea\+Projects\textbackslash{}\textbackslash{}matsim-\/example-\/project-\/modified\textbackslash{}\textbackslash{}ordered\+\_\+weekly\+\_\+trips.\+csv\textquotesingle{}}
+
+\Hypertarget{namespace_generate_frequency_sur_semaine_aaeacf78118024fe43555daff41ece66c}\index{GenerateFrequencySurSemaine@{GenerateFrequencySurSemaine}!trip\_frequency@{trip\_frequency}}
+\index{trip\_frequency@{trip\_frequency}!GenerateFrequencySurSemaine@{GenerateFrequencySurSemaine}}
+\doxysubsubsection{\texorpdfstring{trip\_frequency}{trip\_frequency}}
+{\footnotesize\ttfamily \label{namespace_generate_frequency_sur_semaine_aaeacf78118024fe43555daff41ece66c} 
+Generate\+Frequency\+Sur\+Semaine.\+trip\+\_\+frequency = data.\+groupby(\mbox{[}\textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}\mbox{]}).size().reset\+\_\+index(name=\textquotesingle{}Frequency\textquotesingle{})}
+

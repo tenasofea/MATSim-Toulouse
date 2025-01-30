@@ -1,0 +1,52 @@
+\doxysection{statistique/\+Generate\+Stats\+Par\+Heure.py File Reference}
+\hypertarget{_generate_stats_par_heure_8py}{}\label{_generate_stats_par_heure_8py}\index{statistique/GenerateStatsParHeure.py@{statistique/GenerateStatsParHeure.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_generate_stats_par_heure}{Generate\+Stats\+Par\+Heure}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_heure_a4f56c457333750da1c5eb49a358c7a27}{Generate\+Stats\+Par\+Heure.\+traffic\+\_\+df}} = pd.\+read\+\_\+csv("{}C\+:\textbackslash{}\textbackslash{}\+Users\textbackslash{}\textbackslash{}\+User\textbackslash{}\textbackslash{}\+Idea\+Projects\textbackslash{}\textbackslash{}matsim-\/example-\/project-\/modified\textbackslash{}\textbackslash{}csv\+\_\+tuesday\textbackslash{}\textbackslash{}nombre\+\_\+trajets\+\_\+par\+\_\+heure\+\_\+sans\+\_\+motif\+\_\+regroup.\+csv"{})
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_heure_a23b4d9f54cba7d208703c45660fb3fbd}{Generate\+Stats\+Par\+Heure.\+columns}}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_heure_a5da4d29d1810dc99a6c8309398e72596}{Generate\+Stats\+Par\+Heure.\+motif\+\_\+df}} = pd.\+read\+\_\+csv("{}C\+:\textbackslash{}\textbackslash{}\+Users\textbackslash{}\textbackslash{}\+User\textbackslash{}\textbackslash{}\+Idea\+Projects\textbackslash{}\textbackslash{}matsim-\/example-\/project-\/modified\textbackslash{}\textbackslash{}csv\+\_\+tuesday\textbackslash{}\textbackslash{}repartition\+\_\+trajet\+\_\+par\+\_\+heure\+\_\+avec\+\_\+motif\+\_\+regroup.\+csv"{})
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_heure_a5ad57534be2b8d8cc97816d73312b464}{Generate\+Stats\+Par\+Heure.\+total\+\_\+agents\+\_\+per\+\_\+hour}} = motif\+\_\+df.\+groupby(\textquotesingle{}Heure\textquotesingle{})\mbox{[}\textquotesingle{}Nombre\+\_\+\+Trajet\textquotesingle{}\mbox{]}.sum().reset\+\_\+index()
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_heure_a76a3e5499720db5181effb036dff2f2f}{Generate\+Stats\+Par\+Heure.\+merged\+\_\+df}} = pd.\+merge(\mbox{\hyperlink{namespace_generate_stats_par_heure_a5da4d29d1810dc99a6c8309398e72596}{motif\+\_\+df}}, \mbox{\hyperlink{namespace_generate_stats_par_heure_a4f56c457333750da1c5eb49a358c7a27}{traffic\+\_\+df}}, on=\textquotesingle{}Heure\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_heure_a079fd5b640148d06ffce1279df7132e8}{Generate\+Stats\+Par\+Heure.\+axis}}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_heure_a844e068e5b01bd00061816f206d3115b}{Generate\+Stats\+Par\+Heure.\+pivot\+\_\+df}} = merged\+\_\+df.\+pivot(index=\textquotesingle{}Heure\textquotesingle{}, \mbox{\hyperlink{namespace_generate_stats_par_heure_a23b4d9f54cba7d208703c45660fb3fbd}{columns}}=\mbox{[}\textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}\mbox{]}, values=\textquotesingle{}Normalized\+\_\+\+Trajet\textquotesingle{}).fillna(0)
+\item 
+dict \mbox{\hyperlink{namespace_generate_stats_par_heure_a401af3b2791143eed7a069eddeb82ecb}{Generate\+Stats\+Par\+Heure.\+color\+\_\+mapping}}
+\item 
+list \mbox{\hyperlink{namespace_generate_stats_par_heure_ae44789a282f851917efdaacf9693608b}{Generate\+Stats\+Par\+Heure.\+colors}} = \mbox{[}\mbox{\hyperlink{namespace_generate_stats_par_heure_a401af3b2791143eed7a069eddeb82ecb}{color\+\_\+mapping}}\mbox{[}col\mbox{]} for col in pivot\+\_\+df.\+columns\mbox{]}
+\item 
+int \mbox{\hyperlink{namespace_generate_stats_par_heure_a4dd4f8ab9d7782c079008c28e55d9624}{Generate\+Stats\+Par\+Heure.\+y\+\_\+limit}} = 2000
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_heure_a997409442120b300157f451182ea7f46}{Generate\+Stats\+Par\+Heure.\+fig}}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_heure_a22b9035a1efbd4b81770ce74bd20120d}{Generate\+Stats\+Par\+Heure.\+ax}}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_heure_a67341e352b10a862f54225ff23c38ddc}{Generate\+Stats\+Par\+Heure.\+figsize}}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_heure_a285bc50316e21e85a38418b5046db65a}{Generate\+Stats\+Par\+Heure.\+kind}}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_heure_aae9c3ca3f37edc143158e77b7b4130b0}{Generate\+Stats\+Par\+Heure.\+stacked}}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_heure_a1666176049f2ce537f87b6a238cd6a9c}{Generate\+Stats\+Par\+Heure.\+True}}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_heure_aad253162027f0f98d154b34779b1dbce}{Generate\+Stats\+Par\+Heure.\+color}}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_heure_ac3e1ae32d8cb965abd2124580b7100bd}{Generate\+Stats\+Par\+Heure.\+title}}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_heure_adda2d34ffa0a42bfb1e53bf32af0c8b3}{Generate\+Stats\+Par\+Heure.\+bbox\+\_\+to\+\_\+anchor}}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_heure_a61a1c8e149a33b477663219e24cea987}{Generate\+Stats\+Par\+Heure.\+loc}}
+\item 
+\mbox{\hyperlink{namespace_generate_stats_par_heure_a923cb9ed1daf91580d0003479d1a36d2}{Generate\+Stats\+Par\+Heure.\+linewidth}}
+\end{DoxyCompactItemize}

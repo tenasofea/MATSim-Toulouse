@@ -1,0 +1,26 @@
+\doxysection{statistique/\+Trip\+Par\+Agent\+Sur\+Initial.py File Reference}
+\hypertarget{_trip_par_agent_sur_initial_8py}{}\label{_trip_par_agent_sur_initial_8py}\index{statistique/TripParAgentSurInitial.py@{statistique/TripParAgentSurInitial.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_trip_par_agent_sur_initial}{Trip\+Par\+Agent\+Sur\+Initial}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespace_trip_par_agent_sur_initial_a0f0e315c368455df011b0e547cd2f495}{Trip\+Par\+Agent\+Sur\+Initial.\+file\+\_\+path}} = "{}C\+:/Users/User/Idea\+Projects/matsim-\/example-\/project-\/modified/csv\+\_\+clean/duree\+\_\+total\+\_\+par\+\_\+trajet.\+csv"{}
+\item 
+\mbox{\hyperlink{namespace_trip_par_agent_sur_initial_a4dd7461f9e23a5d0edcf99c35dfecfbe}{Trip\+Par\+Agent\+Sur\+Initial.\+data}} = pd.\+read\+\_\+csv(\mbox{\hyperlink{namespace_trip_par_agent_sur_initial_a0f0e315c368455df011b0e547cd2f495}{file\+\_\+path}})
+\item 
+list \mbox{\hyperlink{namespace_trip_par_agent_sur_initial_a0cda34c1eb6f85e2672e254a7e4c22fc}{Trip\+Par\+Agent\+Sur\+Initial.\+ordered\+\_\+trips}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_trip_par_agent_sur_initial_a9b42b71a47431ef86d637a3ebdcce81e}{Trip\+Par\+Agent\+Sur\+Initial.\+agent\+\_\+data}} = agent\+\_\+data.\+sort\+\_\+values(by=\mbox{[}\textquotesingle{}New\+\_\+\+Trip\textquotesingle{}\mbox{]}).reset\+\_\+index(drop=True)
+\item 
+\mbox{\hyperlink{namespace_trip_par_agent_sur_initial_a53aa5f35e846c41e9882a42f0542d5f8}{Trip\+Par\+Agent\+Sur\+Initial.\+current\+\_\+motif}} = agent\+\_\+data.\+loc\mbox{[}0, \textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_trip_par_agent_sur_initial_af71fbce8587d21a70d2c85ac88362abf}{Trip\+Par\+Agent\+Sur\+Initial.\+ordered\+\_\+trips\+\_\+df}} = pd.\+Data\+Frame(\mbox{\hyperlink{namespace_trip_par_agent_sur_initial_a0cda34c1eb6f85e2672e254a7e4c22fc}{ordered\+\_\+trips}})
+\item 
+str \mbox{\hyperlink{namespace_trip_par_agent_sur_initial_af8b33d860ed0e4cec192eab1ab1fabf8}{Trip\+Par\+Agent\+Sur\+Initial.\+output\+\_\+file}} = \textquotesingle{}ordered\+\_\+daily\+\_\+trips.\+csv\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespace_trip_par_agent_sur_initial_a554d3d7742403b6543c25302c578630a}{Trip\+Par\+Agent\+Sur\+Initial.\+index}}
+\end{DoxyCompactItemize}

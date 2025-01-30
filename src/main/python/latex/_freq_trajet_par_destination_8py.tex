@@ -1,0 +1,44 @@
+\doxysection{statistique/\+Freq\+Trajet\+Par\+Destination.py File Reference}
+\hypertarget{_freq_trajet_par_destination_8py}{}\label{_freq_trajet_par_destination_8py}\index{statistique/FreqTrajetParDestination.py@{statistique/FreqTrajetParDestination.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_freq_trajet_par_destination}{Freq\+Trajet\+Par\+Destination}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespace_freq_trajet_par_destination_aa0843c2b35e41a51ade9a77dcf072046}{Freq\+Trajet\+Par\+Destination.\+file\+\_\+path}} = \textquotesingle{}ordered\+\_\+weekly\+\_\+trips.\+csv\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_a0b66553a0ccf97879fd6d12168b5ed8a}{Freq\+Trajet\+Par\+Destination.\+data}} = pd.\+read\+\_\+csv(\mbox{\hyperlink{namespace_freq_trajet_par_destination_aa0843c2b35e41a51ade9a77dcf072046}{file\+\_\+path}})
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_adc15eaf53ce08c40672ed2aeab56e379}{Freq\+Trajet\+Par\+Destination.\+consecutive\+\_\+trips}}
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_aca3962996eb02746ac876273aacc2860}{Freq\+Trajet\+Par\+Destination.\+consecutive\+\_\+trip\+\_\+counts}} = consecutive\+\_\+trips.\+groupby(\textquotesingle{}Agent\+Id\textquotesingle{}).size()
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_ad56c80e02d45d29d56195743e890e024}{Freq\+Trajet\+Par\+Destination.\+frequency\+\_\+distribution}} = consecutive\+\_\+trip\+\_\+counts.\+value\+\_\+counts().sort\+\_\+index()
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_a77ef8c1113755d900bdb9c6464d3e6db}{Freq\+Trajet\+Par\+Destination.\+x\+\_\+range}} = range(1, 15)
+\item 
+int \mbox{\hyperlink{namespace_freq_trajet_par_destination_a141a5a33277bd9905acc6e5ea20eece0}{Freq\+Trajet\+Par\+Destination.\+y\+\_\+max}} = 700
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_ac1167f285558b6a2f5f339a681b1c51a}{Freq\+Trajet\+Par\+Destination.\+figsize}}
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_a29ba80cc2ff47eaca8814ed060f0f20a}{Freq\+Trajet\+Par\+Destination.\+bars}}
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_ad07c7fec08ce26efbcf58fb65db1d1ac}{Freq\+Trajet\+Par\+Destination.\+height}} = bar.\+get\+\_\+height()
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_a57e62c674f4da8ac3e296f6a3d96de09}{Freq\+Trajet\+Par\+Destination.\+ha}}
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_ac66f1be44ef4851224fcff503e1b9aef}{Freq\+Trajet\+Par\+Destination.\+va}}
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_aa4a39512b5af63c1f54db6394e98924c}{Freq\+Trajet\+Par\+Destination.\+fontsize}}
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_a66da8c99030097a7361b1997c08c9748}{Freq\+Trajet\+Par\+Destination.\+color}}
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_ac1079dbd33919cd2437438cff82e647c}{Freq\+Trajet\+Par\+Destination.\+axis}}
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_a898eccda01410081ca1fa08f0e3ab0f5}{Freq\+Trajet\+Par\+Destination.\+linestyle}}
+\item 
+\mbox{\hyperlink{namespace_freq_trajet_par_destination_af81d843b28e2405f71d0584e059d9ef8}{Freq\+Trajet\+Par\+Destination.\+alpha}}
+\end{DoxyCompactItemize}

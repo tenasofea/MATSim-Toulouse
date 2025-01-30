@@ -1,0 +1,64 @@
+import numpy as np
+import pandas as pd
+import folium
+from sklearn.cluster import DBSCAN
+from geopy.distance import great_circle
+from folium.plugins import MarkerCluster
+
+# Load your OD data (Example Data)
+data = pd.DataFrame({
+    "Origin_Lat": [43.6043, 43.6050, 43.7010, 43.7030, 43.8000, 43.8020],
+    "Origin_Lon": [1.4419, 1.4430, 1.5002, 1.5020, 1.6000, 1.6025],
+    "Dest_Lat":   [43.6123, 43.6130, 43.7505, 43.7520, 43.8500, 43.8520],
+    "Dest_Lon":   [1.4567, 1.4570, 1.6000, 1.6025, 1.7000, 1.7020]
+})
+
+# Convert OD pairs into a feature matrix
+X = data[['Origin_Lat', 'Origin_Lon', 'Dest_Lat', 'Dest_Lon']].values
+
+# Define a function to compute geodesic distance
+def geo_distance(p1, p2):
+    """
+    Compute geodesic distance between two points (Origin_Lat, Origin_Lon, Dest_Lat, Dest_Lon).
+    Uses great-circle distance (haversine formula).
+    """
+    return great_circle((p1[0], p1[1]), (p2[0], p2[1])).km + great_circle((p1[2], p1[3]), (p2[2], p2[3])).km
+
+# Custom DBSCAN with geodesic distance
+dbscan = DBSCAN(eps=5, min_samples=2, metric=geo_distance)  # eps is in kilometers
+data['Cluster'] = dbscan.fit_predict(X)
+
+# Display clustered OD pairs
+print("Clustered OD Pairs:")
+print(data)
+
+# Create a Folium Map for Visualization
+map_center = [data['Origin_Lat'].mean(), data['Origin_Lon'].mean()]
+m = folium.Map(location=map_center, zoom_start=12)
+
+# Add markers for each OD pair with cluster labels
+marker_cluster = MarkerCluster().add_to(m)
+
+for idx, row in data.iterrows():
+    folium.Marker(
+        location=[row['Origin_Lat'], row['Origin_Lon']],
+        popup=f"Cluster {row['Cluster']}: Origin",
+        icon=folium.Icon(color="blue", icon="info-sign")
+    ).add_to(marker_cluster)
+
+    folium.Marker(
+        location=[row['Dest_Lat'], row['Dest_Lon']],
+        popup=f"Cluster {row['Cluster']}: Destination",
+        icon=folium.Icon(color="red", icon="info-sign")
+    ).add_to(marker_cluster)
+
+    folium.PolyLine(
+        locations=[[row['Origin_Lat'], row['Origin_Lon']], [row['Dest_Lat'], row['Dest_Lon']]],
+        color="green",
+        weight=2,
+        opacity=0.6
+    ).add_to(m)
+
+# Save and display the map
+m.save("od_clusters_dbscan.html")
+print("Map saved as 'od_clusters_dbscan.html'. Open in a browser to view.")

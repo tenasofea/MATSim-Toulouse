@@ -1,0 +1,125 @@
+\doxysection{Trip\+Par\+Agent\+Sur\+Semaine Namespace Reference}
+\hypertarget{namespace_trip_par_agent_sur_semaine}{}\label{namespace_trip_par_agent_sur_semaine}\index{TripParAgentSurSemaine@{TripParAgentSurSemaine}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+dict \mbox{\hyperlink{namespace_trip_par_agent_sur_semaine_ae4b90d63d55325ef5de7d5b145379991}{file\+\_\+paths}}
+\item 
+list \mbox{\hyperlink{namespace_trip_par_agent_sur_semaine_ab0aca337cdfff992ad6e4d48e42bfa4d}{all\+\_\+data}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_trip_par_agent_sur_semaine_ad64f3fcce3d7bf541352266ff7c2f5db}{daily\+\_\+data}} = pd.\+read\+\_\+csv(path)
+\item 
+\mbox{\hyperlink{namespace_trip_par_agent_sur_semaine_ad1cf4315d51aad8b060004c9b8e8a007}{combined\+\_\+data}} = pd.\+concat(\mbox{\hyperlink{namespace_trip_par_agent_sur_semaine_ab0aca337cdfff992ad6e4d48e42bfa4d}{all\+\_\+data}}, ignore\+\_\+index=True)
+\item 
+list \mbox{\hyperlink{namespace_trip_par_agent_sur_semaine_a29300a5f9ae2cc2c9d6f0546709776b5}{day\+\_\+order}} = \mbox{[}\textquotesingle{}Sunday\textquotesingle{}, \textquotesingle{}Monday\textquotesingle{}, \textquotesingle{}Tuesday\textquotesingle{}, \textquotesingle{}Wednesday\textquotesingle{}, \textquotesingle{}Thursday\textquotesingle{}, \textquotesingle{}Friday\textquotesingle{}, \textquotesingle{}Saturday\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_trip_par_agent_sur_semaine_a8d2c855b6305093e0f1154a78a2cc1d9}{categories}}
+\item 
+\mbox{\hyperlink{namespace_trip_par_agent_sur_semaine_a10373006a79298e2316960d2fe87e06f}{ordered}}
+\item 
+list \mbox{\hyperlink{namespace_trip_par_agent_sur_semaine_a01cb63dd31fe32bd44897f5434cf9c96}{ordered\+\_\+trips}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_trip_par_agent_sur_semaine_a399382b56ac83d41d7ced13019f9d881}{agent\+\_\+data}} = agent\+\_\+data.\+sort\+\_\+values(by=\mbox{[}\textquotesingle{}Day\textquotesingle{}, \textquotesingle{}New\+\_\+\+Trip\textquotesingle{}\mbox{]}).reset\+\_\+index(drop=True)
+\item 
+\mbox{\hyperlink{namespace_trip_par_agent_sur_semaine_ab083160f92090a6acb23d7349dab677a}{current\+\_\+motif}} = agent\+\_\+data.\+loc\mbox{[}0, \textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_trip_par_agent_sur_semaine_a7e280251abcf77e9b560617f42f5f158}{ordered\+\_\+trips\+\_\+df}} = pd.\+Data\+Frame(\mbox{\hyperlink{namespace_trip_par_agent_sur_semaine_a01cb63dd31fe32bd44897f5434cf9c96}{ordered\+\_\+trips}})
+\item 
+str \mbox{\hyperlink{namespace_trip_par_agent_sur_semaine_a4e46700151c3c2bd1a5c83a4c8e97951}{output\+\_\+file}} = \textquotesingle{}ordered\+\_\+weekly\+\_\+trips.\+csv\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespace_trip_par_agent_sur_semaine_a2261514ddd649b9caafc1ee3c07c86a1}{index}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespace_trip_par_agent_sur_semaine_a399382b56ac83d41d7ced13019f9d881}\index{TripParAgentSurSemaine@{TripParAgentSurSemaine}!agent\_data@{agent\_data}}
+\index{agent\_data@{agent\_data}!TripParAgentSurSemaine@{TripParAgentSurSemaine}}
+\doxysubsubsection{\texorpdfstring{agent\_data}{agent\_data}}
+{\footnotesize\ttfamily \label{namespace_trip_par_agent_sur_semaine_a399382b56ac83d41d7ced13019f9d881} 
+Trip\+Par\+Agent\+Sur\+Semaine.\+agent\+\_\+data = agent\+\_\+data.\+sort\+\_\+values(by=\mbox{[}\textquotesingle{}Day\textquotesingle{}, \textquotesingle{}New\+\_\+\+Trip\textquotesingle{}\mbox{]}).reset\+\_\+index(drop=True)}
+
+\Hypertarget{namespace_trip_par_agent_sur_semaine_ab0aca337cdfff992ad6e4d48e42bfa4d}\index{TripParAgentSurSemaine@{TripParAgentSurSemaine}!all\_data@{all\_data}}
+\index{all\_data@{all\_data}!TripParAgentSurSemaine@{TripParAgentSurSemaine}}
+\doxysubsubsection{\texorpdfstring{all\_data}{all\_data}}
+{\footnotesize\ttfamily \label{namespace_trip_par_agent_sur_semaine_ab0aca337cdfff992ad6e4d48e42bfa4d} 
+list Trip\+Par\+Agent\+Sur\+Semaine.\+all\+\_\+data = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{namespace_trip_par_agent_sur_semaine_a8d2c855b6305093e0f1154a78a2cc1d9}\index{TripParAgentSurSemaine@{TripParAgentSurSemaine}!categories@{categories}}
+\index{categories@{categories}!TripParAgentSurSemaine@{TripParAgentSurSemaine}}
+\doxysubsubsection{\texorpdfstring{categories}{categories}}
+{\footnotesize\ttfamily \label{namespace_trip_par_agent_sur_semaine_a8d2c855b6305093e0f1154a78a2cc1d9} 
+Trip\+Par\+Agent\+Sur\+Semaine.\+categories}
+
+\Hypertarget{namespace_trip_par_agent_sur_semaine_ad1cf4315d51aad8b060004c9b8e8a007}\index{TripParAgentSurSemaine@{TripParAgentSurSemaine}!combined\_data@{combined\_data}}
+\index{combined\_data@{combined\_data}!TripParAgentSurSemaine@{TripParAgentSurSemaine}}
+\doxysubsubsection{\texorpdfstring{combined\_data}{combined\_data}}
+{\footnotesize\ttfamily \label{namespace_trip_par_agent_sur_semaine_ad1cf4315d51aad8b060004c9b8e8a007} 
+Trip\+Par\+Agent\+Sur\+Semaine.\+combined\+\_\+data = pd.\+concat(\mbox{\hyperlink{namespace_trip_par_agent_sur_semaine_ab0aca337cdfff992ad6e4d48e42bfa4d}{all\+\_\+data}}, ignore\+\_\+index=True)}
+
+\Hypertarget{namespace_trip_par_agent_sur_semaine_ab083160f92090a6acb23d7349dab677a}\index{TripParAgentSurSemaine@{TripParAgentSurSemaine}!current\_motif@{current\_motif}}
+\index{current\_motif@{current\_motif}!TripParAgentSurSemaine@{TripParAgentSurSemaine}}
+\doxysubsubsection{\texorpdfstring{current\_motif}{current\_motif}}
+{\footnotesize\ttfamily \label{namespace_trip_par_agent_sur_semaine_ab083160f92090a6acb23d7349dab677a} 
+Trip\+Par\+Agent\+Sur\+Semaine.\+current\+\_\+motif = agent\+\_\+data.\+loc\mbox{[}0, \textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}\mbox{]}}
+
+\Hypertarget{namespace_trip_par_agent_sur_semaine_ad64f3fcce3d7bf541352266ff7c2f5db}\index{TripParAgentSurSemaine@{TripParAgentSurSemaine}!daily\_data@{daily\_data}}
+\index{daily\_data@{daily\_data}!TripParAgentSurSemaine@{TripParAgentSurSemaine}}
+\doxysubsubsection{\texorpdfstring{daily\_data}{daily\_data}}
+{\footnotesize\ttfamily \label{namespace_trip_par_agent_sur_semaine_ad64f3fcce3d7bf541352266ff7c2f5db} 
+Trip\+Par\+Agent\+Sur\+Semaine.\+daily\+\_\+data = pd.\+read\+\_\+csv(path)}
+
+\Hypertarget{namespace_trip_par_agent_sur_semaine_a29300a5f9ae2cc2c9d6f0546709776b5}\index{TripParAgentSurSemaine@{TripParAgentSurSemaine}!day\_order@{day\_order}}
+\index{day\_order@{day\_order}!TripParAgentSurSemaine@{TripParAgentSurSemaine}}
+\doxysubsubsection{\texorpdfstring{day\_order}{day\_order}}
+{\footnotesize\ttfamily \label{namespace_trip_par_agent_sur_semaine_a29300a5f9ae2cc2c9d6f0546709776b5} 
+Trip\+Par\+Agent\+Sur\+Semaine.\+day\+\_\+order = \mbox{[}\textquotesingle{}Sunday\textquotesingle{}, \textquotesingle{}Monday\textquotesingle{}, \textquotesingle{}Tuesday\textquotesingle{}, \textquotesingle{}Wednesday\textquotesingle{}, \textquotesingle{}Thursday\textquotesingle{}, \textquotesingle{}Friday\textquotesingle{}, \textquotesingle{}Saturday\textquotesingle{}\mbox{]}}
+
+\Hypertarget{namespace_trip_par_agent_sur_semaine_ae4b90d63d55325ef5de7d5b145379991}\index{TripParAgentSurSemaine@{TripParAgentSurSemaine}!file\_paths@{file\_paths}}
+\index{file\_paths@{file\_paths}!TripParAgentSurSemaine@{TripParAgentSurSemaine}}
+\doxysubsubsection{\texorpdfstring{file\_paths}{file\_paths}}
+{\footnotesize\ttfamily \label{namespace_trip_par_agent_sur_semaine_ae4b90d63d55325ef5de7d5b145379991} 
+dict Trip\+Par\+Agent\+Sur\+Semaine.\+file\+\_\+paths}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ \{}
+\DoxyCodeLine{00002\ \ \ \ \ \textcolor{stringliteral}{'Sunday'}:\ \textcolor{stringliteral}{"{}C:\(\backslash\)\(\backslash\)Users\(\backslash\)\(\backslash\)User\(\backslash\)\(\backslash\)IdeaProjects\(\backslash\)\(\backslash\)matsim-\/example-\/project-\/modified\(\backslash\)\(\backslash\)activity\_sunday\_real\_car.csv"{}},}
+\DoxyCodeLine{00003\ \ \ \ \ \textcolor{stringliteral}{'Monday'}:\ \textcolor{stringliteral}{"{}C:\(\backslash\)\(\backslash\)Users\(\backslash\)\(\backslash\)User\(\backslash\)\(\backslash\)IdeaProjects\(\backslash\)\(\backslash\)matsim-\/example-\/project-\/modified\(\backslash\)\(\backslash\)activity\_monday\_real\_car.csv"{}},}
+\DoxyCodeLine{00004\ \ \ \ \ \textcolor{stringliteral}{'Tuesday'}:\ \textcolor{stringliteral}{"{}C:\(\backslash\)\(\backslash\)Users\(\backslash\)\(\backslash\)User\(\backslash\)\(\backslash\)IdeaProjects\(\backslash\)\(\backslash\)matsim-\/example-\/project-\/modified\(\backslash\)\(\backslash\)activity\_tuesday\_real\_car.csv"{}},}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{stringliteral}{'Wednesday'}:\ \textcolor{stringliteral}{"{}C:\(\backslash\)\(\backslash\)Users\(\backslash\)\(\backslash\)User\(\backslash\)\(\backslash\)IdeaProjects\(\backslash\)\(\backslash\)matsim-\/example-\/project-\/modified\(\backslash\)\(\backslash\)activity\_wednesday\_real\_car.csv"{}},}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{stringliteral}{'Thursday'}:\ \textcolor{stringliteral}{"{}C:\(\backslash\)\(\backslash\)Users\(\backslash\)\(\backslash\)User\(\backslash\)\(\backslash\)IdeaProjects\(\backslash\)\(\backslash\)matsim-\/example-\/project-\/modified\(\backslash\)\(\backslash\)activity\_thursday\_real\_car.csv"{}},}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{stringliteral}{'Friday'}:\ \textcolor{stringliteral}{"{}C:\(\backslash\)\(\backslash\)Users\(\backslash\)\(\backslash\)User\(\backslash\)\(\backslash\)IdeaProjects\(\backslash\)\(\backslash\)matsim-\/example-\/project-\/modified\(\backslash\)\(\backslash\)activity\_friday\_real\_car.csv"{}},}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{stringliteral}{'Saturday'}:\ \textcolor{stringliteral}{"{}C:\(\backslash\)\(\backslash\)Users\(\backslash\)\(\backslash\)User\(\backslash\)\(\backslash\)IdeaProjects\(\backslash\)\(\backslash\)matsim-\/example-\/project-\/modified\(\backslash\)\(\backslash\)activity\_saturday\_real\_car.csv"{}},}
+\DoxyCodeLine{00009\ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_trip_par_agent_sur_semaine_a2261514ddd649b9caafc1ee3c07c86a1}\index{TripParAgentSurSemaine@{TripParAgentSurSemaine}!index@{index}}
+\index{index@{index}!TripParAgentSurSemaine@{TripParAgentSurSemaine}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily \label{namespace_trip_par_agent_sur_semaine_a2261514ddd649b9caafc1ee3c07c86a1} 
+Trip\+Par\+Agent\+Sur\+Semaine.\+index}
+
+\Hypertarget{namespace_trip_par_agent_sur_semaine_a10373006a79298e2316960d2fe87e06f}\index{TripParAgentSurSemaine@{TripParAgentSurSemaine}!ordered@{ordered}}
+\index{ordered@{ordered}!TripParAgentSurSemaine@{TripParAgentSurSemaine}}
+\doxysubsubsection{\texorpdfstring{ordered}{ordered}}
+{\footnotesize\ttfamily \label{namespace_trip_par_agent_sur_semaine_a10373006a79298e2316960d2fe87e06f} 
+Trip\+Par\+Agent\+Sur\+Semaine.\+ordered}
+
+\Hypertarget{namespace_trip_par_agent_sur_semaine_a01cb63dd31fe32bd44897f5434cf9c96}\index{TripParAgentSurSemaine@{TripParAgentSurSemaine}!ordered\_trips@{ordered\_trips}}
+\index{ordered\_trips@{ordered\_trips}!TripParAgentSurSemaine@{TripParAgentSurSemaine}}
+\doxysubsubsection{\texorpdfstring{ordered\_trips}{ordered\_trips}}
+{\footnotesize\ttfamily \label{namespace_trip_par_agent_sur_semaine_a01cb63dd31fe32bd44897f5434cf9c96} 
+list Trip\+Par\+Agent\+Sur\+Semaine.\+ordered\+\_\+trips = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{namespace_trip_par_agent_sur_semaine_a7e280251abcf77e9b560617f42f5f158}\index{TripParAgentSurSemaine@{TripParAgentSurSemaine}!ordered\_trips\_df@{ordered\_trips\_df}}
+\index{ordered\_trips\_df@{ordered\_trips\_df}!TripParAgentSurSemaine@{TripParAgentSurSemaine}}
+\doxysubsubsection{\texorpdfstring{ordered\_trips\_df}{ordered\_trips\_df}}
+{\footnotesize\ttfamily \label{namespace_trip_par_agent_sur_semaine_a7e280251abcf77e9b560617f42f5f158} 
+Trip\+Par\+Agent\+Sur\+Semaine.\+ordered\+\_\+trips\+\_\+df = pd.\+Data\+Frame(\mbox{\hyperlink{namespace_trip_par_agent_sur_semaine_a01cb63dd31fe32bd44897f5434cf9c96}{ordered\+\_\+trips}})}
+
+\Hypertarget{namespace_trip_par_agent_sur_semaine_a4e46700151c3c2bd1a5c83a4c8e97951}\index{TripParAgentSurSemaine@{TripParAgentSurSemaine}!output\_file@{output\_file}}
+\index{output\_file@{output\_file}!TripParAgentSurSemaine@{TripParAgentSurSemaine}}
+\doxysubsubsection{\texorpdfstring{output\_file}{output\_file}}
+{\footnotesize\ttfamily \label{namespace_trip_par_agent_sur_semaine_a4e46700151c3c2bd1a5c83a4c8e97951} 
+Trip\+Par\+Agent\+Sur\+Semaine.\+output\+\_\+file = \textquotesingle{}ordered\+\_\+weekly\+\_\+trips.\+csv\textquotesingle{}}
+

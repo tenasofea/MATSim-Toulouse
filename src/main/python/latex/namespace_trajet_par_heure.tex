@@ -1,0 +1,154 @@
+\doxysection{Trajet\+Par\+Heure Namespace Reference}
+\hypertarget{namespace_trajet_par_heure}{}\label{namespace_trajet_par_heure}\index{TrajetParHeure@{TrajetParHeure}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespace_trajet_par_heure_aa3e8392de4bd6967079e8304b283eb7c}{output\+\_\+path}} = "{}C\+:\textbackslash{}\textbackslash{}\+Users\textbackslash{}\textbackslash{}\+User\textbackslash{}\textbackslash{}\+Idea\+Projects\textbackslash{}\textbackslash{}matsim-\/example-\/project-\/modified\textbackslash{}\textbackslash{}csv\+\_\+tuesday\textbackslash{}\textbackslash{}"{}
+\item 
+bool \mbox{\hyperlink{namespace_trajet_par_heure_a69ff9265af0320e5224e366028d28805}{include\+\_\+other}} = True
+\item 
+bool \mbox{\hyperlink{namespace_trajet_par_heure_af1074a4e50749e6823f37002efdf5900}{group\+\_\+motifs}} = True
+\item 
+list \mbox{\hyperlink{namespace_trajet_par_heure_ad7f6125e49464913a577b03e5e2d8ad1}{explicit\+\_\+motifs}}
+\item 
+\mbox{\hyperlink{namespace_trajet_par_heure_ab94fd5d1c1efd866cb801adfc2125d49}{df}} = pd.\+read\+\_\+csv(\textquotesingle{}agent\+\_\+positions\+\_\+motif\+\_\+filtre\+\_\+g\+\_\+clean\+\_\+tuesday.\+csv\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespace_trajet_par_heure_a719c99c45074f225bd066bad7dbf431f}{departure\+\_\+df}} = \mbox{\hyperlink{namespace_trajet_par_heure_ab94fd5d1c1efd866cb801adfc2125d49}{df}}\mbox{[}\mbox{\hyperlink{namespace_trajet_par_heure_ab94fd5d1c1efd866cb801adfc2125d49}{df}}\mbox{[}\textquotesingle{}Is\+\_\+\+Departure\textquotesingle{}\mbox{]}\mbox{]}.copy()
+\item 
+dict \mbox{\hyperlink{namespace_trajet_par_heure_afd957faaeb78c477bfe856bcc49eab0f}{trips\+\_\+by\+\_\+motif\+\_\+per\+\_\+hour}} = \{\}
+\item 
+\mbox{\hyperlink{namespace_trajet_par_heure_a6bea234c9b84e56bfac293788357cc6a}{agent\+\_\+id}} = row\mbox{[}\textquotesingle{}Agent\+Id\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_trajet_par_heure_a9b57fd4a3bc1ad5950a7f7cfde1d7cb7}{hour}} = row\mbox{[}\textquotesingle{}Temps\+\_\+hour\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_trajet_par_heure_a28f386f6bb6d8f3446cc066967b245d6}{motif\+\_\+orig}} = row\mbox{[}\textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_trajet_par_heure_ac7d71e516e10bb346c796c822d1481dc}{motif\+\_\+dest}} = row\mbox{[}\textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}\mbox{]}
+\item 
+tuple \mbox{\hyperlink{namespace_trajet_par_heure_abf08a815542674d49274088b4abc7bf7}{trip\+\_\+type}} = (\mbox{\hyperlink{namespace_trajet_par_heure_a28f386f6bb6d8f3446cc066967b245d6}{motif\+\_\+orig}}, \mbox{\hyperlink{namespace_trajet_par_heure_ac7d71e516e10bb346c796c822d1481dc}{motif\+\_\+dest}})
+\item 
+list \mbox{\hyperlink{namespace_trajet_par_heure_ade48fc5ab3b812c0cc00e81c6d5684ab}{motif\+\_\+data}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_trajet_par_heure_a33d4173599555c088237bca6e53375c4}{motif\+\_\+df}} = pd.\+Data\+Frame(\mbox{\hyperlink{namespace_trajet_par_heure_ade48fc5ab3b812c0cc00e81c6d5684ab}{motif\+\_\+data}}, \mbox{\hyperlink{namespace_trajet_par_heure_a29c8fcd930a992342f61be4b74bd203c}{columns}}=\mbox{[}\textquotesingle{}Heure\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}, \textquotesingle{}Nombre\+\_\+\+Trajet\textquotesingle{}\mbox{]}).sort\+\_\+values(by=\textquotesingle{}Heure\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespace_trajet_par_heure_ac53caa1c46eb2277f0ca43245507add9}{trips\+\_\+per\+\_\+hour\+\_\+df}} = motif\+\_\+df.\+groupby(\textquotesingle{}Heure\textquotesingle{})\mbox{[}\textquotesingle{}Nombre\+\_\+\+Trajet\textquotesingle{}\mbox{]}.sum().reset\+\_\+index()
+\item 
+\mbox{\hyperlink{namespace_trajet_par_heure_a29c8fcd930a992342f61be4b74bd203c}{columns}}
+\item 
+\mbox{\hyperlink{namespace_trajet_par_heure_a8c88f7cda9f8f8c22323450c3051b4d3}{index}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespace_trajet_par_heure_a6bea234c9b84e56bfac293788357cc6a}\index{TrajetParHeure@{TrajetParHeure}!agent\_id@{agent\_id}}
+\index{agent\_id@{agent\_id}!TrajetParHeure@{TrajetParHeure}}
+\doxysubsubsection{\texorpdfstring{agent\_id}{agent\_id}}
+{\footnotesize\ttfamily \label{namespace_trajet_par_heure_a6bea234c9b84e56bfac293788357cc6a} 
+Trajet\+Par\+Heure.\+agent\+\_\+id = row\mbox{[}\textquotesingle{}Agent\+Id\textquotesingle{}\mbox{]}}
+
+\Hypertarget{namespace_trajet_par_heure_a29c8fcd930a992342f61be4b74bd203c}\index{TrajetParHeure@{TrajetParHeure}!columns@{columns}}
+\index{columns@{columns}!TrajetParHeure@{TrajetParHeure}}
+\doxysubsubsection{\texorpdfstring{columns}{columns}}
+{\footnotesize\ttfamily \label{namespace_trajet_par_heure_a29c8fcd930a992342f61be4b74bd203c} 
+Trajet\+Par\+Heure.\+columns}
+
+\Hypertarget{namespace_trajet_par_heure_a719c99c45074f225bd066bad7dbf431f}\index{TrajetParHeure@{TrajetParHeure}!departure\_df@{departure\_df}}
+\index{departure\_df@{departure\_df}!TrajetParHeure@{TrajetParHeure}}
+\doxysubsubsection{\texorpdfstring{departure\_df}{departure\_df}}
+{\footnotesize\ttfamily \label{namespace_trajet_par_heure_a719c99c45074f225bd066bad7dbf431f} 
+Trajet\+Par\+Heure.\+departure\+\_\+df = \mbox{\hyperlink{namespace_trajet_par_heure_ab94fd5d1c1efd866cb801adfc2125d49}{df}}\mbox{[}\mbox{\hyperlink{namespace_trajet_par_heure_ab94fd5d1c1efd866cb801adfc2125d49}{df}}\mbox{[}\textquotesingle{}Is\+\_\+\+Departure\textquotesingle{}\mbox{]}\mbox{]}.copy()}
+
+\Hypertarget{namespace_trajet_par_heure_ab94fd5d1c1efd866cb801adfc2125d49}\index{TrajetParHeure@{TrajetParHeure}!df@{df}}
+\index{df@{df}!TrajetParHeure@{TrajetParHeure}}
+\doxysubsubsection{\texorpdfstring{df}{df}}
+{\footnotesize\ttfamily \label{namespace_trajet_par_heure_ab94fd5d1c1efd866cb801adfc2125d49} 
+Trajet\+Par\+Heure.\+df = pd.\+read\+\_\+csv(\textquotesingle{}agent\+\_\+positions\+\_\+motif\+\_\+filtre\+\_\+g\+\_\+clean\+\_\+tuesday.\+csv\textquotesingle{})}
+
+\Hypertarget{namespace_trajet_par_heure_ad7f6125e49464913a577b03e5e2d8ad1}\index{TrajetParHeure@{TrajetParHeure}!explicit\_motifs@{explicit\_motifs}}
+\index{explicit\_motifs@{explicit\_motifs}!TrajetParHeure@{TrajetParHeure}}
+\doxysubsubsection{\texorpdfstring{explicit\_motifs}{explicit\_motifs}}
+{\footnotesize\ttfamily \label{namespace_trajet_par_heure_ad7f6125e49464913a577b03e5e2d8ad1} 
+list Trajet\+Par\+Heure.\+explicit\+\_\+motifs}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ [}
+\DoxyCodeLine{00002\ \ \ \ \ (\textcolor{stringliteral}{"{}home"{}},\ \textcolor{stringliteral}{"{}work"{}}),\ (\textcolor{stringliteral}{"{}home"{}},\ \textcolor{stringliteral}{"{}leisure"{}}),\ (\textcolor{stringliteral}{"{}home"{}},\ \textcolor{stringliteral}{"{}education"{}}),}
+\DoxyCodeLine{00003\ \ \ \ \ (\textcolor{stringliteral}{"{}home"{}},\ \textcolor{stringliteral}{"{}other"{}}),\ (\textcolor{stringliteral}{"{}home"{}},\ \textcolor{stringliteral}{"{}shop"{}}),\ (\textcolor{stringliteral}{"{}work"{}},\ \textcolor{stringliteral}{"{}home"{}}),}
+\DoxyCodeLine{00004\ \ \ \ \ (\textcolor{stringliteral}{"{}leisure"{}},\ \textcolor{stringliteral}{"{}home"{}}),\ (\textcolor{stringliteral}{"{}education"{}},\ \textcolor{stringliteral}{"{}home"{}}),\ (\textcolor{stringliteral}{"{}other"{}},\ \textcolor{stringliteral}{"{}home"{}}),}
+\DoxyCodeLine{00005\ \ \ \ \ (\textcolor{stringliteral}{"{}shop"{}},\ \textcolor{stringliteral}{"{}home"{}})}
+\DoxyCodeLine{00006\ ]}
+
+\end{DoxyCode}
+\Hypertarget{namespace_trajet_par_heure_af1074a4e50749e6823f37002efdf5900}\index{TrajetParHeure@{TrajetParHeure}!group\_motifs@{group\_motifs}}
+\index{group\_motifs@{group\_motifs}!TrajetParHeure@{TrajetParHeure}}
+\doxysubsubsection{\texorpdfstring{group\_motifs}{group\_motifs}}
+{\footnotesize\ttfamily \label{namespace_trajet_par_heure_af1074a4e50749e6823f37002efdf5900} 
+bool Trajet\+Par\+Heure.\+group\+\_\+motifs = True}
+
+\Hypertarget{namespace_trajet_par_heure_a9b57fd4a3bc1ad5950a7f7cfde1d7cb7}\index{TrajetParHeure@{TrajetParHeure}!hour@{hour}}
+\index{hour@{hour}!TrajetParHeure@{TrajetParHeure}}
+\doxysubsubsection{\texorpdfstring{hour}{hour}}
+{\footnotesize\ttfamily \label{namespace_trajet_par_heure_a9b57fd4a3bc1ad5950a7f7cfde1d7cb7} 
+Trajet\+Par\+Heure.\+hour = row\mbox{[}\textquotesingle{}Temps\+\_\+hour\textquotesingle{}\mbox{]}}
+
+\Hypertarget{namespace_trajet_par_heure_a69ff9265af0320e5224e366028d28805}\index{TrajetParHeure@{TrajetParHeure}!include\_other@{include\_other}}
+\index{include\_other@{include\_other}!TrajetParHeure@{TrajetParHeure}}
+\doxysubsubsection{\texorpdfstring{include\_other}{include\_other}}
+{\footnotesize\ttfamily \label{namespace_trajet_par_heure_a69ff9265af0320e5224e366028d28805} 
+bool Trajet\+Par\+Heure.\+include\+\_\+other = True}
+
+\Hypertarget{namespace_trajet_par_heure_a8c88f7cda9f8f8c22323450c3051b4d3}\index{TrajetParHeure@{TrajetParHeure}!index@{index}}
+\index{index@{index}!TrajetParHeure@{TrajetParHeure}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily \label{namespace_trajet_par_heure_a8c88f7cda9f8f8c22323450c3051b4d3} 
+Trajet\+Par\+Heure.\+index}
+
+\Hypertarget{namespace_trajet_par_heure_ade48fc5ab3b812c0cc00e81c6d5684ab}\index{TrajetParHeure@{TrajetParHeure}!motif\_data@{motif\_data}}
+\index{motif\_data@{motif\_data}!TrajetParHeure@{TrajetParHeure}}
+\doxysubsubsection{\texorpdfstring{motif\_data}{motif\_data}}
+{\footnotesize\ttfamily \label{namespace_trajet_par_heure_ade48fc5ab3b812c0cc00e81c6d5684ab} 
+list Trajet\+Par\+Heure.\+motif\+\_\+data = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{namespace_trajet_par_heure_ac7d71e516e10bb346c796c822d1481dc}\index{TrajetParHeure@{TrajetParHeure}!motif\_dest@{motif\_dest}}
+\index{motif\_dest@{motif\_dest}!TrajetParHeure@{TrajetParHeure}}
+\doxysubsubsection{\texorpdfstring{motif\_dest}{motif\_dest}}
+{\footnotesize\ttfamily \label{namespace_trajet_par_heure_ac7d71e516e10bb346c796c822d1481dc} 
+Trajet\+Par\+Heure.\+motif\+\_\+dest = row\mbox{[}\textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}\mbox{]}}
+
+\Hypertarget{namespace_trajet_par_heure_a33d4173599555c088237bca6e53375c4}\index{TrajetParHeure@{TrajetParHeure}!motif\_df@{motif\_df}}
+\index{motif\_df@{motif\_df}!TrajetParHeure@{TrajetParHeure}}
+\doxysubsubsection{\texorpdfstring{motif\_df}{motif\_df}}
+{\footnotesize\ttfamily \label{namespace_trajet_par_heure_a33d4173599555c088237bca6e53375c4} 
+Trajet\+Par\+Heure.\+motif\+\_\+df = pd.\+Data\+Frame(\mbox{\hyperlink{namespace_trajet_par_heure_ade48fc5ab3b812c0cc00e81c6d5684ab}{motif\+\_\+data}}, \mbox{\hyperlink{namespace_trajet_par_heure_a29c8fcd930a992342f61be4b74bd203c}{columns}}=\mbox{[}\textquotesingle{}Heure\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}, \textquotesingle{}Nombre\+\_\+\+Trajet\textquotesingle{}\mbox{]}).sort\+\_\+values(by=\textquotesingle{}Heure\textquotesingle{})}
+
+\Hypertarget{namespace_trajet_par_heure_a28f386f6bb6d8f3446cc066967b245d6}\index{TrajetParHeure@{TrajetParHeure}!motif\_orig@{motif\_orig}}
+\index{motif\_orig@{motif\_orig}!TrajetParHeure@{TrajetParHeure}}
+\doxysubsubsection{\texorpdfstring{motif\_orig}{motif\_orig}}
+{\footnotesize\ttfamily \label{namespace_trajet_par_heure_a28f386f6bb6d8f3446cc066967b245d6} 
+Trajet\+Par\+Heure.\+motif\+\_\+orig = row\mbox{[}\textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}\mbox{]}}
+
+\Hypertarget{namespace_trajet_par_heure_aa3e8392de4bd6967079e8304b283eb7c}\index{TrajetParHeure@{TrajetParHeure}!output\_path@{output\_path}}
+\index{output\_path@{output\_path}!TrajetParHeure@{TrajetParHeure}}
+\doxysubsubsection{\texorpdfstring{output\_path}{output\_path}}
+{\footnotesize\ttfamily \label{namespace_trajet_par_heure_aa3e8392de4bd6967079e8304b283eb7c} 
+str Trajet\+Par\+Heure.\+output\+\_\+path = "{}C\+:\textbackslash{}\textbackslash{}\+Users\textbackslash{}\textbackslash{}\+User\textbackslash{}\textbackslash{}\+Idea\+Projects\textbackslash{}\textbackslash{}matsim-\/example-\/project-\/modified\textbackslash{}\textbackslash{}csv\+\_\+tuesday\textbackslash{}\textbackslash{}"{}}
+
+\Hypertarget{namespace_trajet_par_heure_abf08a815542674d49274088b4abc7bf7}\index{TrajetParHeure@{TrajetParHeure}!trip\_type@{trip\_type}}
+\index{trip\_type@{trip\_type}!TrajetParHeure@{TrajetParHeure}}
+\doxysubsubsection{\texorpdfstring{trip\_type}{trip\_type}}
+{\footnotesize\ttfamily \label{namespace_trajet_par_heure_abf08a815542674d49274088b4abc7bf7} 
+tuple Trajet\+Par\+Heure.\+trip\+\_\+type = (\mbox{\hyperlink{namespace_trajet_par_heure_a28f386f6bb6d8f3446cc066967b245d6}{motif\+\_\+orig}}, \mbox{\hyperlink{namespace_trajet_par_heure_ac7d71e516e10bb346c796c822d1481dc}{motif\+\_\+dest}})}
+
+\Hypertarget{namespace_trajet_par_heure_afd957faaeb78c477bfe856bcc49eab0f}\index{TrajetParHeure@{TrajetParHeure}!trips\_by\_motif\_per\_hour@{trips\_by\_motif\_per\_hour}}
+\index{trips\_by\_motif\_per\_hour@{trips\_by\_motif\_per\_hour}!TrajetParHeure@{TrajetParHeure}}
+\doxysubsubsection{\texorpdfstring{trips\_by\_motif\_per\_hour}{trips\_by\_motif\_per\_hour}}
+{\footnotesize\ttfamily \label{namespace_trajet_par_heure_afd957faaeb78c477bfe856bcc49eab0f} 
+dict Trajet\+Par\+Heure.\+trips\+\_\+by\+\_\+motif\+\_\+per\+\_\+hour = \{\}}
+
+\Hypertarget{namespace_trajet_par_heure_ac53caa1c46eb2277f0ca43245507add9}\index{TrajetParHeure@{TrajetParHeure}!trips\_per\_hour\_df@{trips\_per\_hour\_df}}
+\index{trips\_per\_hour\_df@{trips\_per\_hour\_df}!TrajetParHeure@{TrajetParHeure}}
+\doxysubsubsection{\texorpdfstring{trips\_per\_hour\_df}{trips\_per\_hour\_df}}
+{\footnotesize\ttfamily \label{namespace_trajet_par_heure_ac53caa1c46eb2277f0ca43245507add9} 
+Trajet\+Par\+Heure.\+trips\+\_\+per\+\_\+hour\+\_\+df = motif\+\_\+df.\+groupby(\textquotesingle{}Heure\textquotesingle{})\mbox{[}\textquotesingle{}Nombre\+\_\+\+Trajet\textquotesingle{}\mbox{]}.sum().reset\+\_\+index()}
+

@@ -1,0 +1,104 @@
+\doxysection{Filter\+Short\+Trips Namespace Reference}
+\hypertarget{namespace_filter_short_trips}{}\label{namespace_filter_short_trips}\index{FilterShortTrips@{FilterShortTrips}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_filter_short_trips_a8ab89022c73174530806d8cea944eab9}{agents\+\_\+df}} = pd.\+read\+\_\+csv("{}C\+:\textbackslash{}\textbackslash{}\+Users\textbackslash{}\textbackslash{}\+User\textbackslash{}\textbackslash{}\+Idea\+Projects\textbackslash{}\textbackslash{}matsim-\/example-\/project-\/modified\textbackslash{}\textbackslash{}agent\+\_\+positions\+\_\+motif\+\_\+filtre\+\_\+g\+\_\+clean\+\_\+monday.\+csv"{})
+\item 
+int \mbox{\hyperlink{namespace_filter_short_trips_a4c83caf0456279cdb3cfb4f706686a95}{min\+\_\+duration}} = 2
+\item 
+int \mbox{\hyperlink{namespace_filter_short_trips_a4de4ad69c624e7e3e1aca3a00f96bc95}{max\+\_\+duration}} = 90
+\item 
+list \mbox{\hyperlink{namespace_filter_short_trips_a90c787abe04427a69f339f36992f59df}{filtered\+\_\+trips}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_filter_short_trips_a6245fbc9819d123489bd3a9c4906e783}{previous\+\_\+motif\+\_\+orig}} = None
+\item 
+\mbox{\hyperlink{namespace_filter_short_trips_ab9d63b02f1683f18801ab666f2c7bc54}{previous\+\_\+motif\+\_\+dest}} = None
+\item 
+list \mbox{\hyperlink{namespace_filter_short_trips_a5af915825a0257ad96d98ede15bfbee0}{current\+\_\+trip}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_filter_short_trips_ac641495c43f774cff5ae87d3ff02c1a5}{motif\+\_\+orig}}
+\item 
+\mbox{\hyperlink{namespace_filter_short_trips_a525547e6c23d54c56fa146f42c41ec2f}{motif\+\_\+dest}}
+\item 
+list \mbox{\hyperlink{namespace_filter_short_trips_a4ef0ac5f3ed27fe2236711ff634657e9}{trip\+\_\+duration}} = \mbox{\hyperlink{namespace_filter_short_trips_a5af915825a0257ad96d98ede15bfbee0}{current\+\_\+trip}}\mbox{[}-\/1\mbox{]}\mbox{[}\textquotesingle{}Temps\+\_\+minute\textquotesingle{}\mbox{]} -\/ \mbox{\hyperlink{namespace_filter_short_trips_a5af915825a0257ad96d98ede15bfbee0}{current\+\_\+trip}}\mbox{[}0\mbox{]}\mbox{[}\textquotesingle{}Temps\+\_\+minute\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_filter_short_trips_aec8a98798ac90878f1153e08fd0507fc}{filtered\+\_\+trips\+\_\+df}} = pd.\+Data\+Frame(\mbox{\hyperlink{namespace_filter_short_trips_a90c787abe04427a69f339f36992f59df}{filtered\+\_\+trips}})
+\item 
+\mbox{\hyperlink{namespace_filter_short_trips_a3befc11ab24e9b07fbe2664d9cf2d5be}{index}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespace_filter_short_trips_a8ab89022c73174530806d8cea944eab9}\index{FilterShortTrips@{FilterShortTrips}!agents\_df@{agents\_df}}
+\index{agents\_df@{agents\_df}!FilterShortTrips@{FilterShortTrips}}
+\doxysubsubsection{\texorpdfstring{agents\_df}{agents\_df}}
+{\footnotesize\ttfamily \label{namespace_filter_short_trips_a8ab89022c73174530806d8cea944eab9} 
+Filter\+Short\+Trips.\+agents\+\_\+df = pd.\+read\+\_\+csv("{}C\+:\textbackslash{}\textbackslash{}\+Users\textbackslash{}\textbackslash{}\+User\textbackslash{}\textbackslash{}\+Idea\+Projects\textbackslash{}\textbackslash{}matsim-\/example-\/project-\/modified\textbackslash{}\textbackslash{}agent\+\_\+positions\+\_\+motif\+\_\+filtre\+\_\+g\+\_\+clean\+\_\+monday.\+csv"{})}
+
+\Hypertarget{namespace_filter_short_trips_a5af915825a0257ad96d98ede15bfbee0}\index{FilterShortTrips@{FilterShortTrips}!current\_trip@{current\_trip}}
+\index{current\_trip@{current\_trip}!FilterShortTrips@{FilterShortTrips}}
+\doxysubsubsection{\texorpdfstring{current\_trip}{current\_trip}}
+{\footnotesize\ttfamily \label{namespace_filter_short_trips_a5af915825a0257ad96d98ede15bfbee0} 
+list Filter\+Short\+Trips.\+current\+\_\+trip = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{namespace_filter_short_trips_a90c787abe04427a69f339f36992f59df}\index{FilterShortTrips@{FilterShortTrips}!filtered\_trips@{filtered\_trips}}
+\index{filtered\_trips@{filtered\_trips}!FilterShortTrips@{FilterShortTrips}}
+\doxysubsubsection{\texorpdfstring{filtered\_trips}{filtered\_trips}}
+{\footnotesize\ttfamily \label{namespace_filter_short_trips_a90c787abe04427a69f339f36992f59df} 
+list Filter\+Short\+Trips.\+filtered\+\_\+trips = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{namespace_filter_short_trips_aec8a98798ac90878f1153e08fd0507fc}\index{FilterShortTrips@{FilterShortTrips}!filtered\_trips\_df@{filtered\_trips\_df}}
+\index{filtered\_trips\_df@{filtered\_trips\_df}!FilterShortTrips@{FilterShortTrips}}
+\doxysubsubsection{\texorpdfstring{filtered\_trips\_df}{filtered\_trips\_df}}
+{\footnotesize\ttfamily \label{namespace_filter_short_trips_aec8a98798ac90878f1153e08fd0507fc} 
+Filter\+Short\+Trips.\+filtered\+\_\+trips\+\_\+df = pd.\+Data\+Frame(\mbox{\hyperlink{namespace_filter_short_trips_a90c787abe04427a69f339f36992f59df}{filtered\+\_\+trips}})}
+
+\Hypertarget{namespace_filter_short_trips_a3befc11ab24e9b07fbe2664d9cf2d5be}\index{FilterShortTrips@{FilterShortTrips}!index@{index}}
+\index{index@{index}!FilterShortTrips@{FilterShortTrips}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily \label{namespace_filter_short_trips_a3befc11ab24e9b07fbe2664d9cf2d5be} 
+Filter\+Short\+Trips.\+index}
+
+\Hypertarget{namespace_filter_short_trips_a4de4ad69c624e7e3e1aca3a00f96bc95}\index{FilterShortTrips@{FilterShortTrips}!max\_duration@{max\_duration}}
+\index{max\_duration@{max\_duration}!FilterShortTrips@{FilterShortTrips}}
+\doxysubsubsection{\texorpdfstring{max\_duration}{max\_duration}}
+{\footnotesize\ttfamily \label{namespace_filter_short_trips_a4de4ad69c624e7e3e1aca3a00f96bc95} 
+int Filter\+Short\+Trips.\+max\+\_\+duration = 90}
+
+\Hypertarget{namespace_filter_short_trips_a4c83caf0456279cdb3cfb4f706686a95}\index{FilterShortTrips@{FilterShortTrips}!min\_duration@{min\_duration}}
+\index{min\_duration@{min\_duration}!FilterShortTrips@{FilterShortTrips}}
+\doxysubsubsection{\texorpdfstring{min\_duration}{min\_duration}}
+{\footnotesize\ttfamily \label{namespace_filter_short_trips_a4c83caf0456279cdb3cfb4f706686a95} 
+int Filter\+Short\+Trips.\+min\+\_\+duration = 2}
+
+\Hypertarget{namespace_filter_short_trips_a525547e6c23d54c56fa146f42c41ec2f}\index{FilterShortTrips@{FilterShortTrips}!motif\_dest@{motif\_dest}}
+\index{motif\_dest@{motif\_dest}!FilterShortTrips@{FilterShortTrips}}
+\doxysubsubsection{\texorpdfstring{motif\_dest}{motif\_dest}}
+{\footnotesize\ttfamily \label{namespace_filter_short_trips_a525547e6c23d54c56fa146f42c41ec2f} 
+Filter\+Short\+Trips.\+motif\+\_\+dest}
+
+\Hypertarget{namespace_filter_short_trips_ac641495c43f774cff5ae87d3ff02c1a5}\index{FilterShortTrips@{FilterShortTrips}!motif\_orig@{motif\_orig}}
+\index{motif\_orig@{motif\_orig}!FilterShortTrips@{FilterShortTrips}}
+\doxysubsubsection{\texorpdfstring{motif\_orig}{motif\_orig}}
+{\footnotesize\ttfamily \label{namespace_filter_short_trips_ac641495c43f774cff5ae87d3ff02c1a5} 
+Filter\+Short\+Trips.\+motif\+\_\+orig}
+
+\Hypertarget{namespace_filter_short_trips_ab9d63b02f1683f18801ab666f2c7bc54}\index{FilterShortTrips@{FilterShortTrips}!previous\_motif\_dest@{previous\_motif\_dest}}
+\index{previous\_motif\_dest@{previous\_motif\_dest}!FilterShortTrips@{FilterShortTrips}}
+\doxysubsubsection{\texorpdfstring{previous\_motif\_dest}{previous\_motif\_dest}}
+{\footnotesize\ttfamily \label{namespace_filter_short_trips_ab9d63b02f1683f18801ab666f2c7bc54} 
+Filter\+Short\+Trips.\+previous\+\_\+motif\+\_\+dest = None}
+
+\Hypertarget{namespace_filter_short_trips_a6245fbc9819d123489bd3a9c4906e783}\index{FilterShortTrips@{FilterShortTrips}!previous\_motif\_orig@{previous\_motif\_orig}}
+\index{previous\_motif\_orig@{previous\_motif\_orig}!FilterShortTrips@{FilterShortTrips}}
+\doxysubsubsection{\texorpdfstring{previous\_motif\_orig}{previous\_motif\_orig}}
+{\footnotesize\ttfamily \label{namespace_filter_short_trips_a6245fbc9819d123489bd3a9c4906e783} 
+Filter\+Short\+Trips.\+previous\+\_\+motif\+\_\+orig = None}
+
+\Hypertarget{namespace_filter_short_trips_a4ef0ac5f3ed27fe2236711ff634657e9}\index{FilterShortTrips@{FilterShortTrips}!trip\_duration@{trip\_duration}}
+\index{trip\_duration@{trip\_duration}!FilterShortTrips@{FilterShortTrips}}
+\doxysubsubsection{\texorpdfstring{trip\_duration}{trip\_duration}}
+{\footnotesize\ttfamily \label{namespace_filter_short_trips_a4ef0ac5f3ed27fe2236711ff634657e9} 
+list Filter\+Short\+Trips.\+trip\+\_\+duration = \mbox{\hyperlink{namespace_filter_short_trips_a5af915825a0257ad96d98ede15bfbee0}{current\+\_\+trip}}\mbox{[}-\/1\mbox{]}\mbox{[}\textquotesingle{}Temps\+\_\+minute\textquotesingle{}\mbox{]} -\/ \mbox{\hyperlink{namespace_filter_short_trips_a5af915825a0257ad96d98ede15bfbee0}{current\+\_\+trip}}\mbox{[}0\mbox{]}\mbox{[}\textquotesingle{}Temps\+\_\+minute\textquotesingle{}\mbox{]}}
+

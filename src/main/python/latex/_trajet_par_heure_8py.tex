@@ -1,0 +1,44 @@
+\doxysection{statistique/\+Trajet\+Par\+Heure.py File Reference}
+\hypertarget{_trajet_par_heure_8py}{}\label{_trajet_par_heure_8py}\index{statistique/TrajetParHeure.py@{statistique/TrajetParHeure.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_trajet_par_heure}{Trajet\+Par\+Heure}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespace_trajet_par_heure_aa3e8392de4bd6967079e8304b283eb7c}{Trajet\+Par\+Heure.\+output\+\_\+path}} = "{}C\+:\textbackslash{}\textbackslash{}\+Users\textbackslash{}\textbackslash{}\+User\textbackslash{}\textbackslash{}\+Idea\+Projects\textbackslash{}\textbackslash{}matsim-\/example-\/project-\/modified\textbackslash{}\textbackslash{}csv\+\_\+tuesday\textbackslash{}\textbackslash{}"{}
+\item 
+bool \mbox{\hyperlink{namespace_trajet_par_heure_a69ff9265af0320e5224e366028d28805}{Trajet\+Par\+Heure.\+include\+\_\+other}} = True
+\item 
+bool \mbox{\hyperlink{namespace_trajet_par_heure_af1074a4e50749e6823f37002efdf5900}{Trajet\+Par\+Heure.\+group\+\_\+motifs}} = True
+\item 
+list \mbox{\hyperlink{namespace_trajet_par_heure_ad7f6125e49464913a577b03e5e2d8ad1}{Trajet\+Par\+Heure.\+explicit\+\_\+motifs}}
+\item 
+\mbox{\hyperlink{namespace_trajet_par_heure_ab94fd5d1c1efd866cb801adfc2125d49}{Trajet\+Par\+Heure.\+df}} = pd.\+read\+\_\+csv(\textquotesingle{}agent\+\_\+positions\+\_\+motif\+\_\+filtre\+\_\+g\+\_\+clean\+\_\+tuesday.\+csv\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespace_trajet_par_heure_a719c99c45074f225bd066bad7dbf431f}{Trajet\+Par\+Heure.\+departure\+\_\+df}} = \mbox{\hyperlink{namespace_trajet_par_heure_ab94fd5d1c1efd866cb801adfc2125d49}{df}}\mbox{[}\mbox{\hyperlink{namespace_trajet_par_heure_ab94fd5d1c1efd866cb801adfc2125d49}{df}}\mbox{[}\textquotesingle{}Is\+\_\+\+Departure\textquotesingle{}\mbox{]}\mbox{]}.copy()
+\item 
+dict \mbox{\hyperlink{namespace_trajet_par_heure_afd957faaeb78c477bfe856bcc49eab0f}{Trajet\+Par\+Heure.\+trips\+\_\+by\+\_\+motif\+\_\+per\+\_\+hour}} = \{\}
+\item 
+\mbox{\hyperlink{namespace_trajet_par_heure_a6bea234c9b84e56bfac293788357cc6a}{Trajet\+Par\+Heure.\+agent\+\_\+id}} = row\mbox{[}\textquotesingle{}Agent\+Id\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_trajet_par_heure_a9b57fd4a3bc1ad5950a7f7cfde1d7cb7}{Trajet\+Par\+Heure.\+hour}} = row\mbox{[}\textquotesingle{}Temps\+\_\+hour\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_trajet_par_heure_a28f386f6bb6d8f3446cc066967b245d6}{Trajet\+Par\+Heure.\+motif\+\_\+orig}} = row\mbox{[}\textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_trajet_par_heure_ac7d71e516e10bb346c796c822d1481dc}{Trajet\+Par\+Heure.\+motif\+\_\+dest}} = row\mbox{[}\textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}\mbox{]}
+\item 
+tuple \mbox{\hyperlink{namespace_trajet_par_heure_abf08a815542674d49274088b4abc7bf7}{Trajet\+Par\+Heure.\+trip\+\_\+type}} = (\mbox{\hyperlink{namespace_trajet_par_heure_a28f386f6bb6d8f3446cc066967b245d6}{motif\+\_\+orig}}, \mbox{\hyperlink{namespace_trajet_par_heure_ac7d71e516e10bb346c796c822d1481dc}{motif\+\_\+dest}})
+\item 
+list \mbox{\hyperlink{namespace_trajet_par_heure_ade48fc5ab3b812c0cc00e81c6d5684ab}{Trajet\+Par\+Heure.\+motif\+\_\+data}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_trajet_par_heure_a33d4173599555c088237bca6e53375c4}{Trajet\+Par\+Heure.\+motif\+\_\+df}} = pd.\+Data\+Frame(\mbox{\hyperlink{namespace_trajet_par_heure_ade48fc5ab3b812c0cc00e81c6d5684ab}{motif\+\_\+data}}, \mbox{\hyperlink{namespace_trajet_par_heure_a29c8fcd930a992342f61be4b74bd203c}{columns}}=\mbox{[}\textquotesingle{}Heure\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}, \textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}, \textquotesingle{}Nombre\+\_\+\+Trajet\textquotesingle{}\mbox{]}).sort\+\_\+values(by=\textquotesingle{}Heure\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespace_trajet_par_heure_ac53caa1c46eb2277f0ca43245507add9}{Trajet\+Par\+Heure.\+trips\+\_\+per\+\_\+hour\+\_\+df}} = motif\+\_\+df.\+groupby(\textquotesingle{}Heure\textquotesingle{})\mbox{[}\textquotesingle{}Nombre\+\_\+\+Trajet\textquotesingle{}\mbox{]}.sum().reset\+\_\+index()
+\item 
+\mbox{\hyperlink{namespace_trajet_par_heure_a29c8fcd930a992342f61be4b74bd203c}{Trajet\+Par\+Heure.\+columns}}
+\item 
+\mbox{\hyperlink{namespace_trajet_par_heure_a8c88f7cda9f8f8c22323450c3051b4d3}{Trajet\+Par\+Heure.\+index}}
+\end{DoxyCompactItemize}

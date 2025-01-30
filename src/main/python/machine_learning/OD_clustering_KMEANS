@@ -1,0 +1,83 @@
+import os
+import numpy as np
+import pandas as pd
+import folium
+from sklearn.cluster import KMeans
+from sklearn.preprocessing import StandardScaler
+from folium.plugins import MarkerCluster
+import matplotlib.pyplot as plt
+
+# Fix MKL Memory Leak Warning (Optional)
+os.environ["OMP_NUM_THREADS"] = "1"
+
+# Load example OD data
+data = pd.DataFrame({
+    "Origin_Lat": [43.6043, 43.6050, 43.7010, 43.7030, 43.8000, 43.8020, 43.7500, 43.7550],
+    "Origin_Lon": [1.4419, 1.4430, 1.5002, 1.5020, 1.6000, 1.6025, 1.5500, 1.5550],
+    "Dest_Lat":   [43.6123, 43.6130, 43.7505, 43.7520, 43.8500, 43.8520, 43.8100, 43.8150],
+    "Dest_Lon":   [1.4567, 1.4570, 1.6000, 1.6025, 1.7000, 1.7020, 1.6500, 1.6550]
+})
+
+# Convert OD pairs into feature matrix (Origin + Destination)
+X = data[['Origin_Lat', 'Origin_Lon', 'Dest_Lat', 'Dest_Lon']].values
+
+# Normalize Data (K-Means is sensitive to scale)
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+# Use the Elbow Method to determine optimal K
+wcss = []  # Within-cluster sum of squares
+K_range = range(1, min(10, len(data)))  # Prevent K from exceeding data size
+
+for k in K_range:
+    kmeans = KMeans(n_clusters=k, random_state=42, n_init=10)
+    kmeans.fit(X_scaled)
+    wcss.append(kmeans.inertia_)
+
+# Plot the Elbow Curve
+plt.figure(figsize=(6, 4))
+plt.plot(K_range, wcss, marker='o', linestyle='-')
+plt.xlabel("Number of Clusters (K)")
+plt.ylabel("Within-Cluster Sum of Squares (WCSS)")
+plt.title("Elbow Method to Find Optimal K")
+plt.show()
+
+# Choose the best K (based on the elbow method result)
+optimal_K = min(3, len(data))  # Prevents K > number of data points
+kmeans = KMeans(n_clusters=optimal_K, random_state=42, n_init=10)
+data['Cluster'] = kmeans.fit_predict(X_scaled)
+
+# Display clustered OD pairs
+print("Clustered OD Pairs:")
+print(data)
+
+# Create a Folium Map for Visualization
+map_center = [data['Origin_Lat'].mean(), data['Origin_Lon'].mean()]
+m = folium.Map(location=map_center, zoom_start=12)
+
+# Add markers for each OD pair with cluster labels
+marker_cluster = MarkerCluster().add_to(m)
+
+for idx, row in data.iterrows():
+    folium.Marker(
+        location=[row['Origin_Lat'], row['Origin_Lon']],
+        popup=f"Cluster {row['Cluster']}: Origin",
+        icon=folium.Icon(color="blue", icon="info-sign")
+    ).add_to(marker_cluster)
+
+    folium.Marker(
+        location=[row['Dest_Lat'], row['Dest_Lon']],
+        popup=f"Cluster {row['Cluster']}: Destination",
+        icon=folium.Icon(color="red", icon="info-sign")
+    ).add_to(marker_cluster)
+
+    folium.PolyLine(
+        locations=[[row['Origin_Lat'], row['Origin_Lon']], [row['Dest_Lat'], row['Dest_Lon']]],
+        color="green",
+        weight=2,
+        opacity=0.6
+    ).add_to(m)
+
+# Save and display the map
+m.save("od_clusters_kmeans.html")
+print("Map saved as 'od_clusters_kmeans.html'. Open in a browser to view.")

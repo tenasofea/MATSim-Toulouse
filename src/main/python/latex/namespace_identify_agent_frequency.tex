@@ -1,0 +1,104 @@
+\doxysection{Identify\+Agent\+Frequency Namespace Reference}
+\hypertarget{namespace_identify_agent_frequency}{}\label{namespace_identify_agent_frequency}\index{IdentifyAgentFrequency@{IdentifyAgentFrequency}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespace_identify_agent_frequency_a7a7776949c5d2a6325859aea361873d2}{file\+\_\+path}} = \textquotesingle{}ordered\+\_\+daily\+\_\+trips.\+csv\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespace_identify_agent_frequency_a055fbc6c400bfcd85003c182e8299dd4}{data}} = pd.\+read\+\_\+csv(\mbox{\hyperlink{namespace_identify_agent_frequency_a7a7776949c5d2a6325859aea361873d2}{file\+\_\+path}})
+\item 
+\mbox{\hyperlink{namespace_identify_agent_frequency_a898768543a23a29f0ae1383d5d45a96d}{home\+\_\+to\+\_\+work}} = \mbox{\hyperlink{namespace_identify_agent_frequency_a055fbc6c400bfcd85003c182e8299dd4}{data}}\mbox{[}(\mbox{\hyperlink{namespace_identify_agent_frequency_a055fbc6c400bfcd85003c182e8299dd4}{data}}\mbox{[}\textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}\mbox{]} == \textquotesingle{}home\textquotesingle{}) \& (\mbox{\hyperlink{namespace_identify_agent_frequency_a055fbc6c400bfcd85003c182e8299dd4}{data}}\mbox{[}\textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}\mbox{]} == \textquotesingle{}work\textquotesingle{})\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_identify_agent_frequency_a358ceb7990735eafd1be2cfbaecfb372}{work\+\_\+to\+\_\+home}} = \mbox{\hyperlink{namespace_identify_agent_frequency_a055fbc6c400bfcd85003c182e8299dd4}{data}}\mbox{[}(\mbox{\hyperlink{namespace_identify_agent_frequency_a055fbc6c400bfcd85003c182e8299dd4}{data}}\mbox{[}\textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}\mbox{]} == \textquotesingle{}work\textquotesingle{}) \& (\mbox{\hyperlink{namespace_identify_agent_frequency_a055fbc6c400bfcd85003c182e8299dd4}{data}}\mbox{[}\textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}\mbox{]} == \textquotesingle{}home\textquotesingle{})\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_identify_agent_frequency_a06a6169d445f3d612388c039fe36b8ab}{home\+\_\+to\+\_\+work\+\_\+counts}} = home\+\_\+to\+\_\+work.\+groupby(\textquotesingle{}Agent\+Id\textquotesingle{}).size()
+\item 
+\mbox{\hyperlink{namespace_identify_agent_frequency_ad728909644e7ecfbd40091f9d9a92db5}{work\+\_\+to\+\_\+home\+\_\+counts}} = work\+\_\+to\+\_\+home.\+groupby(\textquotesingle{}Agent\+Id\textquotesingle{}).size()
+\item 
+\mbox{\hyperlink{namespace_identify_agent_frequency_a5eecc34cd6669a8e26df03344e5f36bf}{home\+\_\+to\+\_\+work\+\_\+1}} = set(\mbox{\hyperlink{namespace_identify_agent_frequency_a06a6169d445f3d612388c039fe36b8ab}{home\+\_\+to\+\_\+work\+\_\+counts}}\mbox{[}\mbox{\hyperlink{namespace_identify_agent_frequency_a06a6169d445f3d612388c039fe36b8ab}{home\+\_\+to\+\_\+work\+\_\+counts}} == 1\mbox{]}.\mbox{\hyperlink{namespace_identify_agent_frequency_a5551beb39b03932c1b382c64bb55431f}{index}})
+\item 
+\mbox{\hyperlink{namespace_identify_agent_frequency_ab08c2d78f2e1697209ab70e9a9b34842}{work\+\_\+to\+\_\+home\+\_\+1}} = set(\mbox{\hyperlink{namespace_identify_agent_frequency_ad728909644e7ecfbd40091f9d9a92db5}{work\+\_\+to\+\_\+home\+\_\+counts}}\mbox{[}\mbox{\hyperlink{namespace_identify_agent_frequency_ad728909644e7ecfbd40091f9d9a92db5}{work\+\_\+to\+\_\+home\+\_\+counts}} == 1\mbox{]}.\mbox{\hyperlink{namespace_identify_agent_frequency_a5551beb39b03932c1b382c64bb55431f}{index}})
+\item 
+\mbox{\hyperlink{namespace_identify_agent_frequency_af7a675cd51de89a067db16114f0c8098}{agents\+\_\+not\+\_\+in\+\_\+circle}} = \mbox{\hyperlink{namespace_identify_agent_frequency_a5eecc34cd6669a8e26df03344e5f36bf}{home\+\_\+to\+\_\+work\+\_\+1}} -\/ \mbox{\hyperlink{namespace_identify_agent_frequency_ab08c2d78f2e1697209ab70e9a9b34842}{work\+\_\+to\+\_\+home\+\_\+1}}
+\item 
+\mbox{\hyperlink{namespace_identify_agent_frequency_a9b81563228bd00483e88995751448a24}{output\+\_\+df}} = pd.\+Data\+Frame(list(\mbox{\hyperlink{namespace_identify_agent_frequency_af7a675cd51de89a067db16114f0c8098}{agents\+\_\+not\+\_\+in\+\_\+circle}}), columns=\mbox{[}\textquotesingle{}Agent\+Id\textquotesingle{}\mbox{]})
+\item 
+\mbox{\hyperlink{namespace_identify_agent_frequency_a5551beb39b03932c1b382c64bb55431f}{index}}
+\item 
+\mbox{\hyperlink{namespace_identify_agent_frequency_ac43d0e29c4d94c681a2bc8bd1e459552}{z}} = home\+\_\+to\+\_\+work\+\_\+1.\+intersection(\mbox{\hyperlink{namespace_identify_agent_frequency_ab08c2d78f2e1697209ab70e9a9b34842}{work\+\_\+to\+\_\+home\+\_\+1}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespace_identify_agent_frequency_af7a675cd51de89a067db16114f0c8098}\index{IdentifyAgentFrequency@{IdentifyAgentFrequency}!agents\_not\_in\_circle@{agents\_not\_in\_circle}}
+\index{agents\_not\_in\_circle@{agents\_not\_in\_circle}!IdentifyAgentFrequency@{IdentifyAgentFrequency}}
+\doxysubsubsection{\texorpdfstring{agents\_not\_in\_circle}{agents\_not\_in\_circle}}
+{\footnotesize\ttfamily \label{namespace_identify_agent_frequency_af7a675cd51de89a067db16114f0c8098} 
+Identify\+Agent\+Frequency.\+agents\+\_\+not\+\_\+in\+\_\+circle = \mbox{\hyperlink{namespace_identify_agent_frequency_a5eecc34cd6669a8e26df03344e5f36bf}{home\+\_\+to\+\_\+work\+\_\+1}} -\/ \mbox{\hyperlink{namespace_identify_agent_frequency_ab08c2d78f2e1697209ab70e9a9b34842}{work\+\_\+to\+\_\+home\+\_\+1}}}
+
+\Hypertarget{namespace_identify_agent_frequency_a055fbc6c400bfcd85003c182e8299dd4}\index{IdentifyAgentFrequency@{IdentifyAgentFrequency}!data@{data}}
+\index{data@{data}!IdentifyAgentFrequency@{IdentifyAgentFrequency}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \label{namespace_identify_agent_frequency_a055fbc6c400bfcd85003c182e8299dd4} 
+Identify\+Agent\+Frequency.\+data = pd.\+read\+\_\+csv(\mbox{\hyperlink{namespace_identify_agent_frequency_a7a7776949c5d2a6325859aea361873d2}{file\+\_\+path}})}
+
+\Hypertarget{namespace_identify_agent_frequency_a7a7776949c5d2a6325859aea361873d2}\index{IdentifyAgentFrequency@{IdentifyAgentFrequency}!file\_path@{file\_path}}
+\index{file\_path@{file\_path}!IdentifyAgentFrequency@{IdentifyAgentFrequency}}
+\doxysubsubsection{\texorpdfstring{file\_path}{file\_path}}
+{\footnotesize\ttfamily \label{namespace_identify_agent_frequency_a7a7776949c5d2a6325859aea361873d2} 
+str Identify\+Agent\+Frequency.\+file\+\_\+path = \textquotesingle{}ordered\+\_\+daily\+\_\+trips.\+csv\textquotesingle{}}
+
+\Hypertarget{namespace_identify_agent_frequency_a898768543a23a29f0ae1383d5d45a96d}\index{IdentifyAgentFrequency@{IdentifyAgentFrequency}!home\_to\_work@{home\_to\_work}}
+\index{home\_to\_work@{home\_to\_work}!IdentifyAgentFrequency@{IdentifyAgentFrequency}}
+\doxysubsubsection{\texorpdfstring{home\_to\_work}{home\_to\_work}}
+{\footnotesize\ttfamily \label{namespace_identify_agent_frequency_a898768543a23a29f0ae1383d5d45a96d} 
+Identify\+Agent\+Frequency.\+home\+\_\+to\+\_\+work = \mbox{\hyperlink{namespace_identify_agent_frequency_a055fbc6c400bfcd85003c182e8299dd4}{data}}\mbox{[}(\mbox{\hyperlink{namespace_identify_agent_frequency_a055fbc6c400bfcd85003c182e8299dd4}{data}}\mbox{[}\textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}\mbox{]} == \textquotesingle{}home\textquotesingle{}) \& (\mbox{\hyperlink{namespace_identify_agent_frequency_a055fbc6c400bfcd85003c182e8299dd4}{data}}\mbox{[}\textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}\mbox{]} == \textquotesingle{}work\textquotesingle{})\mbox{]}}
+
+\Hypertarget{namespace_identify_agent_frequency_a5eecc34cd6669a8e26df03344e5f36bf}\index{IdentifyAgentFrequency@{IdentifyAgentFrequency}!home\_to\_work\_1@{home\_to\_work\_1}}
+\index{home\_to\_work\_1@{home\_to\_work\_1}!IdentifyAgentFrequency@{IdentifyAgentFrequency}}
+\doxysubsubsection{\texorpdfstring{home\_to\_work\_1}{home\_to\_work\_1}}
+{\footnotesize\ttfamily \label{namespace_identify_agent_frequency_a5eecc34cd6669a8e26df03344e5f36bf} 
+Identify\+Agent\+Frequency.\+home\+\_\+to\+\_\+work\+\_\+1 = set(\mbox{\hyperlink{namespace_identify_agent_frequency_a06a6169d445f3d612388c039fe36b8ab}{home\+\_\+to\+\_\+work\+\_\+counts}}\mbox{[}\mbox{\hyperlink{namespace_identify_agent_frequency_a06a6169d445f3d612388c039fe36b8ab}{home\+\_\+to\+\_\+work\+\_\+counts}} == 1\mbox{]}.\mbox{\hyperlink{namespace_identify_agent_frequency_a5551beb39b03932c1b382c64bb55431f}{index}})}
+
+\Hypertarget{namespace_identify_agent_frequency_a06a6169d445f3d612388c039fe36b8ab}\index{IdentifyAgentFrequency@{IdentifyAgentFrequency}!home\_to\_work\_counts@{home\_to\_work\_counts}}
+\index{home\_to\_work\_counts@{home\_to\_work\_counts}!IdentifyAgentFrequency@{IdentifyAgentFrequency}}
+\doxysubsubsection{\texorpdfstring{home\_to\_work\_counts}{home\_to\_work\_counts}}
+{\footnotesize\ttfamily \label{namespace_identify_agent_frequency_a06a6169d445f3d612388c039fe36b8ab} 
+Identify\+Agent\+Frequency.\+home\+\_\+to\+\_\+work\+\_\+counts = home\+\_\+to\+\_\+work.\+groupby(\textquotesingle{}Agent\+Id\textquotesingle{}).size()}
+
+\Hypertarget{namespace_identify_agent_frequency_a5551beb39b03932c1b382c64bb55431f}\index{IdentifyAgentFrequency@{IdentifyAgentFrequency}!index@{index}}
+\index{index@{index}!IdentifyAgentFrequency@{IdentifyAgentFrequency}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily \label{namespace_identify_agent_frequency_a5551beb39b03932c1b382c64bb55431f} 
+Identify\+Agent\+Frequency.\+index}
+
+\Hypertarget{namespace_identify_agent_frequency_a9b81563228bd00483e88995751448a24}\index{IdentifyAgentFrequency@{IdentifyAgentFrequency}!output\_df@{output\_df}}
+\index{output\_df@{output\_df}!IdentifyAgentFrequency@{IdentifyAgentFrequency}}
+\doxysubsubsection{\texorpdfstring{output\_df}{output\_df}}
+{\footnotesize\ttfamily \label{namespace_identify_agent_frequency_a9b81563228bd00483e88995751448a24} 
+Identify\+Agent\+Frequency.\+output\+\_\+df = pd.\+Data\+Frame(list(\mbox{\hyperlink{namespace_identify_agent_frequency_af7a675cd51de89a067db16114f0c8098}{agents\+\_\+not\+\_\+in\+\_\+circle}}), columns=\mbox{[}\textquotesingle{}Agent\+Id\textquotesingle{}\mbox{]})}
+
+\Hypertarget{namespace_identify_agent_frequency_a358ceb7990735eafd1be2cfbaecfb372}\index{IdentifyAgentFrequency@{IdentifyAgentFrequency}!work\_to\_home@{work\_to\_home}}
+\index{work\_to\_home@{work\_to\_home}!IdentifyAgentFrequency@{IdentifyAgentFrequency}}
+\doxysubsubsection{\texorpdfstring{work\_to\_home}{work\_to\_home}}
+{\footnotesize\ttfamily \label{namespace_identify_agent_frequency_a358ceb7990735eafd1be2cfbaecfb372} 
+Identify\+Agent\+Frequency.\+work\+\_\+to\+\_\+home = \mbox{\hyperlink{namespace_identify_agent_frequency_a055fbc6c400bfcd85003c182e8299dd4}{data}}\mbox{[}(\mbox{\hyperlink{namespace_identify_agent_frequency_a055fbc6c400bfcd85003c182e8299dd4}{data}}\mbox{[}\textquotesingle{}Motif\+\_\+\+Orig\textquotesingle{}\mbox{]} == \textquotesingle{}work\textquotesingle{}) \& (\mbox{\hyperlink{namespace_identify_agent_frequency_a055fbc6c400bfcd85003c182e8299dd4}{data}}\mbox{[}\textquotesingle{}Motif\+\_\+\+Dest\textquotesingle{}\mbox{]} == \textquotesingle{}home\textquotesingle{})\mbox{]}}
+
+\Hypertarget{namespace_identify_agent_frequency_ab08c2d78f2e1697209ab70e9a9b34842}\index{IdentifyAgentFrequency@{IdentifyAgentFrequency}!work\_to\_home\_1@{work\_to\_home\_1}}
+\index{work\_to\_home\_1@{work\_to\_home\_1}!IdentifyAgentFrequency@{IdentifyAgentFrequency}}
+\doxysubsubsection{\texorpdfstring{work\_to\_home\_1}{work\_to\_home\_1}}
+{\footnotesize\ttfamily \label{namespace_identify_agent_frequency_ab08c2d78f2e1697209ab70e9a9b34842} 
+Identify\+Agent\+Frequency.\+work\+\_\+to\+\_\+home\+\_\+1 = set(\mbox{\hyperlink{namespace_identify_agent_frequency_ad728909644e7ecfbd40091f9d9a92db5}{work\+\_\+to\+\_\+home\+\_\+counts}}\mbox{[}\mbox{\hyperlink{namespace_identify_agent_frequency_ad728909644e7ecfbd40091f9d9a92db5}{work\+\_\+to\+\_\+home\+\_\+counts}} == 1\mbox{]}.\mbox{\hyperlink{namespace_identify_agent_frequency_a5551beb39b03932c1b382c64bb55431f}{index}})}
+
+\Hypertarget{namespace_identify_agent_frequency_ad728909644e7ecfbd40091f9d9a92db5}\index{IdentifyAgentFrequency@{IdentifyAgentFrequency}!work\_to\_home\_counts@{work\_to\_home\_counts}}
+\index{work\_to\_home\_counts@{work\_to\_home\_counts}!IdentifyAgentFrequency@{IdentifyAgentFrequency}}
+\doxysubsubsection{\texorpdfstring{work\_to\_home\_counts}{work\_to\_home\_counts}}
+{\footnotesize\ttfamily \label{namespace_identify_agent_frequency_ad728909644e7ecfbd40091f9d9a92db5} 
+Identify\+Agent\+Frequency.\+work\+\_\+to\+\_\+home\+\_\+counts = work\+\_\+to\+\_\+home.\+groupby(\textquotesingle{}Agent\+Id\textquotesingle{}).size()}
+
+\Hypertarget{namespace_identify_agent_frequency_ac43d0e29c4d94c681a2bc8bd1e459552}\index{IdentifyAgentFrequency@{IdentifyAgentFrequency}!z@{z}}
+\index{z@{z}!IdentifyAgentFrequency@{IdentifyAgentFrequency}}
+\doxysubsubsection{\texorpdfstring{z}{z}}
+{\footnotesize\ttfamily \label{namespace_identify_agent_frequency_ac43d0e29c4d94c681a2bc8bd1e459552} 
+Identify\+Agent\+Frequency.\+z = home\+\_\+to\+\_\+work\+\_\+1.\+intersection(\mbox{\hyperlink{namespace_identify_agent_frequency_ab08c2d78f2e1697209ab70e9a9b34842}{work\+\_\+to\+\_\+home\+\_\+1}})}
+

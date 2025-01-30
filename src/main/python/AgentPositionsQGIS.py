@@ -1,5 +1,3 @@
-#----------------------------------------------------------------------------------------------------------
-# Creer un fichier csv qui va etre utilise pour QGIS (AgentID, x_orig,y_orig,x_dest,y_dest)
 
 # import pandas as pd
 
@@ -58,15 +56,13 @@
 
 # print(f"Fichier des trajets filtrés enregistré : {output_filtered_path}")
 
-#----------------------------------------------------------------------------------------------------------
-# Creer un fichier csv qui va etre utilise pour QGIS (AgentID, x_orig,y_orig,x_dest,y_dest,Motif_Orig,Motif_Dest)
 
 import pandas as pd
 
 file_path = "C:\\Users\\User\\IdeaProjects\\matsim-example-project-modified\\agent_positions_motif_filtre_g_5000_clean.csv"
 data = pd.read_csv(file_path)
 
-# Initialiser une liste pour stocker les trajets filtrés
+# Initialiser une liste pour stocker les trajets 
 filtered_trips = []
 
 # Trier les données par AgentId et Temps (si nécessaire pour garantir l'ordre temporel)

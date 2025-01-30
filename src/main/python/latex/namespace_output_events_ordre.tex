@@ -1,0 +1,47 @@
+\doxysection{Output\+Events\+Ordre Namespace Reference}
+\hypertarget{namespace_output_events_ordre}{}\label{namespace_output_events_ordre}\index{OutputEventsOrdre@{OutputEventsOrdre}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_output_events_ordre_a0f9a9e95cf12d80cd21844f1c57b8468}{ecrire\+\_\+evenements\+\_\+filtre}} (\mbox{\hyperlink{namespace_output_events_ordre_a24f18ec22d8747096dce8b35ebba6ada}{fichier\+\_\+entree}}, \mbox{\hyperlink{namespace_output_events_ordre_a689919681fe03253a15e35b62cf129f7}{fichier\+\_\+sortie}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespace_output_events_ordre_a24f18ec22d8747096dce8b35ebba6ada}{fichier\+\_\+entree}} = "{}C\+:/Users/User/Idea\+Projects/matsim-\/example-\/project-\/modified/simulation\+\_\+output\+\_\+monday/output\+\_\+events.\+xml.\+gz"{}
+\item 
+str \mbox{\hyperlink{namespace_output_events_ordre_a689919681fe03253a15e35b62cf129f7}{fichier\+\_\+sortie}} = "{}output\+\_\+detaillees\+\_\+car\+\_\+monday.\+xml"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_output_events_ordre_a0f9a9e95cf12d80cd21844f1c57b8468}\index{OutputEventsOrdre@{OutputEventsOrdre}!ecrire\_evenements\_filtre@{ecrire\_evenements\_filtre}}
+\index{ecrire\_evenements\_filtre@{ecrire\_evenements\_filtre}!OutputEventsOrdre@{OutputEventsOrdre}}
+\doxysubsubsection{\texorpdfstring{ecrire\_evenements\_filtre()}{ecrire\_evenements\_filtre()}}
+{\footnotesize\ttfamily \label{namespace_output_events_ordre_a0f9a9e95cf12d80cd21844f1c57b8468} 
+Output\+Events\+Ordre.\+ecrire\+\_\+evenements\+\_\+filtre (\begin{DoxyParamCaption}\item[{}]{fichier\+\_\+entree}{, }\item[{}]{fichier\+\_\+sortie}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Filters and writes important events for agents using cars only by ignoring other leg mode.
+
+@details This function reads an input compressed XML file, processes events related to agents
+based on their mode of transport, and filters for those using cars. It then writes the 
+filtered events into a new XML file.
+
+@param fichier_entree The path to the input compressed XML file containing events.
+@param fichier_sortie The path to the output XML file for filtered events.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespace_output_events_ordre_a24f18ec22d8747096dce8b35ebba6ada}\index{OutputEventsOrdre@{OutputEventsOrdre}!fichier\_entree@{fichier\_entree}}
+\index{fichier\_entree@{fichier\_entree}!OutputEventsOrdre@{OutputEventsOrdre}}
+\doxysubsubsection{\texorpdfstring{fichier\_entree}{fichier\_entree}}
+{\footnotesize\ttfamily \label{namespace_output_events_ordre_a24f18ec22d8747096dce8b35ebba6ada} 
+str Output\+Events\+Ordre.\+fichier\+\_\+entree = "{}C\+:/Users/User/Idea\+Projects/matsim-\/example-\/project-\/modified/simulation\+\_\+output\+\_\+monday/output\+\_\+events.\+xml.\+gz"{}}
+
+\Hypertarget{namespace_output_events_ordre_a689919681fe03253a15e35b62cf129f7}\index{OutputEventsOrdre@{OutputEventsOrdre}!fichier\_sortie@{fichier\_sortie}}
+\index{fichier\_sortie@{fichier\_sortie}!OutputEventsOrdre@{OutputEventsOrdre}}
+\doxysubsubsection{\texorpdfstring{fichier\_sortie}{fichier\_sortie}}
+{\footnotesize\ttfamily \label{namespace_output_events_ordre_a689919681fe03253a15e35b62cf129f7} 
+str Output\+Events\+Ordre.\+fichier\+\_\+sortie = "{}output\+\_\+detaillees\+\_\+car\+\_\+monday.\+xml"{}}
+

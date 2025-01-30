@@ -1,0 +1,40 @@
+\doxysection{Heure\+Filtre Namespace Reference}
+\hypertarget{namespace_heure_filtre}{}\label{namespace_heure_filtre}\index{HeureFiltre@{HeureFiltre}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_heure_filtre_a1e7f319d571679bf4c91a78cdf6cb850}{df}} = pd.\+read\+\_\+csv(\textquotesingle{}agent\+\_\+positions\+\_\+motif\+\_\+filtre\+\_\+g.\+csv\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespace_heure_filtre_a36a56f7878ec17da74b57864d40dbbfc}{filtered\+\_\+df}}
+\item 
+\mbox{\hyperlink{namespace_heure_filtre_aa68ad8e06c67139d784fc7b7ac962898}{index}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespace_heure_filtre_a1e7f319d571679bf4c91a78cdf6cb850}\index{HeureFiltre@{HeureFiltre}!df@{df}}
+\index{df@{df}!HeureFiltre@{HeureFiltre}}
+\doxysubsubsection{\texorpdfstring{df}{df}}
+{\footnotesize\ttfamily \label{namespace_heure_filtre_a1e7f319d571679bf4c91a78cdf6cb850} 
+Heure\+Filtre.\+df = pd.\+read\+\_\+csv(\textquotesingle{}agent\+\_\+positions\+\_\+motif\+\_\+filtre\+\_\+g.\+csv\textquotesingle{})}
+
+\Hypertarget{namespace_heure_filtre_a36a56f7878ec17da74b57864d40dbbfc}\index{HeureFiltre@{HeureFiltre}!filtered\_df@{filtered\_df}}
+\index{filtered\_df@{filtered\_df}!HeureFiltre@{HeureFiltre}}
+\doxysubsubsection{\texorpdfstring{filtered\_df}{filtered\_df}}
+{\footnotesize\ttfamily \label{namespace_heure_filtre_a36a56f7878ec17da74b57864d40dbbfc} 
+Heure\+Filtre.\+filtered\+\_\+df}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ df[(df[\textcolor{stringliteral}{'Temps\_minute'}]\ >=\ 540)\ \&\ }
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (df[\textcolor{stringliteral}{'Temps\_minute'}]\ <=\ 600)\ \&\ }
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (df[\textcolor{stringliteral}{'Motif\_Orig'}]\ ==\ \textcolor{stringliteral}{'work'})\ \&\ }
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (df[\textcolor{stringliteral}{'Motif\_Dest'}]\ ==\ \textcolor{stringliteral}{'home'})]}
+
+\end{DoxyCode}
+\Hypertarget{namespace_heure_filtre_aa68ad8e06c67139d784fc7b7ac962898}\index{HeureFiltre@{HeureFiltre}!index@{index}}
+\index{index@{index}!HeureFiltre@{HeureFiltre}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily \label{namespace_heure_filtre_aa68ad8e06c67139d784fc7b7ac962898} 
+Heure\+Filtre.\+index}
+
